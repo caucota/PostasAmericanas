@@ -1,0 +1,935 @@
+@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/liberation-serif.min.css");
+/*Como llamar: 'Liberation Serif', sans-serif;*/
+
+/* -------------- MASTER  ------------- */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Header */
+.divLogoNombreSitio__imagenLogoSitio {
+    width: 120px;
+    height: 120px;
+    float: left;
+    padding-left: 5%;
+    padding-top: 2%;
+}
+
+#divLogoNombreSitio{
+    margin-right: 3%; 
+    margin-left: 2%;
+}
+
+.divLogoNombreSitio__nombreSitio{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: xxx-large;
+    color: blue;
+    text-align: center;
+    padding: 2% 14%;
+}
+/*
+.divLogoNombreSitio__provincia{
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(0, 102, 255);
+    font-size: 20px;
+    text-align: left;
+    padding-left: 25%;
+}
+*/
+.iconHelp {
+    width: 30px;
+    height: 30px;
+    padding-left: 25px;
+    padding-top: 20px;
+    float:right;
+
+}
+
+.navMenu{
+    padding-left: 26%;
+    padding-bottom: 1%;
+}
+/*menu*/
+.menuSticky {
+    position: sticky;
+    top: 0px;
+    /*background-color:rgba(0, 0, 0, 0.815) ;*/
+    background-color:black;    
+    padding-left: 0%;
+    /*
+    background-color:rgba(0, 0, 0, 0.904) ;    
+    padding-left: 5%;
+    */
+}
+
+.navMenu ul {
+    list-style: none;
+    font-size: 0;
+    
+}
+
+.navMenu ul li{
+    display: inline-block;
+    width: 10%;
+    position: relative;
+    font-size: 17px;
+    /*border: 1px solid rgb(54, 54, 27);*/
+    text-align: center;
+    margin: 1%;
+}
+
+.navMenu ul li a {
+    text-decoration: none;
+}
+.navMenu ul ul {
+    position: absolute;
+    display: none;
+    /*background-color: blanchedalmond;*/
+    border-color: rgb(0, 102, 255);
+    border: 1px solid rgb(54, 54, 27);
+    width: 225px;
+    padding-left: 0;
+
+}
+
+.navMenu ul li ul li {
+    display: block;
+    text-align: left;
+    width: auto;
+    border: 1px solid rgb(54, 54, 27);
+    background-color:rgba(0, 0, 0, 0.904) ;    
+
+}
+
+.navMenu ul li:hover ul {
+    display: block;
+}
+nav ul li {
+    border-style: inset;
+    border-color: rgb(0, 102, 255);
+    /*background-color: blanchedalmond;*/
+    border-radius: 10%;
+}
+
+nav ul li a {
+    /*color: black;*/
+    color: rgb(0, 102, 255);
+
+}
+
+.liSeleccionado {
+    border-color: rgb(0, 255, 191);
+}
+
+/* Footer */
+
+.classFooter {
+    /*background-color:rgba(0, 0, 0, 0.904) ;*/
+    background-color:black;
+    padding-top: 2%;      
+}
+
+.textoFooter{
+    text-align: center;
+    color: rgb(0, 102, 255);
+}
+
+.divIconosFooter {
+    display: block;
+    float: left;
+}
+
+.imagenIconoRedes {
+    width: 30px;
+    height: 30px;
+    padding-right: 10px;
+    padding-left: 20px;
+}
+
+.divIconosRedes {
+    display: block;
+    float: right;
+}
+
+.derechosAutor {
+    text-align: center;
+    margin-top: 3%;
+    color: rgb(0, 102, 255);
+}
+
+
+/* Generales */
+.sectionPrincipal {
+    padding-left: 1%; 
+    padding-right: 1%;
+    padding-top: 1%;
+    background-color: rgba(0, 0, 0, 0.904) ;    
+/*    background-color: rgba(195, 185, 241, 0.568);*/
+}
+
+.section_articlePrincipal {
+    /*background-color: rgba(195, 185, 241, 0.568);*/
+    border-style:inset;
+    display: inline-block;
+    background-color: whitesmoke;   
+    width: 100%; 
+}
+
+.tituloArticulo {
+    /*padding-left: 25%; */
+    font-family: 'Liberation Serif', sans-serif;
+    text-align: center;
+    font-size: xx-large; 
+    border-style: ridge;
+    background-color: rgba(57, 201, 141, 0.363);
+    margin: 10px;
+
+}
+/* -------------- FIN MASTER  ------------- */
+
+
+
+
+/* -------------- INDEX  ------------- */
+.imagenFondo{
+    width: 100%;
+    height: 1000px; 
+    /*margin-bottom: 20px;*/
+    background-image: url('../Img/foto_inicio.jpg');
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-size: cover;
+    background-blend-mode: soft-light;
+    background-color: rgba(48, 69, 100, 0.116);
+    /*background-image: url('../Img/foto_inicio.jpg');*/
+    /*background: transparent url('../Img/foto_inicio.jpg');*/
+}
+
+.spanBienvenida{
+    display: flex; 
+    font-size: 50px; 
+    /*font-family: 'Rubik Moonrocks', cursive;*/
+    font-family: 'Fredericka the Great', cursive;
+    /*font-family: 'Reenie Beanie', cursive;    */
+    /*font-style: italic;*/
+/*    color: rgb(190, 181, 48); */
+    color: rgb(0, 245, 253); 
+    text-shadow: black 0 -3px;
+    margin-left: 15%; 
+    margin-right: 5%; 
+    margin-top: 30%;
+    float: left;
+}
+
+/* index - Burbuja Noticias */
+#noticia{
+    background-color: burlywood;
+    top: 10%;
+    width: 170px;
+    height: 80px;
+    position: fixed;
+    right: 100px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+#noticia__titulo {
+    text-decoration: underline;
+    margin-top: 5%;
+}
+
+#noticia_inscribite {
+    animation: blinker 1s step-start infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* -------------- FIN INDEX  ------------- */
+
+/* -------------- CONSTRUCCION  ------------- */
+
+.imagenFondoConstruccion{
+    width: 30%;
+    padding-left: 30%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-size: cover;
+}
+/* -------------- FIN CONSTRUCCION  ------------- */
+
+
+/* -------------- EVENTOS  ------------- */
+
+.eventosSection{
+    text-align: center;
+    padding: 10%;
+}
+
+
+.eventosTitulos h1{
+    font-size: 50px;
+    text-decoration: underline;
+    padding-bottom: 1%;
+}
+
+#eventosP{
+    margin-top: 5%;
+    font-size: 28px;
+    text-align: center;
+}
+.eventosBotones > div{
+    display: inline-block;
+    padding: 3%;
+}
+
+.eventosBotonProximos a{
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    font-family: 'Liberation Serif', sans-serif;
+    padding: 20px 30px;
+
+    border-style: inset;
+    border-radius: 10%;    
+    border-color: rgb(0, 102, 255);
+}
+/* -------------- FIN EVENTOS  ------------- */
+
+/* -------------- PROXIMOS EVENTOS  ------------- */
+
+.resumenEvento {
+    font-size: x-large;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 2%;
+}
+
+.cuandoDonde {
+    font-size: medium;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-bottom: 150px;
+    height: auto;
+}
+
+.reglamento {
+    font-size: medium;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 2%;
+}
+
+#proxEventosdivDatosPersonales{
+    padding-top: 10px;
+    margin-bottom: 7%;
+}
+
+#proxEventosinputApellido {
+    margin-left: 21px;
+}
+
+#proxEventosinputDocumento {
+    margin-left: 4px;
+}
+#proxEventossectionEquipo{
+    width: 38%;
+
+}
+
+#proxEventosdivDatosEmergencia{
+    padding-top: 10px;
+    margin-bottom: 7%;
+}
+
+.h4Datos{
+    margin-bottom: 2%;
+}
+
+#proxEventosdivTerminos {
+    padding-right: 20%;
+}
+
+.divEvento--left {
+    float: left;
+    width: 50%;
+}
+.divEvento--right {
+    float: right;
+    width: 50%;
+}
+
+.elementosFormInscripcion{
+    margin-bottom: 15px;
+}
+
+table, th,  td {
+    border: 1px solid black;
+}
+th{
+    font-style: inherit;
+}
+
+.ulEvento {
+    display: block;
+    list-style-type: disc;
+    /*
+    margin-top: 1em;
+    margin-bottom: 1 em;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 40px;
+    */
+}
+
+.liEvento {
+    display: list-item;    
+    width: 100%;
+    text-align: left;
+}
+
+.divInscripcion {
+    width: 80%; 
+    padding-left: 10%;
+    border-style:inset;    
+    float: left;
+}
+
+
+
+#button-container{
+	position:relative;
+	left:40%;
+	width:203px;
+	height:43px;
+	background:#022c3e;
+	padding-top:5px;
+	margin-top:10px;
+	-webkit-border-radius:38px;
+	-moz-border-radius:38px;
+	border-radius:38px;
+	-webkit-box-shadow:inset 0 1px 2px #000, 0px 1px 1px rgba(255,255,225,0.2);
+	-moz-box-shadow:inset 0 1px 2px #000, 0px 1px 1px rgba(255,255,225,0.2);
+	box-shadow:inset 0 1px 2px #000, 0px 1px 0px rgba(255,255,225,0.3);
+	/*Hover effect*/
+	-webkit-transition: .5s all;
+	-moz-transition: .5s all;
+	-o-transition: .5s all;
+	-ms-transition: .5s all;
+	transition: .5s all;}
+
+#button{
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width:193px;
+	height:38px;
+	margin:0px auto;
+	-webkit-border-radius:20px;
+	-moz-border-radius:20px;
+	border-radius:20px;
+	cursor:pointer;
+
+}
+
+#button p{
+	margin-top: 11px;
+	margin-left:60px;
+	font-size:.9em;
+}
+
+#button-container:hover {
+    box-shadow: none;
+	-webkit-box-shadow: inset 0 1px 2px #000, 0px 0px 10px 5px rgba(255,255,225,0.2);
+}
+
+/*Colors*/
+.yellow{
+/*Gradient*/
+	background: rgb(255,197,120); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(255,197,120,1) 0%, rgba(251,157,35,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,197,120,1)), color-stop(100%,rgba(251,157,35,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(255,197,120,1) 0%,rgba(251,157,35,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(255,197,120,1) 0%,rgba(251,157,35,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(255,197,120,1) 0%,rgba(251,157,35,1) 100%); /* IE10+ */
+	background: linear-gradient(top, rgba(255,197,120,1) 0%,rgba(251,157,35,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffc578', endColorstr='#fb9d23',GradientType=0 ); /* IE6-9 */
+}
+
+.green{
+	background: rgb(205,235,142); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(205,235,142,1) 0%, rgba(165,201,86,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(205,235,142,1)), color-stop(100%,rgba(165,201,86,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(205,235,142,1) 0%,rgba(165,201,86,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(205,235,142,1) 0%,rgba(165,201,86,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(205,235,142,1) 0%,rgba(165,201,86,1) 100%); /* IE10+ */
+	background: linear-gradient(top, rgba(205,235,142,1) 0%,rgba(165,201,86,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cdeb8e', endColorstr='#a5c956',GradientType=0 ); /* IE6-9 */
+}
+
+.blue{
+	background: rgb(122,188,255); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(122,188,255,1) 0%, rgba(96,171,248,1) 44%, rgba(64,150,238,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(122,188,255,1)), color-stop(44%,rgba(96,171,248,1)), color-stop(100%,rgba(64,150,238,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(122,188,255,1) 0%,rgba(96,171,248,1) 44%,rgba(64,150,238,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(122,188,255,1) 0%,rgba(96,171,248,1) 44%,rgba(64,150,238,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(122,188,255,1) 0%,rgba(96,171,248,1) 44%,rgba(64,150,238,1) 100%); /* IE10+ */
+	background: linear-gradient(top, rgba(122,188,255,1) 0%,rgba(96,171,248,1) 44%,rgba(64,150,238,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7abcff', endColorstr='#4096ee',GradientType=0 ); /* IE6-9 */
+}
+
+/*ICONS*/
+#clock{
+	position:absolute;
+	top:10px;
+	left:20px;
+	width:15px;
+	height:15px;
+	border:2px solid #000;
+	-webkit-border-radius:50%;
+	-moz-border-radius:50%;
+	border-radius:50%;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+	filter: alpha(opacity=80);
+	opacity:0.8;
+}
+#clock-hand1{
+	position:absolute;
+	width:0px;
+	height:5px;
+	border:1px solid #000;
+	top:2px;
+	left:7px;
+}
+#clock-hand2{
+	position:absolute;
+	width:5px;
+	height:0px;
+	border:1px solid #000;
+	top:7px;
+	left:7px;
+}
+
+#order{
+	position:absolute;
+	top:10px;
+	left:23px;
+	width:10px;
+	height:15px;
+	border:2px solid #000;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+	border-top-right-radius:5px;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+	filter: alpha(opacity=80);
+	opacity:0.8;
+}
+
+#order-line{
+	position:absolute;
+	width:4px;
+	height:0px;
+	border:1px solid #000;
+	top:5px;
+	left:0px;
+}
+
+#order-line:nth-child(2){
+	top:10px;
+	width:6px;
+}
+
+#camera{
+	position:absolute;
+	top:12px;
+	left:23px;
+	width:17px;
+	height:11px;
+	border:2px solid #000;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+	filter: alpha(opacity=80);
+	opacity:0.8;
+}
+
+#camera-optics{
+	position:absolute;
+	top:1px;
+	left:4px;
+	width:5px;
+	height:5px;
+	border:2px solid #000;
+	-webkit-border-radius:50%;
+	-moz-border-radius:50%;
+	border-radius:50%;
+}
+
+#camera-button{
+	position:absolute;
+	top:-3px;
+	left:1px;
+	width:0px;
+	height:0px;
+	border:2px solid #000;
+	border-bottom:0;
+}
+
+/* Grillas Proximos Eventos */
+main{
+    background-color: black;
+}
+.gridProximosEventos {
+    display: grid;
+    margin-left: 10px;
+    margin-right: 10px;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-areas: 
+    "nav header header header"
+    "nav section1 section1 aside"
+    "nav section2 section2 aside"
+    "nav section3 section3 section3"
+    "nav section4 section4 section4"
+    "nav footer footer footer"    
+}
+
+.gridProximosEventos > * {
+    border: 2px solid blue;
+    background-color: orange;
+}
+
+.gridProximosEventos > header {
+    grid-area: header;
+}
+.gridProximosEventos > nav {
+    grid-area: nav;
+}
+
+.itemsResumenEvento {
+    grid-area: section1;
+}
+
+.itemCuandoyDonde{
+    grid-area: section2;
+}
+
+.gridProximosEventos > div.items {
+    grid-area: section3;
+}
+
+.maps {
+    grid-area: aside;
+}
+.gridProximosEventos > footer {
+    grid-area: footer;
+}
+
+
+.categoriasFlex {
+    display: flex;
+    flex-direction: row;    
+    flex-wrap: wrap;
+    gap: 10px;
+    /*
+    justify-content: space-evenly;
+    align-items: flex-start;
+    align-content: space-evenly;
+    */
+}
+
+.detalleCat{
+    border: 2px solid blue;
+    background-color: aqua;
+    justify-self: center;
+    padding-left: 2%;
+    align-items: stretch;
+}
+
+.consideraciones{
+    grid-area: section4;
+    padding: 2%;
+}
+
+.ConsideracionesFlex{
+    display: flex;
+    flex-wrap: wrap;    
+    gap: 10px;
+}
+
+.consideracionFlexIndividual{
+    background-color: aquamarine;
+    padding: 2%;
+    border: 3px solid blue;
+    width: 200px;
+}
+
+.tituloGridHijo{
+    margin: 20px;
+}
+/* -------------- FIN PROXIMOS EVENTOS  ------------- */
+
+
+/*********** INSCRIPCION EVENTOS  ****************/
+.gridInscripcionEventosDatosPers{
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 4fr ;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.gridInscripcionEventosDatosPers > * {
+    border: 2px solid blue;
+    background-color: orange;
+}
+
+.gridInscripcionEventosDatosPers > header {
+    grid-column: 1/4 ;
+    grid-row:1/1;
+}
+
+.itemDatosInscripcion{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gridInscripcionEventosDatosPers > #apellidoInscripcion {
+    grid-column: 1/1 ;
+    grid-row:2/2;
+    border-right: 0;
+}
+
+.gridInscripcionEventosDatosPers > #nombreInscripcion {
+    grid-column: 2/2 ;
+    grid-row:2/2;
+    border-left: 0;
+}
+
+.gridInscripcionEventosDatosPers > #documentoInscripcion {
+    grid-column: 1/1 ;
+    grid-row:3/3;
+    border-right: 0;
+}
+
+.gridInscripcionEventosDatosPers > #generoInscripcion {
+    grid-column: 2/2 ;
+    grid-row:3/3;
+    border-left: 0;
+}
+
+.gridInscripcionEventosDatosPers > #fechaNacimientoInscripcion {
+    grid-column: 1/1 ;
+    grid-row:4/4;
+    border-right: 0;
+}
+.gridInscripcionEventosDatosPers > #equipoInscripcion {
+    grid-column: 2/2 ;
+    grid-row:4/4;
+    border-left: 0;
+}
+
+.gridInscripcionEventosDatosPers > #datosContactoInscripcion {
+    grid-column: 3/3 ;
+    grid-row:2/5;
+}
+
+#datosContactoInscripcion > div{
+    align-content: space-between;
+    margin-top: 8%;
+}
+
+
+.gridInscripcionEventosDatosPers > #divTerminosInscripcion {
+    grid-column: 1/4 ;
+    grid-row: 5/5;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 1%;
+}
+
+.frameTerminos{
+    width: 100%;
+}
+
+#inscEventosBotonesInscripcion{
+    margin-top: 3%;
+    margin-bottom: 3%;
+    padding-left: 25%;
+}
+
+
+/*********** FIN INSCRIPCION EVENTOS  ****************/
+
+/* -------------- FELICITACIONES  ------------- */
+#felicitacionesFelicitaciones{
+    text-align: center; 
+    background: rgb(111, 109, 243); 
+    color:yellow; 
+    padding-left: 10%; 
+    padding-right: 10%;    
+}
+
+#imagenFelicitaciones{
+    width: 30%;
+    padding-left: 35%;
+}
+
+/* -------------- FIN FELICITACIONES  ------------- */
+
+
+/* -------------- MIS DATOS  ------------- */
+
+#misDatosFormulario {
+    margin: 10px;
+}
+
+#misDatosDatosPers {
+    text-align: center;
+}
+
+#misDatosFoto {
+    text-align: center;
+}
+
+.divCargaDatos > div {
+    padding-bottom: 2%;
+    text-align: center;
+}
+.divCargaDatos{
+    margin-top: 2%;
+}
+
+.misDatosFrameTerminos{
+    margin-left: 12%;
+    margin-right: 12%;    
+    margin-bottom: 10px;
+    width: 80%;
+    height: 250px;
+}
+
+#misDatosCheckAceptar {
+    margin-left: 20%;
+
+}
+
+#misDatosBotones{
+    margin-top: 3%;
+    padding-left: 35%;
+}
+
+/* -------------- FIN MIS DATOS  ------------- */
+
+
+/* -------------- NOVEDADES  ------------- */
+
+
+.divNovedad--left {
+    float: left;
+    margin: 2%;
+    width: 40%;
+}
+.divNovedad--right {
+    float: right;
+    margin: 2%;
+    width: 50%;
+}
+
+.parrafoNovedad {
+    font-size: x-large;
+}
+
+.imgvideoNovedad {
+    width: 100%;
+    height: 315px;
+    /*padding-left: 20%;*/
+    border: 0;
+}
+
+/* -------------- FIN NOVEDADES  ------------- */
+
+
+/* -------------- CONTACTO ------------- */
+#contactoDivContendorFormulario {
+    padding-left: 20%; 
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+#contactoDivGral {
+    width: 50%; 
+    padding-left: 5%; 
+    border-style:inset; 
+    display: flex;    
+    align-items: center;
+    padding-right: 5%;
+    float:none
+}
+/* -------------- FIN CONTACTO ------------- */
+
+
+/* -------------- MAPA DEL SITIO ------------- */
+.imagenFondoMapa{
+    width: 50%;
+    padding-left: 20%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-size: cover;
+
+    /*width: 100%;*/
+    /*margin-bottom: 20px;*/
+    /*background-image: url('../Img/mapa-del-sitio_organigrama.jpg');*/
+    /*background-blend-mode: soft-light;*/
+    /*background-color: rgba(48, 69, 100, 0.116);*/
+    /*background-image: url('../Img/foto_inicio.jpg');*/
+    /*background: transparent url('../Img/foto_inicio.jpg');*/
+}
+
+/* -------------- MAPA DEL SITIO ------------- */
+
+
+/*---------------- AYUDA ------------------*/
+
+#sectionAyuda {
+    background-color: black;
+    padding-top: 1%;
+}
+
+.divlistaAyuda{
+    display: flex;
+    align-items: center;
+    float: none;
+}
+
+.divlistaAyuda__lista {
+    margin-left: 20%;
+    margin-bottom: 3%;
+}
+
+.divlistaAyuda__lista li{
+    margin: 4%;
+}
+
+.detalleAyuda p {
+    margin-top: 1%;
+    margin-left: 2%;
+    margin-left: 2%;
+    margin-bottom: 2%;
+}
+.detalleAyuda {
+    margin: 1%;
+    border-style: double;
+    border-color: blue;
+    background-color: whitesmoke;
+}
+
+
+/*---------------- FIN AYUDA ------------------*/
