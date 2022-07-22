@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripción Evento</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="menuSticky">
+        <section>
+            <div  id="divLogoNombreSitio" >
+                <a href="./ayuda.html"><img class="iconHelp" src="../Img/help.png"></a>
+                <img class="divLogoNombreSitio__imagenLogoSitio" src="../Img/IconoPostas.jpg">
+                <h1 class="divLogoNombreSitio__nombreSitio" >Postas Americanas  </h1>
+            </div>
+            <nav class="navMenu">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="./novedades.html">Novedades</a></li>
+                    <li class="liSeleccionado"><a href="./eventos.html">Eventos</a>
+                        <ul>
+                            <li><a href="./proximos_eventos.html">Próximos Eventos</a></li>
+                            <li><a href="./construccion.html">Eventos Recientes</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./mis_datos.html">Mis Datos</a></li>
+                    <li><a href="./construccion.html">Ingreso</a></li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+    <main>
+        <form action="felicitaciones.html" method="post">
+            <section class="gridInscripcionEventosDatosPers">
+            
+                <header>
+                    <h1 class="tituloArticulo">INSCRIPCION CLUB ALAS ARGENTINAS</h1>
+                </header>
+
+                <!--
+                <h2 id="h2DatosPersonalesInscripcion" class="h2Inscripcion">Datos Personales</h2>
+                -->
+                <div id="apellidoInscripcion" class="itemDatosInscripcion">
+                    <div >
+                        <label for="apellido">Apellido</label>
+                        <input id="proxEventosinputApellido" type="text" name="apellido" required>
+                    </div>
+                </div>
+                <div id="nombreInscripcion" class="itemDatosInscripcion">
+                    <div>
+                        <label for="nombre">Nombre</label>
+                        <input type="text" name="nombre" required>
+                    </div>
+                </div>
+                <div id="documentoInscripcion" class="itemDatosInscripcion">
+                    <label for="documento">Documento</label>
+                    <input id="proxEventosinputDocumento" type="number" name="documento" required>
+                </div>
+                <div id="generoInscripcion" class="itemDatosInscripcion">
+                    <div>
+                        <input type="radio" name="genero" value="Masculino">Masculino
+                        <input type="radio" name="genero" value="Femenino">Femenino
+                    </div>
+                </div>
+                <div id="fechaNacimientoInscripcion" class="itemDatosInscripcion">
+                    <label for="fechanacimiento">Fecha de Nacimiento</label>
+                    <input type="date" name="fechanacimiento" required>
+                </div>
+                <div id="equipoInscripcion" class="itemDatosInscripcion">
+                    <label for="equipo">Equipo</label>
+                    <select id="proxEventossectionEquipo" name="equipo">
+                        <option value=""></option>
+                        <option value="4fantasticos">Los 4 Fantasticos</option>
+                        <option value="unclasico">Un Clásico</option>
+                        <option value="siemprepresentes">Siempre Presentes</option>
+                    </select>
+
+                </div>
+                <div id="datosContactoInscripcion">
+                    <h3>Datos Contacto en caso de Emergencia</h3>
+                    <div id="nombreContactoInscripcion">
+                        <label for="nombrecontacto">Nombre</label>
+                        <input  type="text" name="nombrecontacto" placeholder="nombre de su contacto"
+                            required>
+                    </div>
+                    <div id="telefonoContactoInscripcion" >
+                        <label for="telcontacto">Telefono:</label>
+                        <input type="tel" name="telcontacto" required>
+                    </div>
+                </div>
+                <!--
+                <h2 id="h2TerminosYCondInscripcion" class="h2Inscripcion">Términos y Condiciones</h2>
+                -->
+                <div id="divTerminosInscripcion" >
+
+                    <h3>Términos y Condiciones</h3>
+                    <!--iframe src="./terminos_y_condiciones_evento.html" frameborder="2"     style="width: 100%;"></iframe> -->
+                    <iframe src="./terminos_y_condiciones_evento.html" frameborder="2" class="frameTerminos"></iframe>
+                    <!--checkbox-->
+                    <div>
+                        <input type="checkbox" name="aceptarterminos" value=aceptotc>Acepto los términos y condiciones
+                    </div>
+                    <div id="inscEventosBotonesInscripcion" >
+                        <input type="submit" value="Enviar Inscripción">
+                        <input type="reset" value="Limpiar formulario">
+                        <!--Envia la info al archivo que figura en action-->
+                    </div>
+                </div>
+
+            </section>
+        </form>
+    </main>
+    <footer class="classFooter">
+        <div class="textoFooter">
+            <label>Por una vida saludable, subite a la Cauconeta y no dejes pasar el tiempo!!!</label>
+        </div>
+        <section>
+            <div class="divIconosFooter">
+                <a href="./mapadelsitio.html"><img class="imagenIconoRedes" src="../Img/organigrama_amarillo.png"></a>
+            </div>
+            <div class="divIconosRedes">
+                <a href="./contacto.html" ><img class="imagenIconoRedes" src="../Img/formulario-de-contacto.png"></a> 
+                <a href="https://wa.me/15551234567"><img class="imagenIconoRedes" src="../Img/whatsapp (1).png"></a>
+                <a href="https://www.instagram.com/invites/contact/?i=j58yqhtl06su&utm_content=h8u7da4"><img class="imagenIconoRedes" src="../Img/instagram.png"></a>
+                <a href="https://www.facebook.com"><img class="imagenIconoRedes" src="../Img/facebook (1).png"></a>
+            </div>
+        </section>
+        <div class="derechosAutor">
+            <p>Córdoba - Argentina</p>
+            <p>© Todos los derechos reservados</p>
+        </div>
+    </footer>    
+
+    
+</body>
+</html>
