@@ -15,19 +15,20 @@
     float: left;
     padding-left: 5%;
     padding-top: 2%;
+    grid-column: 1/1;
+    grid-row: 1/3;
 }
 
-#divLogoNombreSitio{
-    margin-right: 3%; 
-    margin-left: 2%;
-}
 
 .divLogoNombreSitio__nombreSitio{
     font-family: 'Courier New', Courier, monospace;
     font-size: xxx-large;
     color: blue;
     text-align: center;
-    padding: 2% 14%;
+    /*padding: 2% 14%;*/
+    grid-column: 2/2;
+    grid-row: 1/1;
+
 }
 /*
 .divLogoNombreSitio__provincia{
@@ -43,41 +44,132 @@
     height: 30px;
     padding-left: 25px;
     padding-top: 20px;
-    float:right;
+    /*float:right;*/
+    grid-column: 3/3;
+    grid-row: 1/1;
 
 }
 
 .navMenu{
-    padding-left: 26%;
+/*    padding-left: 26%;
     padding-bottom: 1%;
+*/    
+    grid-column: 2/2;
+    grid-row: 2/2;
 }
 /*menu*/
+
 .menuSticky {
     position: sticky;
     top: 0px;
-    /*background-color:rgba(0, 0, 0, 0.815) ;*/
     background-color:black;    
     padding-left: 0%;
-    /*
-    background-color:rgba(0, 0, 0, 0.904) ;    
-    padding-left: 5%;
-    */
 }
 
+.headerSitio {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
 .navMenu ul {
     list-style: none;
     font-size: 0;
+    margin-left: 0%;
+
+/*    align-content: space-between ;*/
     
 }
 
 .navMenu ul li{
     display: inline-block;
-    width: 10%;
-    position: relative;
+    width: 15%;
+    /*position: relative;*/
     font-size: 17px;
     /*border: 1px solid rgb(54, 54, 27);*/
     text-align: center;
     margin: 1%;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 767px){
+    .menuSticky {
+        position: absolute;
+        height: auto;
+        width: 100%;
+    }
+    
+        
+    .headerSitio {
+        grid-template-columns: 1fr 4fr;
+        grid-template-rows: 1fr 1fr ;
+    }
+
+    .divLogoNombreSitio__imagenLogoSitio {
+        width: 80px;
+        height: 80px;
+        grid-column: 1/1;
+        grid-row: 1/1;
+
+    }
+
+    .divLogoNombreSitio__nombreSitio{
+        grid-column: 2/2;
+        grid-row: 1/1;
+        font-size: x-large;
+    }
+
+    .iconHelp {
+        display: none;
+    }
+
+    .navMenu ul li{
+        display: inline-table;
+        /*width: 50%;*/
+        /*position: relative;*/
+        font-size: 12px;
+        /*border: 1px solid rgb(54, 54, 27);*/
+    }
+
+    .imagenFondo2{
+        width: 100%;
+        height: 1000px; 
+        background-image: url('../Img/foto_inicio.jpg');
+        background-position-x: center;
+        background-size: auto;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-blend-mode: soft-light;
+        background-color: rgba(48, 69, 100, 0.116);
+    }
+    
+    .imagenFondo{
+        display: none;
+        width: 100%;
+        height: 1000px; 
+        /*margin-bottom: 20px;*/
+        background-image: url('../Img/foto_inicio_grey.jpg');
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-size: cover;
+        background-blend-mode: soft-light;
+        background-color: rgba(48, 69, 100, 0.116);
+        /*background-image: url('../Img/foto_inicio.jpg');*/
+        /*background: transparent url('../Img/foto_inicio.jpg');*/
+    }
+    
+
+    .spanBienvenida2 {
+        display: none;
+        font-size: 10px; 
+        /*font-family: 'Rubik Moonrocks', cursive;*/
+        /*font-family: 'Fredericka the Great', cursive;*/
+        font-family: 'Reenie Beanie', cursive;    
+        background-color: #022c3e;
+        /*font-style: italic;*/
+    /*    color: rgb(190, 181, 48); */
+        text-shadow: black 0 -3px;
+        }
+    
+
 }
 
 .navMenu ul li a {
@@ -197,7 +289,7 @@ nav ul li a {
     width: 100%;
     height: 1000px; 
     /*margin-bottom: 20px;*/
-    background-image: url('../Img/foto_inicio.jpg');
+    background-image: url('../Img/foto_inicio_grey.jpg');
     background-repeat: no-repeat;
     background-position-x: center;
     background-size: cover;
@@ -745,6 +837,7 @@ main{
 #datosContactoInscripcion > div{
     align-content: space-between;
     margin-top: 8%;
+    margin-left: 8%;
 }
 
 
