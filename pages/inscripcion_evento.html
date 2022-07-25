@@ -7,14 +7,12 @@
     <title>Inscripción Evento</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
+<body class="classBody">
     <header class="menuSticky">
-        <section>
-            <div  id="divLogoNombreSitio" >
-                <a href="./ayuda.html"><img class="iconHelp" src="../Img/help.png"></a>
-                <img class="divLogoNombreSitio__imagenLogoSitio" src="../Img/IconoPostas.jpg">
-                <h1 class="divLogoNombreSitio__nombreSitio" >Postas Americanas  </h1>
-            </div>
+        <section class="headerSitio">
+            <img class="divLogoNombreSitio__imagenLogoSitio" src="../Img/IconoPostas.jpg">
+            <h1 class="divLogoNombreSitio__nombreSitio" >Postas Americanas  </h1>
+            <a href="./pages/ayuda.html"><img class="iconHelp" src="../Img/help.png"></a>
             <nav class="navMenu">
                 <ul>
                     <li><a href="../index.html">Inicio</a></li>
@@ -35,7 +33,7 @@
         <form action="felicitaciones.html" method="post">
             <section class="gridInscripcionEventosDatosPers">
             
-                <header>
+                <header id="tituloInscripcion">
                     <h1 class="tituloArticulo">INSCRIPCION CLUB ALAS ARGENTINAS</h1>
                 </header>
 
@@ -45,18 +43,18 @@
                 <div id="apellidoInscripcion" class="itemDatosInscripcion">
                     <div >
                         <label for="apellido">Apellido</label>
-                        <input id="proxEventosinputApellido" type="text" name="apellido" required>
+                        <input id="inscripcionEventosinputApellido" type="text" name="apellido" required>
                     </div>
                 </div>
                 <div id="nombreInscripcion" class="itemDatosInscripcion">
                     <div>
                         <label for="nombre">Nombre</label>
-                        <input type="text" name="nombre" required>
+                        <input id="inscripcionEventosinputNombre" type="text" name="nombre" required>
                     </div>
                 </div>
                 <div id="documentoInscripcion" class="itemDatosInscripcion">
                     <label for="documento">Documento</label>
-                    <input id="proxEventosinputDocumento" type="number" name="documento" required>
+                    <input id="inscripcionEventosinputDocumento" type="number" name="documento" required>
                 </div>
                 <div id="generoInscripcion" class="itemDatosInscripcion">
                     <div>
@@ -65,12 +63,12 @@
                     </div>
                 </div>
                 <div id="fechaNacimientoInscripcion" class="itemDatosInscripcion">
-                    <label for="fechanacimiento">Fecha de Nacimiento</label>
-                    <input type="date" name="fechanacimiento" required>
+                    <label for="fechanacimiento">Fec.Nacimiento</label>
+                    <input id="inscripcionFechaNacimientoInscripcion" type="date" name="fechanacimiento" required>
                 </div>
                 <div id="equipoInscripcion" class="itemDatosInscripcion">
                     <label for="equipo">Equipo</label>
-                    <select id="proxEventossectionEquipo" name="equipo">
+                    <select id="inscripcionEventossectionEquipo" name="equipo">
                         <option value=""></option>
                         <option value="4fantasticos">Los 4 Fantasticos</option>
                         <option value="unclasico">Un Clásico</option>
@@ -82,7 +80,7 @@
                     <h3>Datos Contacto en caso de Emergencia</h3>
                     <div id="nombreContactoInscripcion">
                         <label for="nombrecontacto">Nombre</label>
-                        <input  type="text" name="nombrecontacto" placeholder="nombre de su contacto"
+                        <input id="inputnombreContacto"  type="text" name="nombrecontacto" placeholder="nombre de su contacto"
                             required>
                     </div>
                     <div id="telefonoContactoInscripcion" >
@@ -131,7 +129,9 @@
             <p>Córdoba - Argentina</p>
             <p>© Todos los derechos reservados</p>
         </div>
+
     </footer>    
+
 
     
 </body>

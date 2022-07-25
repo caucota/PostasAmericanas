@@ -9,14 +9,12 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
-<body>
+<body class="classBody">
     <header class="menuSticky">
-        <section>
-            <div  id="divLogoNombreSitio" >
-                <a href="./ayuda.html"><img class="iconHelp" src="../Img/help.png"></a>
-                <img class="divLogoNombreSitio__imagenLogoSitio" src="../Img/IconoPostas.jpg">
-                <h1 class="divLogoNombreSitio__nombreSitio" >Postas Americanas  </h1>
-            </div>
+        <section class="headerSitio">
+            <img class="divLogoNombreSitio__imagenLogoSitio" src="../Img/IconoPostas.jpg">
+            <h1 class="divLogoNombreSitio__nombreSitio" >Postas Americanas  </h1>
+            <a href="./pages/ayuda.html"><img class="iconHelp" src="../Img/help.png"></a>
             <nav class="navMenu">
                 <ul>
                     <li><a href="../index.html">Inicio</a></li>
@@ -38,10 +36,9 @@
             <header>
                 <h1 class="tituloArticulo">Postas Americanas el 25/07/2022 - CLUB ALAS ARGENTINAS</h1>
             </header>
-            <nav>Nav</nav>
-            <div class="itemsResumenEvento">Nuestros queridos amigos del Club Alas nos invitan a
+            <h3 class="itemsResumenEvento">Nuestros queridos amigos del Club Alas nos invitan a
                 participar de la 2da edición de Postas Americanas. Prometen un tercer tiempo inolvidable!!!
-            </div>
+            </h3>
             <div class="itemCuandoyDonde">
                 <h3 class="tituloGridHijo">Cuándo y Dónde</h3>
                 <p>25/07/2022 desde las 12 pm</p>
@@ -50,44 +47,38 @@
             <div class="maps">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.8271378512345!2d-64.22950488430843!3d-31.418888403518014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x943298a6fdd7f8f5%3A0xf470b8957b03af2b!2sClub%20Alas%20Argentinas!5e0!3m2!1ses-419!2sar!4v1656856225491!5m2!1ses-419!2sar"
-                    style="border:3;" allowfullscreen="" loading="lazy"
+                    style="border:3; width: 98%;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
             </div>
-            <div class="items">
-                <section>
-                    <div class="categoriasFlex">
-                        <div class="detalleCat">
-                            <h3>Categorías</h3>
-                            <p> Los equipos deben estar conformados por 4 integrantes</p>
-                            <p> La suma de las edades determinara la categoría</p>
-                        </div>
-                        <div class="rangoEdades">
-                            <table>
-                                <tr>
-                                    <th>Categoría</th>
-                                    <th>Rango de Edades</th>
-                                </tr>
-                                <tr>
-                                    <td>Menores</td>
-                                    <td>Hasta 80 años</td>
-                                </tr>
-                                <tr>
-                                    <td>Mayores</td>
-                                    <td>De 81 a 120 años</td>
-                                </tr>
-                                <tr>
-                                    <td>Mayores</td>
-                                    <td>De 121 a 160 años</td>
-                                </tr>
-                                <tr>
-                                    <td>Mayores</td>
-                                    <td>De 161 en adelante</td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                </section>
+            <div class="categorias" >
+                <h3 class="tituloGridHijo">Categorías</h3>
+                <p> Los equipos deben estar conformados por 4 integrantes</p>
+                <p> La suma de las edades determinara la categoría</p>
+            </div>
+            <div class="rangoEdades" >
+                <table>
+                    <tr>
+                        <th>Categoría</th>
+                        <th>Rango de Edades</th>
+                    </tr>
+                    <tr>
+                        <td>Menores</td>
+                        <td>Hasta 80 años</td>
+                    </tr>
+                    <tr>
+                        <td>Mayores</td>
+                        <td>De 81 a 120 años</td>
+                    </tr>
+                    <tr>
+                        <td>Mayores</td>
+                        <td>De 121 a 160 años</td>
+                    </tr>
+                    <tr>
+                        <td>Mayores</td>
+                        <td>De 161 en adelante</td>
+                    </tr>
+                </table>
             </div>
             <div class="consideraciones">
                 <h3 class="tituloGridHijo">Consideraciones Generales</h3>
@@ -104,37 +95,37 @@
                 </div>
             </div>
             <footer>
-                <section class="footer" style="display: flex; justify-content: space-evenly;">
-                <div>
-                    <h3 class="tituloGridHijo">Cierre de Inscripciones: 23/07/2022 a las 22:00 hs</h3>
-                </div>
-                <div id="container">
-                    <!--
-                    <div id="button-container">
-                        <div id="button" class="yellow">
-                            <div id="clock"><div id="clock-hand1"></div><div id="clock-hand2"></div></div>
-                            <p>Time schedule</p>
-                        </div>
+                <section class="footerGridProximosEventos" id ='sectionFooterGridProxEventos' >
+                    <div>
+                        <h3 class="tituloGridHijo">Cierre de Inscripciones: 23/07/2022 a las 22:00 hs</h3>
                     </div>
+                    <div id="divcontainerButton" >
+                        <!--
+                        <div id="button-container">
+                            <div id="button" class="yellow">
+                                <div id="clock"><div id="clock-hand1"></div><div id="clock-hand2"></div></div>
+                                <p>Time schedule</p>
+                            </div>
+                        </div>
+                        -->
+                        <div id="button-container" >
+                            <div id="button" class="green" >
+                                <div id="order"><div id="order-line"></div><div id="order-line"></div></div>
+                                <p><a href="inscripcion_evento.html">Inscribite Aquí!!!</a></p>
+                            </div>
+                        </div>
+                        
+                        <!--
+                        <div id="button-container">
+                            <div id="button" class="blue">
+                                <div id="camera"><div id="camera-button"></div><div id="camera-optics"></div></div>
+                                <p>My photos</p>
+                            </div>
+                        </div>
                     -->
-                    <div id="button-container">
-                        <div id="button" class="green">
-                            <div id="order"><div id="order-line"></div><div id="order-line"></div></div>
-                            <p><a href="inscripcion_evento.html">Inscribite Aquí!!!</a></p>
-                        </div>
-                    </div>
-                    
-                    <!--
-                    <div id="button-container">
-                        <div id="button" class="blue">
-                            <div id="camera"><div id="camera-button"></div><div id="camera-optics"></div></div>
-                            <p>My photos</p>
-                        </div>
-                    </div>
-                -->
-                </div>                    
-            </section>
-                </footer>
+                    </div>                    
+                </section>
+            </footer>
         </section>
     </main>
     <footer class="classFooter">
