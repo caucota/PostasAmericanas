@@ -365,9 +365,27 @@ nav ul li a {
     #inscripcionFechaNacimientoInscripcion {
         margin-left: 2%;
     }
-    
-
     /* FIN Media Query Inscripcion Evento */
+
+
+    /* Media Query Novedades */
+    .sectionNovedades > .novedadLayoutIzq{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding-bottom: 2%;
+        border-bottom: 15px solid rgba(128, 128, 128, 0.801);
+    }
+    
+    .sectionNovedades > .novedadLayoutDer{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding-bottom: 2%;
+        border-bottom: 5p1x solid rgba(128, 128, 128, 0.801);
+    }
+
+    /* FIN Media Query Novedades */
 
 }
 
@@ -1077,7 +1095,119 @@ main{
 
 /* -------------- NOVEDADES  ------------- */
 
+.sectionNovedades {
+    /*background-color: rgba(195, 185, 241, 0.568);*/
+    border-style:inset;
+    background-color: whitesmoke;   
+    width: 100%; 
+}
 
+.novedadLayoutIzq{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-areas: 
+        "titleIzq sectionRightIzq"
+        "sectionLeftIzq sectionRightIzq"
+        "fuenteIzq sectionRightIzq"
+        ;
+    padding-bottom: 2%;
+    border-bottom: 15px solid rgba(128, 128, 128, 0.801);
+}
+
+.novedadLayoutDer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-areas: 
+        "sectionRightDer titleDer "
+        "sectionRightDer sectionLeftDer"
+        "sectionRightDer fuenteDer"
+        ;
+    
+    border-bottom: 5p1x solid rgba(128, 128, 128, 0.801);
+}
+
+.tituloNovedadIzq {
+    grid-area: titleIzq;
+    font-size: xx-large;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.tituloNovedadDer {
+    grid-area: titleDer;
+    font-size: xx-large;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.parrafoNovedadIzq {
+    grid-area: sectionLeftIzq;
+    font-size: x-large;
+    margin-left: 2%;
+}
+.parrafoNovedadDer {
+    grid-area: sectionLeftDer;
+    font-size: x-large;
+    margin-left: 2%;
+}
+
+.fotoVideoIzq {
+    grid-area: sectionRightIzq;
+}
+
+.fotoVideoDer {
+    grid-area: sectionRightDer;
+}
+
+
+a.buttonVerFuenteNoticiaIzq {
+    grid-area: fuenteIzq;
+    height:12px;
+    width: 18%;
+    align-self:center;
+    justify-self: center;
+    text-align: center;
+    padding: 10px 50px;
+    background: #4479BA;
+    color: #FFF;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border: solid 1px #20538D;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+a.buttonVerFuenteNoticiaDer {
+    grid-area: fuenteDer;
+    height:12px;
+    width: 18%;
+    align-self:center;
+    justify-self: center;
+    text-align: center;
+    padding: 10px 50px;
+    background: #4479BA;
+    color: #FFF;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border: solid 1px #20538D;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+a.buttonVerFuenteNoticiaIzq:hover, a.buttonVerFuenteNoticiaDer:hover {
+    background: #359477;
+    border: solid 1px #2A4E77;
+    text-decoration: none;
+}
+
+/*
 .divNovedad--left {
     float: left;
     margin: 2%;
@@ -1088,10 +1218,7 @@ main{
     margin: 2%;
     width: 50%;
 }
-
-.parrafoNovedad {
-    font-size: x-large;
-}
+*/
 
 .imgvideoNovedad {
     width: 100%;
@@ -1108,17 +1235,117 @@ main{
     padding-left: 20%; 
     margin-top: 2%;
     margin-bottom: 5%;
+    padding-right: 30%; 
 }
 
 #contactoDivGral {
-    width: 50%; 
     padding-left: 5%; 
+    padding-right: 50%;
     border-style:inset; 
-    display: flex;    
     align-items: center;
-    padding-right: 5%;
-    float:none
+    display: grid;    
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "imagenTrabajoEquipo datos";
 }
+
+#imgTrabajoEquipo {
+    grid-area: imagenTrabajoEquipo;
+}
+
+#griddatosContacto {
+    grid-area: datos;
+}
+
+
+#labelNombre{
+    padding-right: 3px;
+}
+
+#labelCorreo {
+    padding-right: 11px;
+}
+
+
+#textAreaConsulta{
+    padding-right: 15%;
+}
+
+@media screen and (min-width: 0px) and (max-width: 599px) {
+    #contactoDivContendorFormulario {
+        padding-left: 0; 
+        margin-top: 2%;
+        margin-bottom: 5%;
+    }
+
+    #contactoDivGral {
+        display: flex;    
+        width: 99%; 
+        padding-left: 5%; 
+        border-style:inset; 
+        align-items: center;
+    }
+    #textAreaConsulta {
+        width: 100%;
+    }
+}
+@media screen and (min-width: 600px) and (max-width: 767px) {
+    #contactoDivContendorFormulario {
+        padding-left: 10%; 
+        margin-top: 2%;
+        margin-bottom: 5%;
+    }
+
+    #contactoDivGral {
+        display: flex;    
+        width: 89%; 
+        padding-left: 5%; 
+        border-style:inset; 
+        align-items: center;
+    }
+    #textAreaConsulta {
+        width: 80%;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1223px) {
+    #contactoDivContendorFormulario {
+        margin-top: 2%;
+        margin-bottom: 5%;
+        padding-left: 10%;
+    }
+
+    #contactoDivGral {
+        display: flex;    
+        width: 89%; 
+        padding-left: 5%; 
+        border-style:inset; 
+        align-items: center;
+    }
+    #textAreaConsulta {
+        width: 70%;
+    }
+}
+
+
+@media screen and (max-width: 1224px) {
+    #contactoDivContendorFormulario {
+        margin-top: 2%;
+        margin-bottom: 5%;
+        padding-right: 50%; 
+    }
+
+    #contactoDivGral {
+        display: block;    
+        width: 100%; 
+        text-align:center;
+        padding-bottom: 5%;
+    }
+    #contactoDivGral > div{
+        padding-left: 30%;
+    } 
+
+}
+
 /* -------------- FIN CONTACTO ------------- */
 
 

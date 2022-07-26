@@ -7,19 +7,17 @@
     <title>Contacto</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
+<body class="classBody">
     <header class="menuSticky">
-        <section>
-            <div  id="divLogoNombreSitio" >
-                <a href="./ayuda.html"><img class="iconHelp" src="../Img/help.png"></a>
-                <img class="divLogoNombreSitio__imagenLogoSitio" src="../Img/IconoPostas.jpg">
-                <h1 class="divLogoNombreSitio__nombreSitio" >Postas Americanas  </h1>
-            </div>
+        <section class="headerSitio">
+            <img class="divLogoNombreSitio__imagenLogoSitio" src="../Img/IconoPostas.jpg">
+            <h1 class="divLogoNombreSitio__nombreSitio" >Postas Americanas  </h1>
+            <a href="./ayuda.html"><img class="iconHelp" src="../Img/help.png"></a>
             <nav class="navMenu">
                 <ul>
                     <li><a href="../index.html">Inicio</a></li>
                     <li><a href="./novedades.html">Novedades</a></li>
-                    <li><a href="./eventos.html">Eventos</a>
+                    <li class="liSeleccionado"><a href="./eventos.html">Eventos</a>
                         <ul>
                             <li><a href="./proximos_eventos.html">Próximos Eventos</a></li>
                             <li><a href="./construccion.html">Eventos Recientes</a></li>
@@ -31,34 +29,32 @@
             </nav>
         </section>
     </header>
-
-
     <form action="construccion.html" style="position: unset;">
         <div id="contactoDivContendorFormulario">
             <div id="contactoDivGral">
-                <div>
+                <div id="imgTrabajoEquipo">
                     <img src="../Img/contacto.jpg" alt="Imagen Trabajo en equipo">
                 </div>
-                <div style="display: unset;">
+                <div id="griddatosContacto">
                     <br>
                     <div>
-                        <label for="nombre">Nombre</label>
+                        <label id="labelNombre" for="nombre">Nombre</label>
                         <input type="text" name="nombre">
                     </div>
                     <br>
                     <div>
-                        <label for="telefono">Telefono</label>
+                        <label id="labelTelefono" for="telefono">Telefono</label>
                         <input type="tel" name="telefono">
                     </div>
                     <br>
                     <div>
-                        <label for="correo">Correo</label>
+                        <label id="labelCorreo" for="correo">Correo</label>
                         <input type="email" name="correo">
                     </div>
                     <br>
                     <label for="consulta">Consulta</label>
                     <br>
-                    <textarea name="consulta" rows="10" cols="40"></textarea>
+                    <textarea id="textAreaConsulta" name="consulta" rows="10" cols="40"></textarea>
                     <div>
                         <input type="submit" value="Enviar Aporte">
                         <input type="reset" value="Limpiar formulario">
@@ -88,5 +84,6 @@
             <p>© Todos los derechos reservados</p>
         </div>
     </footer>    
+  
 </body>
 </html>
