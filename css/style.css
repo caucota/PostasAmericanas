@@ -470,7 +470,6 @@ nav ul li a {
     border-style: ridge;
     background-color: rgba(57, 201, 141, 0.363);
     margin: 10px;
-    background-image: linear-gradient(to right, rgba(0, 0, 255, 0.555), rgba(255, 255, 0, 0.521), rgba(90, 90, 155, 0.541), rgba(255, 166, 0, 0.514));
 }
 /* -------------- FIN MASTER  ------------- */
 
@@ -1228,13 +1227,6 @@ a.buttonVerFuenteNoticiaIzq:hover, a.buttonVerFuenteNoticiaDer:hover {
 }
 
 
-.novedadRadial{
-    background-image: radial-gradient(rgba(0, 89, 255, 0.445), rgba(141, 216, 97, 0.644));
-}
-
-.novedadGradient{
-    background-image: linear-gradient(to left, rgb(135, 135, 233), yellow);
-}
 /* -------------- FIN NOVEDADES  ------------- */
 
 
