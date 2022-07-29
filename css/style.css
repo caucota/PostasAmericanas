@@ -1109,7 +1109,16 @@ main{
 
 #misDatosBotones{
     margin-top: 3%;
-    padding-left: 35%;
+    padding-left: 40%;
+}
+
+.misDatosBotonIzq{
+    margin-right: 20px;
+    padding: 5px;
+}
+.misDatosBotonDer{
+    margin-left: 20px;
+    padding: 5px;
 }
 
 /* -------------- FIN MIS DATOS  ------------- */
