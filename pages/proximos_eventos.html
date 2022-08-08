@@ -7,30 +7,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Próximos Eventos</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Rubik+Moonrocks&family=Reenie+Beanie&display=swap"  rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
-
 <body class="classBody">
     <header class="menuSticky">
-        <section class="headerSitio">
-            <img class="divLogoNombreSitio__imagenLogoSitio" src="../Img/IconoPostas.jpg">
-            <h1 class="divLogoNombreSitio__nombreSitio" >Postas Americanas  </h1>
-            <a href="./ayuda.html"><img class="iconHelp" src="../Img/help.png"></a>
-            <nav class="navMenu">
-                <ul>
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="./novedades.html">Novedades</a></li>
-                    <li class="liSeleccionado"><a href="./eventos.html">Eventos</a>
-                        <ul>
-                            <li><a href="./proximos_eventos.html">Próximos Eventos</a></li>
-                            <li><a href="./construccion.html">Eventos Recientes</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="./mis_datos.html">Mis Datos</a></li>
-                    <li><a href="./construccion.html">Ingreso</a></li>
-                </ul>
-            </nav>
-        </section>
-    </header>
+        <div class="container">
+            <section class="row">
+                <div class="col-2">
+                    <img class="divLogoNombreSitio__imagenLogoSitio" src="../img/IconoPostas.jpg">
+                </div>
+                <div class="col-9 text-center">
+                    <h1 class="divLogoNombreSitio__nombreSitio" >Postas Americanas  </h1>
+                </div>
+                <div class="col-1">
+                    <a href="./ayuda.html"><img class="iconHelp " src="../img/help.png"></a>
+                </div>
+                <nav class="navMenu container">
+                    <ul class="nav nav-justified">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./novedades.html">Novedades</a></li>
+                        <li class="nav-item liSeleccionado"><a class="nav-link" href="#">Eventos</a>
+                            <ul class="nav">
+                                <li class="nav-item"><a class="nav-link" href="./proximos_eventos.html">Próximos Eventos</a></li>
+                                <li class="nav-item"><a class="nav-link" href="./construccion.html">Eventos Recientes</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="./mis_datos.html">Mis Datos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./construccion.html">Ingreso</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </div>
+    </header>    
     <main>
         <section class="gridProximosEventos">
             <header>
@@ -58,23 +67,24 @@
             </div>
             <div class="rangoEdades" >
                 <table>
-                    <tr>
+
+                    <tr class="table-active">
                         <th>Categoría</th>
                         <th>Rango de Edades</th>
                     </tr>
-                    <tr>
+                    <tr class="table-secondary">
                         <td>Menores</td>
                         <td>Hasta 80 años</td>
                     </tr>
-                    <tr>
+                    <tr class="table-warning">
                         <td>Mayores</td>
                         <td>De 81 a 120 años</td>
                     </tr>
-                    <tr>
+                    <tr class="table-primary">
                         <td>Mayores</td>
                         <td>De 121 a 160 años</td>
                     </tr>
-                    <tr>
+                    <tr class="table-secondary">
                         <td>Mayores</td>
                         <td>De 161 en adelante</td>
                     </tr>
@@ -83,15 +93,70 @@
             <div class="consideraciones">
                 <h3 class="tituloGridHijo">Consideraciones Generales</h3>
                 <div class="ConsideracionesFlex">
-                    <div class="consideracionFlexIndividual">Como siempre, la clasificación será según la cantidad de metros nadados.</div>
-                    <div class="consideracionFlexIndividual">Se debe respetar el órden de largadas durante toda la competencia</div>
-                    <div class="consideracionFlexIndividual">Al finalizar el tiempo de la competencia, sólo se contarán los últimos 50 metros si se han superado los primeros 25 mts</div>
-                    <div class="consideracionFlexIndividual">Al acreditarse cada nadador debe presentar el Deslinde de Responsabilidad</div>
-                    <div class="consideracionFlexIndividual">Medallas de Participación y trofeos para los tres primeros equipos con mayor cantidad de metros nadados de cada categoría</div>
-                    <div class="consideracionFlexIndividual">En el predio habrá puestos de hidratación</div>
-                    <div class="consideracionFlexIndividual">Las duchas estarán habilitadas para todos los participantes</div>
-                    <div class="consideracionFlexIndividual">Sólo se considera inscripto a un equipo, si ha presentado sus integrantes y el comprobante de pago</div>
-                    <div class="consideracionFlexIndividual">48 hs antes del evento se dará a concocer el cancheo de los equipos</div>
+                    <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+                        <!-- <div class="card-header">Clasificación</div> -->
+                        <div class="card-body">
+                            <h5 class="card-title">Clasificación</h5>
+                            <p class="card-text">Como siempre, la clasificación será según la cantidad de metros nadados.</p>
+                        </div>
+                    </div>                    
+                    <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+                        <!-- <div class="card-header">Clasificación</div> -->
+                        <div class="card-body">
+                            <h5 class="card-title">Orden de Largadas</h5>
+                            <p class="card-text">Se debe respetar el órden de largadas durante toda la competencia.</p>
+                        </div>
+                    </div>                    
+                    <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+                        <!-- <div class="card-header">Clasificación</div> -->
+                        <div class="card-body">
+                            <h5 class="card-title">Los últimos Metros</h5>
+                            <p class="card-text">Al finalizar el tiempo de la competencia, sólo se contarán los últimos 50 metros si se han superado los primeros 25 mts.</p>
+                        </div>
+                    </div>                    
+                    <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+                        <!-- <div class="card-header">Clasificación</div> -->
+                        <div class="card-body">
+                            <h5 class="card-title">Deslinde</h5>
+                            <p class="card-text">Al acreditarse cada nadador debe presentar el Deslinde de Responsabilidad.</p>
+                        </div>
+                    </div>                    
+                    <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+                        <!-- <div class="card-header">Clasificación</div> -->
+                        <div class="card-body">
+                            <h5 class="card-title">Medallas</h5>
+                            <p class="card-text">Medallas de Participación y trofeos para los tres primeros equipos con mayor cantidad de metros nadados de cada categoría.</p>
+                        </div>
+                    </div>                    
+                    <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+                        <!-- <div class="card-header">Clasificación</div> -->
+                        <div class="card-body">
+                            <h5 class="card-title">Hidratación</h5>
+                            <p class="card-text">En el predio habrá puestos de hidratación y mesa de frutas para todos los nadadores.</p>
+                        </div>
+                    </div>                    
+                    <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+                        <!-- <div class="card-header">Clasificación</div> -->
+                        <div class="card-body">
+                            <h5 class="card-title">Duchas</h5>
+                            <p class="card-text">Las duchas estarán habilitadas para todos los participantes.</p>
+                        </div>
+                    </div>                    
+                    <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+                        <!-- <div class="card-header">Clasificación</div> -->
+                        <div class="card-body">
+                            <h5 class="card-title">Cuando estoy Inscripto?</h5>
+                            <p class="card-text">Sólo se considera inscripto a un equipo, si ha presentado sus integrantes y el comprobante de pago.</p>
+                        </div>
+                    </div>                    
+                    
+                    <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+                        <!-- <div class="card-header">Clasificación</div> -->
+                        <div class="card-body">
+                            <h5 class="card-title">A que hora nadamos</h5>
+                            <p class="card-text">48 hs antes del evento se dará a concocer el cancheo de los equipos.</p>
+                        </div>
+                    </div>                    
                 </div>
             </div>
             <footer>
@@ -128,19 +193,19 @@
             </footer>
         </section>
     </main>
-    <footer class="classFooter">
-        <div class="textoFooter">
-            <label>Por una vida saludable, subite a la Cauconeta y no dejes pasar el tiempo!!!</label>
+    <footer class="classFooter container">
+        <div class="textoFooter row">
+            <label class="col-12">Por una vida saludable, subite a la Cauconeta y no dejes pasar el tiempo!!!</label>
         </div>
-        <section>
-            <div class="divIconosFooter">
-                <a href="./mapadelsitio.html"><img class="imagenIconoRedes" src="../Img/organigrama_amarillo.png"></a>
+        <section class="row">
+            <div class="col-1 align-self-center divIconosFooter">
+                <a href="./mapadelsitio.html"><img class="btn btn-outline-light btn-floating m-1 imagenIconoRedes" src="../img/organigrama_amarillo.png"></a>
             </div>
-            <div class="divIconosRedes">
-                <a href="./contacto.html" ><img class="imagenIconoRedes" src="../Img/formulario-de-contacto.png"></a> 
-                <a href="https://wa.me/15551234567"><img class="imagenIconoRedes" src="../Img/whatsapp (1).png"></a>
-                <a href="https://www.instagram.com/invites/contact/?i=j58yqhtl06su&utm_content=h8u7da4"><img class="imagenIconoRedes" src="../Img/instagram.png"></a>
-                <a href="https://www.facebook.com"><img class="imagenIconoRedes" src="../Img/facebook (1).png"></a>
+            <div class="divIconosRedes row col-11 justify-content-end align-self-center ">
+                <a href="./contacto.html" ><img class="btn btn-outline-light btn-floating m-1 imagenIconoRedes" src="../img/formulario-de-contacto.png"></a> 
+                <a href="https://wa.me/15551234567"><img class="btn btn-outline-light btn-floating m-1 imagenIconoRedes" src="../img/whatsapp (1).png"></a>
+                <a href="https://www.instagram.com/invites/contact/?i=j58yqhtl06su&utm_content=h8u7da4"><img class="btn btn-outline-light btn-floating m-1 imagenIconoRedes" src="../img/instagram.png"></a>
+                <a href="https://www.facebook.com"><img class="btn btn-outline-light btn-floating m-1 imagenIconoRedes" src="../img/facebook (1).png"></a>
             </div>
         </section>
         <div class="derechosAutor">
@@ -148,6 +213,7 @@
             <p>© Todos los derechos reservados</p>
         </div>
     </footer>    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 
 </html>

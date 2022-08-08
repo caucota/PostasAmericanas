@@ -6,38 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Novedades</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Rubik+Moonrocks&family=Reenie+Beanie&display=swap"  rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body class="classBody">
     <header class="menuSticky">
-        <section class="headerSitio">
-            <img class="divLogoNombreSitio__imagenLogoSitio" src="../Img/IconoPostas.jpg">
-            <h1 class="divLogoNombreSitio__nombreSitio" >Postas Americanas  </h1>
-            <a href="./ayuda.html"><img class="iconHelp" src="../Img/help.png"></a>
-            <nav class="navMenu">
-                <ul>
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li class="liSeleccionado"><a href="./novedades.html">Novedades</a></li>
-                    <li><a href="./eventos.html">Eventos</a>
-                        <ul>
-                            <li><a href="./proximos_eventos.html">Próximos Eventos</a></li>
-                            <li><a href="./construccion.html">Eventos Recientes</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="./mis_datos.html">Mis Datos</a></li>
-                    <li><a href="./construccion.html">Ingreso</a></li>
-                </ul>
-            </nav>
-        </section>
-    </header>
-    <main>
+        <div class="container">
+            <section class="row">
+                <div class="col-2">
+                    <img class="divLogoNombreSitio__imagenLogoSitio" src="../img/IconoPostas.jpg">
+                </div>
+                <div class="col-9 text-center">
+                    <h1 class="divLogoNombreSitio__nombreSitio" >Postas Americanas  </h1>
+                </div>
+                <div class="col-1">
+                    <a href="./ayuda.html"><img class="iconHelp " src="../img/help.png"></a>
+                </div>
+                <nav class="navMenu container">
+                    <ul class="nav nav-justified">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                        <li class="nav-item liSeleccionado"><a class="nav-link" href="./novedades.html">Novedades</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Eventos</a>
+                            <ul class="nav">
+                                <li class="nav-item"><a class="nav-link" href="./proximos_eventos.html">Próximos Eventos</a></li>
+                                <li class="nav-item"><a class="nav-link" href="./construccion.html">Eventos Recientes</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="./mis_datos.html">Mis Datos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./construccion.html">Ingreso</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </div>
+    </header>    
+    <main class="justify-content-center align-items-center content" >
         <section class="sectionPrincipal">
             <div class="section_articlePrincipal">
                 <h1 class="tituloArticulo">NOVEDADES DEL MUNDO ACUATICO</h1>
             </div>
         </section>
-        <section id="sectionNovedades" class="sectionPrincipal">
+        <section id="sectionNovedades" class="sectionPrincipal row">
             <article class="sectionNovedades">
-                <div class="novedadLayoutIzq novedadRadial" >
+                <div class="novedadLayoutIzq novedadRadial col-12" >
                     <h2 class="tituloNovedadIzq">Mundial Budapest</h2>
                     <div class="parrafoNovedadIzq">El XIX Campeonato Mundial de Natación se celebra en Budapest entre el 17 de junio y el 3 de julio de 2022 bajo la
                         organización de la Federación Internacional de Natación y la Federación Húngara de Natación.​Se realizan competiciones
@@ -48,7 +58,9 @@
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen ></iframe>
                     </div>
-                    <a href="https://olympics.com/es/noticias/mundial-de-natacion-budapest-2022-todos-los-resultados" class="buttonVerFuenteNoticiaIzq" target="_blank">Nota Completa</a>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <a class="btn btn-primary" href="https://olympics.com/es/noticias/mundial-de-natacion-budapest-2022-todos-los-resultados" role="button">Nota Completa</a>
+                    </div>
                 </div>
 
                 <div class="novedadLayoutDer novedadGradient" >
@@ -56,36 +68,36 @@
                     <div class="parrafoNovedadDer">La argentina Malena Santillán con sólo 14 años alcanzó la medalla de bronce en los 200 metros espalda femenino, al obtener el tercer puesto en la categoría cadetes, en el marco del Campeonato Absoluto de Natación, que se lleva a cabo en la ciudad de Sabadell, España.
                     </div>
                     <div class="fotoVideoDer">
-                        <img id="fotoNovedadDer" src="../Img/fotoMalenaSantillas.jpg" alt="Página en Construcción" >
-                        <img id="fotoNovedadDer2" src="../Img/fotoMalenaSantillan2.jpg" alt="Página en Construcción" >
+                        <img id="fotoNovedadDer" src="../img/fotoMalenaSantillas.jpg" alt="Página en Construcción" >
+                        <img id="fotoNovedadDer2" src="../img/fotoMalenaSantillan2.jpg" alt="Página en Construcción" >
                     </div>
-                    <a href="https://www.sitioandino.com.ar/andino-sports/malena-santillan-bronce-la-natacion-internacional-n5632024" class="buttonVerFuenteNoticiaDer" target="_blank">Nota Completa</a>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <a class="btn btn-primary" href="https://www.sitioandino.com.ar/andino-sports/malena-santillan-bronce-la-natacion-internacional-n5632024" role="button">Nota Completa</a>
+                    </div>
                 </div>
             </article>
         </section>
-
     </main>
-    <footer class="classFooter">
-        <div class="textoFooter">
-            <label>Por una vida saludable, subite a la Cauconeta y no dejes pasar el tiempo!!!</label>
+    <footer class="classFooter container">
+        <div class="textoFooter row">
+            <label class="col-12">Por una vida saludable, subite a la Cauconeta y no dejes pasar el tiempo!!!</label>
         </div>
-        <section>
-            <div class="divIconosFooter">
-                <a href="./mapadelsitio.html"><img class="imagenIconoRedes" src="../Img/organigrama_amarillo.png"></a>
+        <section class="row">
+            <div class="col-1 align-self-center divIconosFooter">
+                <a href="./mapadelsitio.html"><img class="btn btn-outline-light btn-floating m-1 imagenIconoRedes" src="../img/organigrama_amarillo.png"></a>
             </div>
-            <div class="divIconosRedes">
-                <a href="./contacto.html" ><img class="imagenIconoRedes" src="../Img/formulario-de-contacto.png"></a> 
-                <a href="https://wa.me/15551234567"><img class="imagenIconoRedes" src="../Img/whatsapp (1).png"></a>
-                <a href="https://www.instagram.com/invites/contact/?i=j58yqhtl06su&utm_content=h8u7da4"><img class="imagenIconoRedes" src="../Img/instagram.png"></a>
-                <a href="https://www.facebook.com"><img class="imagenIconoRedes" src="../Img/facebook (1).png"></a>
+            <div class="divIconosRedes row col-11 justify-content-end align-self-center ">
+                <a href="./contacto.html" ><img class="btn btn-outline-light btn-floating m-1 imagenIconoRedes" src="../img/formulario-de-contacto.png"></a> 
+                <a href="https://wa.me/15551234567"><img class="btn btn-outline-light btn-floating m-1 imagenIconoRedes" src="../img/whatsapp (1).png"></a>
+                <a href="https://www.instagram.com/invites/contact/?i=j58yqhtl06su&utm_content=h8u7da4"><img class="btn btn-outline-light btn-floating m-1 imagenIconoRedes" src="../img/instagram.png"></a>
+                <a href="https://www.facebook.com"><img class="btn btn-outline-light btn-floating m-1 imagenIconoRedes" src="../img/facebook (1).png"></a>
             </div>
         </section>
         <div class="derechosAutor">
             <p>Córdoba - Argentina</p>
             <p>© Todos los derechos reservados</p>
         </div>
-
-    </footer>  
-
+    </footer>    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>

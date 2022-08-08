@@ -12,56 +12,61 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap" rel="stylesheet">
     -->
     <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Rubik+Moonrocks&family=Reenie+Beanie&display=swap"  rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 </head>
 <body class="classBody">
     <header class="menuSticky">
-        <section class="headerSitio">
-            <img class="divLogoNombreSitio__imagenLogoSitio" src="./Img/IconoPostas.jpg">
-            <h1 class="divLogoNombreSitio__nombreSitio" >Postas Americanas  </h1>
-            <a href="./pages/ayuda.html"><img class="iconHelp" src="./Img/help.png"></a>
-            <nav class="navMenu">
-                <ul>
-                    <li class="liSeleccionado"><a href="./index.html">Inicio</a></li>
-                    <li><a href="./pages/novedades.html">Novedades</a></li>
-                    <li><a href="#">Eventos</a>
-                        <ul>
-                            <li><a href="./pages/proximos_eventos.html">Próximos Eventos</a></li>
-                            <li><a href="./pages/construccion.html">Eventos Recientes</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="./pages/mis_datos.html">Mis Datos</a></li>
-                    <li><a href="./pages/construccion.html">Ingreso</a></li>
-                </ul>
-            </nav>
-        </section>
+        <div class="container">
+            <section class="row">
+                <div class="col-2">
+                    <img class="divLogoNombreSitio__imagenLogoSitio" src="./img/IconoPostas.jpg">
+                </div>
+                <div class="col-9 text-center">
+                    <h1 class="divLogoNombreSitio__nombreSitio" >Postas Americanas  </h1>
+                </div>
+                <div class="col-1">
+                    <a href="./pages/ayuda.html"><img class="iconHelp " src="./img/help.png"></a>
+                </div>
+                <nav class="navMenu container">
+                    <ul class="nav nav-justified">
+                        <li class="liSeleccionado nav-item"><a class="nav-link" href="./index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./pages/novedades.html">Novedades</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Eventos</a>
+                            <ul class="nav">
+                                <li class="nav-item"><a class="nav-link" href="./pages/proximos_eventos.html">Próximos Eventos</a></li>
+                                <li class="nav-item"><a class="nav-link" href="./pages/construccion.html">Eventos Recientes</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="./pages/mis_datos.html">Mis Datos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./pages/construccion.html">Ingreso</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </div>
     </header>
     <main>
-        <div class="imagenFondo">
-            <h1 class="h1Bienvenida">
-                Bienvenidos a nuestro primer sitio de Postas Americanas. Aquí podrás registrarte y estar siempre informado de los próximos eventos, inscribirte, ver los resultados y recordar buenos momentos!!!
-            </h1>
-            <!--
-            <div id="noticia">
-                <h3 id="noticia__titulo">Nuevos Eventos</h3>
-                <p  id="noticia_inscribite"><a href="./pages/novedades.html">Inscribite Aquí!!!</a></p>
+        <div class="container imagenFondo" >
+            <div class="row">
+                <h1 class="h1Bienvenida col-12">
+                    Bienvenidos a nuestro primer sitio de Postas Americanas. Aquí podrás registrarte y estar siempre informado de los próximos eventos, inscribirte, ver los resultados y recordar buenos momentos!!!
+                </h1>
             </div>
-            -->
         </div>  
     </main>
-
-    <footer class="classFooter">
-        <div class="textoFooter">
-            <label>Por una vida saludable, subite a la Cauconeta y no dejes pasar el tiempo!!!</label>
+    <footer class="classFooter container">
+        <div class="textoFooter row">
+            <label class="col-12">Por una vida saludable, subite a la Cauconeta y no dejes pasar el tiempo!!!</label>
         </div>
-        <section>
-            <div class="divIconosFooter">
-                <a href="./pages/mapadelsitio.html"><img class="imagenIconoRedes" src="./Img/organigrama_amarillo.png"></a>
+        <section class="row">
+            <div class="col-1 align-self-center divIconosFooter">
+                <a href="./pages/mapadelsitio.html"><img class="btn btn-outline-light btn-floating m-1 imagenIconoRedes" src="./img/organigrama_amarillo.png"></a>
             </div>
-            <div class="divIconosRedes">
-                <a href="./pages/contacto.html" ><img class="imagenIconoRedes" src="./Img/formulario-de-contacto.png"></a> 
-                <a href="https://wa.me/15551234567"><img class="imagenIconoRedes" src="./Img/whatsapp (1).png"></a>
-                <a href="https://www.instagram.com/invites/contact/?i=j58yqhtl06su&utm_content=h8u7da4"><img class="imagenIconoRedes" src="./Img/instagram.png"></a>
-                <a href="https://www.facebook.com"><img class="imagenIconoRedes" src="./Img/facebook (1).png"></a>
+            <div class="divIconosRedes row col-11 justify-content-end align-self-center ">
+                <a href="./pages/contacto.html" ><img class="btn btn-outline-light btn-floating m-1 imagenIconoRedes" src="./img/formulario-de-contacto.png"></a> 
+                <a href="https://wa.me/15551234567"><img class="btn btn-outline-light btn-floating m-1 imagenIconoRedes" src="./img/whatsapp (1).png"></a>
+                <a href="https://www.instagram.com/invites/contact/?i=j58yqhtl06su&utm_content=h8u7da4"><img class="btn btn-outline-light btn-floating m-1 imagenIconoRedes" src="./img/instagram.png"></a>
+                <a href="https://www.facebook.com"><img class="btn btn-outline-light btn-floating m-1 imagenIconoRedes" src="./img/facebook (1).png"></a>
             </div>
         </section>
         <div class="derechosAutor">
@@ -69,5 +74,7 @@
             <p>© Todos los derechos reservados</p>
         </div>
     </footer>    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>

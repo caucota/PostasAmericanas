@@ -6,104 +6,126 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Rubik+Moonrocks&family=Reenie+Beanie&display=swap"  rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
 </head>
 <body class="classBody">
     <header class="menuSticky">
-        <section class="headerSitio">
-            <img class="divLogoNombreSitio__imagenLogoSitio" src="../Img/IconoPostas.jpg">
-            <h1 class="divLogoNombreSitio__nombreSitio" >Postas Americanas  </h1>
-            <a href="./ayuda.html"><img class="iconHelp" src="../Img/help.png"></a>
-            <nav class="navMenu">
-                <ul>
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="./novedades.html">Novedades</a></li>
-                    <li><a href="./eventos.html">Eventos</a>
-                        <ul>
-                            <li><a href="./proximos_eventos.html">Próximos Eventos</a></li>
-                            <li><a href="./construccion.html">Eventos Recientes</a></li>
-                        </ul>
-                    </li>
-                    <li class="liSeleccionado"><a href="./mis_datos.html">Mis Datos</a></li>
-                    <li><a href="./construccion.html">Ingreso</a></li>
-                </ul>
-            </nav>
-        </section>
-    </header>
-    <main>
-        <section class="sectionPrincipal">
-            <article class="section_articlePrincipal" >
+        <div class="container">
+            <section class="row">
+                <div class="col-2">
+                    <img class="divLogoNombreSitio__imagenLogoSitio" src="../img/IconoPostas.jpg">
+                </div>
+                <div class="col-9 text-center">
+                    <h1 class="divLogoNombreSitio__nombreSitio" >Postas Americanas  </h1>
+                </div>
+                <div class="col-1">
+                    <a href="./ayuda.html"><img class="iconHelp " src="../img/help.png"></a>
+                </div>
+                <nav class="navMenu container">
+                    <ul class="nav nav-justified">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./novedades.html">Novedades</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Eventos</a>
+                            <ul class="nav">
+                                <li class="nav-item"><a class="nav-link" href="./proximos_eventos.html">Próximos Eventos</a></li>
+                                <li class="nav-item"><a class="nav-link" href="./construccion.html">Eventos Recientes</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item liSeleccionado"><a class="nav-link" href="./mis_datos.html">Mis Datos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./construccion.html">Ingreso</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </div>
+    </header>    
+    <main class="justify-content-center align-items-center content" >
+        
+        <section class="sectionPrincipal row">
+            <article id="sectionPrincipalMisDatos" class="section_articlePrincipal" >
                 <!--Formulario-->
                 <h1 class="tituloArticulo">FORMULARIO DE ADHESION</h1>
-                <form id="misDatosFormulario" class= "novedadRadial" action="felicitaciones.html" method="post">
-                    <fieldset>
+                <form id="misDatosFormulario" class= "form-horizontal novedadRadial" action="felicitaciones.html" method="post">
+                    <h2 id="misDatosDatosPers" class="col-12">Datos Personales</h2>
+                    <div id="misDatosFoto" class="form-group">
+                        <img src="../img/FotoEjemplo.jpg" alt="Foto personal">
+                        <input class="btn btn-default" type="button" value="Subir Foto" name="subirfoto" >
+                    </div>
+                    <div class="form-group" align="center">
+                        <label for="apellido" class="form-label col-sm-2">Apellido</label>
+                        <input class="divCargaDatosText col-sm-4" type="text" name="apellido" required>
+                    </div>
+
+                    <div class="form-group" align="center">
+                        <label for="nombre" class="form-label col-sm-2">Nombre</label>
+                        <input class="divCargaDatosText col-sm-4" type="text" name="nombre" required>
+                    </div>
+                    <div class="form-group"  align="center">
+                        <label for="documento" class="form-label col-sm-2">Documento</label>
+                        <input class="divCargaDatosText  col-sm-4" type="number" name="documento" required>
+                    </div>
+                    <div class="form-group" align="center">
+                        <label for="fechanacimiento" class="form-label col-sm-2">Fecha de Nacimiento</label>
+                        <input class="divCargaDatosText col-sm-4" type="date" name="fechanacimiento" required>
+                    </div>
+                    <!--Radio Booton-->
+                    <!--
+                    <div class="form-check" align="center">
+                        <input class="divCargaDatosText col-sm-2" type="radio" name="genero" value="Masculino">Masculino
+                        <input class="divCargaDatosText col-sm-2" type="radio" name="genero" value="Femenino">Femenino
+                    </div>
+                    -->
+                    <div class="form-group" align="center">
                         <div>
-                            <h2 id="misDatosDatosPers">Datos Personales</h2>
-                            <div id="misDatosFoto">
-                                <img src="../Img/FotoEjemplo.jpg" alt="Foto personal">
-                                <input type="button" value="Subir Foto" name="subirfoto">
-                            </div>
-                            <div class="divCargaDatos">
-                                <div >
-                                    <label for="apellido">Apellido</label>
-                                    <input class="divCargaDatosText" type="text" name="apellido" required>
-                                </div>
-                                <div>
-                                    <label for="nombre">Nombre</label>
-                                    <input class="divCargaDatosText" type="text" name="nombre" required>
-                                </div>
-                                <!--Radio Booton-->
-                                <div>
-                                    <input class="divCargaDatosText" type="radio" name="genero" value="Masculino">Masculino
-                                    <input class="divCargaDatosText" type="radio" name="genero" value="Femenino">Femenino
-                                </div>
-                                <div>
-                                    <label for="documento">Documento</label>
-                                    <input class="divCargaDatosText" type="number" name="documento" required>
-                                </div>
-                                <div>
-                                    <label for="fechanacimiento">Fecha de Nacimiento</label>
-                                    <input class="divCargaDatosText" type="date" name="fechanacimiento" required>
-                                </div>
-                            </div>
+                            <input class="form-check-input" type="radio" name="genero" id="generoFemenino" value="Femenino">
+                            <label class="form-check-label" for="generoFemenino">Femenino</label>
                         </div>
-                        <div >
-                            <iframe class="misDatosFrameTerminos" src="./terminos_y_condiciones.html" frameborder="2" ></iframe>
-                            <div id="misDatosCheckAceptar">
-                                <input class="divCargaDatosText" type="checkbox" name="aceptarterminos" value=aceptotc>Acepto los términos y condiciones
-                            </div>
+                        <div>
+                            <input class="form-check-input" type="radio" name="genero" id="generoMasculino" value="Masculino">
+                            <label class="form-check-label" for="generoMasculino">Masculino</label>
                         </div>
-                        <div id="misDatosBotones">
-                            <input class="misDatosBotonIzq" type="submit" value="Enviar Registro">
-                            <input class="misDatosBotonDer" type="reset" value="Limpiar formulario">
-                            <!--Envia la info al archivo que figura en action-->
-                        </div>
-                    </fieldset>
+                    </div>
+                    <div id="misDatosCheckAceptar" class="checkbox">
+                        <iframe class="misDatosFrameTerminos" src="./terminos_y_condiciones.html" frameborder="2" ></iframe>
+                    </div>
+                    <div id="misDatosCheckAceptar" class="checkbox" style="padding-left: 12%;">
+                        <input class="divCargaDatosText" type="checkbox" name="aceptarterminos" value=aceptotc>Acepto los términos y condiciones
+                    </div>
+
+
+                    <div id="misDatosBotones"  align="center" >
+                        <input class="btn btn-default" type="submit" value="Enviar Registro">
+                        <input class="btn btn-default" type="reset" value="Limpiar formulario">
+                        <!--Envia la info al archivo que figura en action-->
+                    </div>
+                    <br>
                 </form>
             <article>
         </section>
     </main>
-    <footer class="classFooter">
-        <div class="textoFooter">
-            <label>Por una vida saludable, subite a la Cauconeta y no dejes pasar el tiempo!!!</label>
+    <footer class="classFooter container">
+        <div class="textoFooter row">
+            <label class="col-12">Por una vida saludable, subite a la Cauconeta y no dejes pasar el tiempo!!!</label>
         </div>
-        <section>
-            <div class="divIconosFooter">
-                <a href="./mapadelsitio.html"><img class="imagenIconoRedes" src="../Img/organigrama_amarillo.png"></a>
+        <section class="row">
+            <div class="col-1 align-self-center divIconosFooter">
+                <a href="./mapadelsitio.html"><img class="btn btn-outline-light btn-floating m-1 imagenIconoRedes" src="../img/organigrama_amarillo.png"></a>
             </div>
-            <div class="divIconosRedes">
-                <a href="./contacto.html" ><img class="imagenIconoRedes" src="../Img/formulario-de-contacto.png"></a> 
-                <a href="https://wa.me/15551234567"><img class="imagenIconoRedes" src="../Img/whatsapp (1).png"></a>
-                <a href="https://www.instagram.com/invites/contact/?i=j58yqhtl06su&utm_content=h8u7da4"><img class="imagenIconoRedes" src="../Img/instagram.png"></a>
-                <a href="https://www.facebook.com"><img class="imagenIconoRedes" src="../Img/facebook (1).png"></a>
+            <div class="divIconosRedes row col-11 justify-content-end align-self-center ">
+                <a href="./contacto.html" ><img class="btn btn-outline-light btn-floating m-1 imagenIconoRedes" src="../img/formulario-de-contacto.png"></a> 
+                <a href="https://wa.me/15551234567"><img class="btn btn-outline-light btn-floating m-1 imagenIconoRedes" src="../img/whatsapp (1).png"></a>
+                <a href="https://www.instagram.com/invites/contact/?i=j58yqhtl06su&utm_content=h8u7da4"><img class="btn btn-outline-light btn-floating m-1 imagenIconoRedes" src="../img/instagram.png"></a>
+                <a href="https://www.facebook.com"><img class="btn btn-outline-light btn-floating m-1 imagenIconoRedes" src="../img/facebook (1).png"></a>
             </div>
         </section>
         <div class="derechosAutor">
             <p>Córdoba - Argentina</p>
             <p>© Todos los derechos reservados</p>
         </div>
-
     </footer>    
- 
-    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   
 </body>
 </html>

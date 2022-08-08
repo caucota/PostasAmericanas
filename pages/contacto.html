@@ -6,77 +6,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 </head>
 <body class="classBody">
     <header class="menuSticky">
-        <section class="headerSitio">
-            <img class="divLogoNombreSitio__imagenLogoSitio" src="../Img/IconoPostas.jpg">
-            <h1 class="divLogoNombreSitio__nombreSitio" >Postas Americanas  </h1>
-            <a href="./ayuda.html"><img class="iconHelp" src="../Img/help.png"></a>
-            <nav class="navMenu">
-                <ul>
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="./novedades.html">Novedades</a></li>
-                    <li class="liSeleccionado"><a href="./eventos.html">Eventos</a>
-                        <ul>
-                            <li><a href="./proximos_eventos.html">Próximos Eventos</a></li>
-                            <li><a href="./construccion.html">Eventos Recientes</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="./mis_datos.html">Mis Datos</a></li>
-                    <li><a href="./construccion.html">Ingreso</a></li>
-                </ul>
-            </nav>
-        </section>
-    </header>
-    <form action="construccion.html" style="position: unset;"  class="ColorFondoGral">
-        <div id="contactoDivContendorFormulario">
-            <div id="contactoDivGral">
-                <div id="imgTrabajoEquipo">
-                    <img src="../Img/contacto.jpg" alt="Imagen Trabajo en equipo">
+        <div class="container">
+            <section class="row">
+                <div class="col-2">
+                    <img class="divLogoNombreSitio__imagenLogoSitio" src="../img/IconoPostas.jpg">
                 </div>
-                <div id="griddatosContacto">
-                    <br>
-                    <div>
-                        <label id="labelNombre" for="nombre" >Nombre</label>
-                        <input class="divCargaDatosText" type="text" name="nombre">
-                    </div>
-                    <br>
-                    <div>
-                        <label id="labelTelefono" for="telefono">Telefono</label>
-                        <input class="divCargaDatosText" type="tel" name="telefono">
-                    </div>
-                    <br>
-                    <div>
-                        <label id="labelCorreo" for="correo">Correo</label>
-                        <input class="divCargaDatosText" type="email" name="correo">
-                    </div>
-                    <br>
-                    <label for="consulta">Consulta</label>
-                    <br>
-                    <textarea id="textAreaConsulta"  class="divCargaDatosTextArea" name="consulta" rows="10" cols="40"></textarea>
-                    <div>
-                        <input type="submit" value="Enviar Aporte">
-                        <input type="reset" value="Limpiar formulario">
-                        <!--Envia la info al archivo que figura en action-->
-                    </div>
-                </div>            
-            </div>
+                <div class="col-9 text-center">
+                    <h1 class="divLogoNombreSitio__nombreSitio" >Postas Americanas  </h1>
+                </div>
+                <div class="col-1">
+                    <a href="./ayuda.html"><img class="iconHelp " src="../img/help.png"></a>
+                </div>
+                <nav class="navMenu container">
+                    <ul class="nav nav-justified">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./novedades.html">Novedades</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Eventos</a>
+                            <ul class="nav">
+                                <li class="nav-item"><a class="nav-link" href="./proximos_eventos.html">Próximos Eventos</a></li>
+                                <li class="nav-item"><a class="nav-link" href="./construccion.html">Eventos Recientes</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="./mis_datos.html">Mis Datos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./construccion.html">Ingreso</a></li>
+                    </ul>
+                </nav>
+            </section>
         </div>
-    </form>
-    <footer class="classFooter">
-        <div class="textoFooter">
-            <label>Por una vida saludable, subite a la Cauconeta y no dejes pasar el tiempo!!!</label>
+    </header>    
+
+    <main class="d-flex justify-content-center align-items-center">
+        <section id="sectionPrincipalContacto" class="sectionPrincipal">
+            <article class="section_articlePrincipal" >
+                <h1 class="tituloArticulo">APORTES</h1>
+                <form id="formContacto" action="construccion.html" class= "form-horizontal novedadRadial ColorFondoGral"  >
+                    <div id="contactoDivGral" class="content">
+                        <div id="imgTrabajoEquipo" class="d-flex align-items-center; justify-content-center">
+                            <img src="../img/contacto.jpg" alt="Imagen Trabajo en equipo" class="img-responsive">
+                        </div>
+                        <div id="griddatosContacto">
+                            <br>
+                            <div class="form-group">
+                                <label id="labelNombre" class="form-label" for="nombre" >Nombre</label>
+                                <input class="divCargaDatosText" type="text" name="nombre">
+                            </div>
+                            <div class="form-group">
+                                <label id="labelTelefono" class="form-label" for="telefono">Telefono</label>
+                                <input class="divCargaDatosText" type="tel" name="telefono">
+                            </div>
+                            <div class="form-group">
+                                <label id="labelCorreo" class="form-label" for="correo">Correo</label>
+                                <input class="divCargaDatosText" type="email" name="correo">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="consulta">Consulta</label>
+                                <textarea id="textAreaConsulta"  class="divCargaDatosTextArea" name="consulta" rows="10" cols="40"></textarea>
+                            </div>
+                        </div>            
+                        <div id="botonesContacto" class="content">
+                                <input class="col-xs-4 col-md-5" type="submit" value="Enviar Aporte">
+                                <input class="col-xs-4 col-md-5" type="reset" value="Limpiar formulario">
+                        </div>
+                    </div>
+                </form>
+            </article>
+        </section>
+    </main>
+
+
+
+    <footer class="classFooter container">
+        <div class="textoFooter row">
+            <label class="col-12">Por una vida saludable, subite a la Cauconeta y no dejes pasar el tiempo!!!</label>
         </div>
-        <section>
-            <div class="divIconosFooter">
-                <a href="./mapadelsitio.html"><img class="imagenIconoRedes" src="../Img/organigrama_amarillo.png"></a>
+        <section class="row">
+            <div class="col-1 align-self-center divIconosFooter">
+                <a href="./mapadelsitio.html"><img class="btn btn-outline-light btn-floating m-1 imagenIconoRedes" src="../img/organigrama_amarillo.png"></a>
             </div>
-            <div class="divIconosRedes">
-                <a href="./contacto.html" ><img class="imagenIconoRedes" src="../Img/formulario-de-contacto.png"></a> 
-                <a href="https://wa.me/15551234567"><img class="imagenIconoRedes" src="../Img/whatsapp (1).png"></a>
-                <a href="https://www.instagram.com/invites/contact/?i=j58yqhtl06su&utm_content=h8u7da4"><img class="imagenIconoRedes" src="../Img/instagram.png"></a>
-                <a href="https://www.facebook.com"><img class="imagenIconoRedes" src="../Img/facebook (1).png"></a>
+            <div class="divIconosRedes row col-11 justify-content-end align-self-center ">
+                <a href="./contacto.html" ><img class="btn btn-outline-light btn-floating m-1 imagenIconoRedes" src="../img/formulario-de-contacto.png"></a> 
+                <a href="https://wa.me/15551234567"><img class="btn btn-outline-light btn-floating m-1 imagenIconoRedes" src="../img/whatsapp (1).png"></a>
+                <a href="https://www.instagram.com/invites/contact/?i=j58yqhtl06su&utm_content=h8u7da4"><img class="btn btn-outline-light btn-floating m-1 imagenIconoRedes" src="../img/instagram.png"></a>
+                <a href="https://www.facebook.com"><img class="btn btn-outline-light btn-floating m-1 imagenIconoRedes" src="../img/facebook (1).png"></a>
             </div>
         </section>
         <div class="derechosAutor">
@@ -84,6 +100,5 @@
             <p>© Todos los derechos reservados</p>
         </div>
     </footer>    
-  
 </body>
 </html>

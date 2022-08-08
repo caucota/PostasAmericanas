@@ -6,54 +6,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscripción Evento</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body class="classBody">
-    <header class="menuSticky">
-        <section class="headerSitio">
-            <img class="divLogoNombreSitio__imagenLogoSitio" src="../Img/IconoPostas.jpg">
-            <h1 class="divLogoNombreSitio__nombreSitio" >Postas Americanas  </h1>
-            <a href="./ayuda.html"><img class="iconHelp" src="../Img/help.png"></a>
-            <nav class="navMenu">
-                <ul>
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="./novedades.html">Novedades</a></li>
-                    <li class="liSeleccionado"><a href="./eventos.html">Eventos</a>
-                        <ul>
-                            <li><a href="./proximos_eventos.html">Próximos Eventos</a></li>
-                            <li><a href="./construccion.html">Eventos Recientes</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="./mis_datos.html">Mis Datos</a></li>
-                    <li><a href="./construccion.html">Ingreso</a></li>
-                </ul>
-            </nav>
-        </section>
-    </header>
+    <header >
+        <div class="container">
+            <section class="row">
+                <div class="col-2">
+                    <img class="divLogoNombreSitio__imagenLogoSitio" src="../img/IconoPostas.jpg">
+                </div>
+                <div class="col-9 text-center">
+                    <h1 class="divLogoNombreSitio__nombreSitio" >Postas Americanas  </h1>
+                </div>
+                <div class="col-1">
+                    <a href="./ayuda.html"><img class="iconHelp " src="../img/help.png"></a>
+                </div>
+                <nav class="navMenu container">
+                    <ul class="nav nav-justified">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./novedades.html">Novedades</a></li>
+                        <li class="nav-item liSeleccionado"><a class="nav-link" href="#">Eventos</a>
+                            <ul class="nav">
+                                <li class="nav-item"><a class="nav-link" href="./proximos_eventos.html">Próximos Eventos</a></li>
+                                <li class="nav-item"><a class="nav-link" href="./construccion.html">Eventos Recientes</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="./mis_datos.html">Mis Datos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./construccion.html">Ingreso</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </div>
+    </header>    
+
     <main>
-        <form action="felicitaciones.html" method="post">
+        <form action="felicitaciones.html" method="post" class="content">
             <section class="gridInscripcionEventosDatosPers">
-            
                 <header id="tituloInscripcion">
                     <h1 class="tituloArticulo">INSCRIPCION CLUB ALAS ARGENTINAS</h1>
                 </header>
-
                 <!--
                 <h2 id="h2DatosPersonalesInscripcion" class="h2Inscripcion">Datos Personales</h2>
                 -->
                 <div id="apellidoInscripcion" class="itemDatosInscripcion">
-                    <div >
-                        <label for="apellido">Apellido</label>
+                    <div class="form-group">
+                        <label class="form-label" for="apellido">Apellido</label>
                         <input id="inscripcionEventosinputApellido" type="text" name="apellido" required>
                     </div>
                 </div>
                 <div id="nombreInscripcion" class="itemDatosInscripcion">
-                    <div>
+                    <div class="form-group">
                         <label for="nombre">Nombre</label>
                         <input id="inscripcionEventosinputNombre" type="text" name="nombre" required>
                     </div>
                 </div>
                 <div id="documentoInscripcion" class="itemDatosInscripcion">
-                    <label for="documento">Documento</label>
+                    <label class="form-label" for="documento">Documento</label>
                     <input id="inscripcionEventosinputDocumento" type="number" name="documento" required>
                 </div>
                 <div id="generoInscripcion" class="itemDatosInscripcion">
@@ -68,41 +76,48 @@
                 </div>
                 <div id="equipoInscripcion" class="itemDatosInscripcion">
                     <label for="equipo">Equipo</label>
-                    <select id="inscripcionEventossectionEquipo" name="equipo">
-                        <option value=""></option>
+                    <select id="inscripcionEventossectionEquipo" name="equipo" class="form-select" aria-label="Default select example">
+                        <option selected>Elija el Equipo</option>
                         <option value="4fantasticos">Los 4 Fantasticos</option>
                         <option value="unclasico">Un Clásico</option>
                         <option value="siemprepresentes">Siempre Presentes</option>
                     </select>
 
                 </div>
-                <div id="datosContactoInscripcion">
-                    <h3>Datos Contacto en caso de Emergencia</h3>
-                    <div id="nombreContactoInscripcion">
-                        <label for="nombrecontacto">Nombre</label>
-                        <input id="inputnombreContacto"  type="text" name="nombrecontacto" placeholder="nombre de su contacto"
-                            required>
-                    </div>
-                    <div id="telefonoContactoInscripcion" >
-                        <label for="telcontacto">Telefono:</label>
-                        <input type="tel" name="telcontacto" required>
+                <div id="datosContactoInscripcion" class="content">
+                    <div class="row">
+                        <h3 class="col-12">Datos Contacto en caso de Emergencia</h3>
+                        <div id="nombreContactoInscripcion" class="col-12">
+                            <label for="nombrecontacto">Nombre:</label>
+                            <input id="inputnombreContacto"  type="text" name="nombrecontacto" placeholder="nombre de su contacto"
+                                required class="col-10">
+                        </div>
+                        <div id="telefonoContactoInscripcion" class="col-12">
+                            <label for="telcontacto">Telefono:</label>
+                            <input type="tel" name="telcontacto" required class="col-10">
+                        </div>
                     </div>
                 </div>
                 <!--
                 <h2 id="h2TerminosYCondInscripcion" class="h2Inscripcion">Términos y Condiciones</h2>
                 -->
-                <div id="divTerminosInscripcion" >
+                <div id="divTerminosInscripcion" class="content">
 
                     <h3>Términos y Condiciones</h3>
                     <!--iframe src="./terminos_y_condiciones_evento.html" frameborder="2"     style="width: 100%;"></iframe> -->
-                    <iframe src="./terminos_y_condiciones_evento.html" frameborder="2" class="frameTerminos"></iframe>
-                    <!--checkbox-->
-                    <div>
-                        <input type="checkbox" name="aceptarterminos" value=aceptotc>Acepto los términos y condiciones
+                    <div class="row">
+                        <iframe src="./terminos_y_condiciones_evento.html" frameborder="2" class="frameTerminos col-12"></iframe>
                     </div>
-                    <div id="inscEventosBotonesInscripcion" >
-                        <input type="submit" value="Enviar Inscripción">
-                        <input type="reset" value="Limpiar formulario">
+                    <!--checkbox-->
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="aceptotc" id="aceptarterminos">
+                        <label class="form-check-label" for="aceptarterminos">
+                            Acepto los términos y condiciones
+                        </label>
+                    </div>                    
+                    <div class="text-center" >
+                        <input class="btn btn-default" type="submit" value="Enviar Inscripción">
+                        <input class="btn btn-default" type="reset" value="Limpiar formulario">
                         <!--Envia la info al archivo que figura en action-->
                     </div>
                 </div>
@@ -110,29 +125,28 @@
             </section>
         </form>
     </main>
-    <footer class="classFooter">
-        <div class="textoFooter">
-            <label>Por una vida saludable, subite a la Cauconeta y no dejes pasar el tiempo!!!</label>
+    <footer class="classFooter container">
+        <div class="textoFooter row">
+            <label class="col-12">Por una vida saludable, subite a la Cauconeta y no dejes pasar el tiempo!!!</label>
         </div>
-        <section>
-            <div class="divIconosFooter">
-                <a href="./mapadelsitio.html"><img class="imagenIconoRedes" src="../Img/organigrama_amarillo.png"></a>
+        <section class="row">
+            <div class="col-1 align-self-center divIconosFooter">
+                <a href="./mapadelsitio.html"><img class="btn btn-outline-light btn-floating m-1 imagenIconoRedes" src="../img/organigrama_amarillo.png"></a>
             </div>
-            <div class="divIconosRedes">
-                <a href="./contacto.html" ><img class="imagenIconoRedes" src="../Img/formulario-de-contacto.png"></a> 
-                <a href="https://wa.me/15551234567"><img class="imagenIconoRedes" src="../Img/whatsapp (1).png"></a>
-                <a href="https://www.instagram.com/invites/contact/?i=j58yqhtl06su&utm_content=h8u7da4"><img class="imagenIconoRedes" src="../Img/instagram.png"></a>
-                <a href="https://www.facebook.com"><img class="imagenIconoRedes" src="../Img/facebook (1).png"></a>
+            <div class="divIconosRedes row col-11 justify-content-end align-self-center ">
+                <a href="./contacto.html" ><img class="btn btn-outline-light btn-floating m-1 imagenIconoRedes" src="../img/formulario-de-contacto.png"></a> 
+                <a href="https://wa.me/15551234567"><img class="btn btn-outline-light btn-floating m-1 imagenIconoRedes" src="../img/whatsapp (1).png"></a>
+                <a href="https://www.instagram.com/invites/contact/?i=j58yqhtl06su&utm_content=h8u7da4"><img class="btn btn-outline-light btn-floating m-1 imagenIconoRedes" src="../img/instagram.png"></a>
+                <a href="https://www.facebook.com"><img class="btn btn-outline-light btn-floating m-1 imagenIconoRedes" src="../img/facebook (1).png"></a>
             </div>
         </section>
         <div class="derechosAutor">
             <p>Córdoba - Argentina</p>
             <p>© Todos los derechos reservados</p>
         </div>
-
     </footer>    
-
-
-    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
