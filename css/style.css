@@ -1057,12 +1057,13 @@ th {
   border-style: double;
   border-color: blue;
   background-color: whitesmoke;
-  background-image: radial-gradient(rgba(0, 89, 255, 0.445), rgba(141, 216, 97, 0.644)) p;
-    background-image-margin-top: 1%;
-    background-image-margin-left: 2%;
-    background-image-margin-right: 2%;
-    background-image-margin-bottom: 2%;
-    background-image-grid-area: detalle; }
+  background-image: radial-gradient(rgba(0, 89, 255, 0.445), rgba(141, 216, 97, 0.644)); }
+  .detalleAyuda p {
+    margin-top: 1%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    grid-area: detalle; }
   .detalleAyuda h2 {
     background-image: linear-gradient(to right, rgba(0, 0, 99, 0.411), rgba(121, 121, 25, 0.521), rgba(90, 90, 155, 0.541), rgba(255, 166, 0, 0.281));
     grid-area: titulo; }
