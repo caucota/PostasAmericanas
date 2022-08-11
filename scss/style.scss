@@ -1,9 +1,8 @@
 @import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/liberation-serif.min.css");
-@import "elementos";
-@import "colores";
 @import "header";
-/*Como llamar: 'Liberation Serif', sans-serif;*/
-
+@import "colores";
+@import "elementos";
+@import "fuentes";
 
 /* -------------- MASTER  ------------- */
 *{
@@ -13,27 +12,128 @@
 }
 
 
-
-
 /**** MediaQuerys ***********/
+@media only screen and (min-width: 0px) and (max-width: 355px){
+    .divLogoNombreSitio__nombreSitio{
+        font-size: x-large;
+    }
+    .divLogoNombreSitio__imagenLogoSitio {
+        width: 80px;
+        height: 80px;
+    }
+    #sectionIconsFooter{
+        display: block;
+    }
+    #divIconosRedes{
+        display: flex;
+    }
+    .imagenFondo {
+        .h1Bienvenida{
+            font-size: 28px;
+        }
+    }
+
+}
+
+@media only screen and (min-width: 356px) and (max-width: 455px){
+    .divLogoNombreSitio__nombreSitio{
+        font-size: xx-large;
+    }
+    .divLogoNombreSitio__imagenLogoSitio {
+        width: 80px;
+        height: 80px;
+    }
+    #sectionIconsFooter{
+        display: flex;
+    }
+    .imagenFondo {
+        .h1Bienvenida{
+            font-size: 30px;
+        }
+    }
+}
 
 @media only screen and (min-width: 0px) and (max-width: 456px){
-    section #divcontainerButton {
-        padding-left: 13%;
+    
+    section {
+        #divcontainerButton {
+            padding-left: 13%;
+        }
     }
+
+    .divHeaderGeneralNombreSitio{
+        display: grid;
+        grid-template-areas: 
+        "icono nada ayuda"
+        "nombre nombre nombre"
+        ;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 0.6fr;
+    }
+
+    #divLogo{
+    /*#divHeaderGeneralNombreSitio{*/
+        grid-area: icono;
+    }
+
+    #divNombreSitio{
+        grid-area: nombre;
+        display: inline-block;
+        justify-self: center;
+    }
+    
+    #divHelp{
+        grid-area: ayuda;
+        justify-self: center;
+        align-self: center;
+    }
+
+    /* Media Query Felicitaciones */
+    #felicitacionesFelicitaciones{
+        width: 100%;
+    }
+    /* Fin Media Query Felicitaciones */
+
+    /* Media Query Contacto */
+    #formContacto {
+        width: 100%;
+    }
+    
+    #contactoDivGral {
+        display: block;    
+        align-content: center;
+        text-align:center;
+        width: 100%;
+    }
+
+    #textAreaConsulta{
+        width: 100%;
+    }    
+    /*Fin media Query Contacto */
 }
 
 @media only screen and (min-width: 457px) and (max-width: 767px){
-    section #divcontainerButton {
-        padding-left: 25%;
+    .divLogoNombreSitio__nombreSitio{
+        font-size: xx-large;
     }
-}
-@media only screen and (min-width: 0px) and (max-width: 600px){
-
-    #divBotonProximosEventos{
-        padding-bottom: 20%;
+    
+    section {
+        #divcontainerButton {
+            padding-left: 25%;
+        }
     }
 
+    .divLogoNombreSitio__imagenLogoSitio {
+        width: 100px;
+        height: 100px;
+    }  
+    
+    .imagenFondo {
+        .h1Bienvenida{
+            font-size: 30px;
+        }
+    }
+    /* FIN Media Query Header */    
 }
 
 
@@ -44,89 +144,70 @@
         width: 100%;
     }
     
-        
-
-
 
     .navMenu {
-        ul{ 
-            li{
+        ul {
+            li {
                 display: block;
                 width: 80%;
-                /*position: relative;*/
                 font-size: 15px;
-                /*border: 1px solid rgb(54, 54, 27);*/
             }
         }
     }
 
-    .imagenFondo {
-        .h1Bienvenida{
-            font-size: 38px;
-        }
-    }
     /* FIN Media Query Header */
 
-    /* Media Query Proximos Eventos */
-    main {
-        .gridProximosEventos {
-            display: block;
-            margin-left: 10%;
-            margin-right: 10%;
-            text-align: center;
-        }
-        .itemCuandoyDonde {
-            display: block;
-        }
-        .maps {
-            display: flex;
-            justify-content: center;
-            width: auto
-        }
-    }
 
-    section {
-        .footerGridProximosEventos{
-            display: block;
-            padding-bottom: 2%;
-        }
-        .categorias {
-            flex-direction: column;  
-            align-items: center; 
-            text-align: center;
-        }    
-    
-        .rangoEdades{
-            display: flex;
-            flex-direction: column;  
-            padding: 2%;
-        } 
-    }
 
-    div {
-        consideraciones {
+    /* Media Query Novedades */
+    .sectionNovedades {
+        .novedadLayoutIzq{
+            display: flex;
             flex-direction: column;
-            align-items: center;
-            text-align: center;
-            background-color: azure;
+            gap: 10px;
+            padding-bottom: 2%;
+            border-bottom: 15px solid rgba(128, 128, 128, 0.801);
         }
+        .novedadLayoutDer{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding-bottom: 2%;
+            border-bottom: 5p1x solid rgba(128, 128, 128, 0.801);
     }
 
-    .consideraciones {
-        .tituloGridHijo {
-            text-align: center;
-        }
+    /* FIN Media Query Novedades */
 
-        .ConsideracionesFlex{
-            display: inline-block;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1000px){
+    .navMenu {
+        ul {
+            li {
+                display: inline-table;
+                font-size: 17px;
+            }
         }
     }
-    
-    
+}
 
-
-
-    /* FIN Media Query Proximos Eventos */
+@media only screen and (min-width: 768px) and (max-width: 1595px)
+{
+    .fotoVideoDer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        #fotoNovedadDer {
+            transform: rotate(350deg) translate(30px, 30px);
+            height: 80%;
+            width: 30%;
+        }
+        #fotoNovedadDer2 {
+            transform: rotateZ(10deg) translate(0px, 10px) scale(-1, 1);
+            height: 60%;
+            width: 30%;
+        }
+    }
 
 
     /* Media Query Novedades */
@@ -147,24 +228,183 @@
         }
     }
 
-
     /* FIN Media Query Novedades */
 
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1000px){
-    .navMenu {
-        ul {
-            li{
-                display: inline-table;
-                font-size: 17px;
+
+
+@media only screen and (min-width: 1019px) {
+
+    /* Media Query min 1019px  INSCRIPCION EVENTOS  */
+    .gridInscripcionEventosDatosPers > * {
+        border: $verdeBorder;
+        background-color: whitesmoke;
+        background-image: $radialBackground-image;
+    }
+
+    .gridInscripcionEventosDatosPers {
+        display: grid;
+        grid-template-columns: 2fr 2fr 2fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 4fr ;
+        margin-left: 10%;
+        margin-right: 10%;
+
+        #tituloInscripcion {
+            grid-column: 1/4 ;
+            grid-row:1/1;
+        }
+        #apellidoInscripcion {
+            grid-column: 1/1 ;
+            grid-row:2/2;
+            border-right: 0;
+            #inscripcionEventosinputApellido {
+                margin-left: 21px;
             }
         }
-    }
-}
-@media only screen and (min-width: 0px) and (max-width: 1020px){
-    /* Media Query Inscripcion Evento */
+        #nombreInscripcion {
+            grid-column: 2/2 ;
+            grid-row:2/2;
+            border-left: 0;
+            #inscripcionEventosinputNombre {
+                margin-left: 21px;
+            }
+        }
+    
+        #documentoInscripcion {
+            grid-column: 1/1 ;
+            grid-row:3/3;
+            border-right: 0;
+            #inscripcionEventosinputDocumento {
+                margin-left: 1%;
+            }
+        }
 
+        #generoInscripcion {
+            grid-column: 2/2 ;
+            grid-row:3/3;
+            border-left: 0;
+        }
+
+        #fechaNacimientoInscripcion {
+            grid-column: 1/1 ;
+            grid-row:4/4;
+            border-right: 0;
+            #inscripcionFechaNacimientoInscripcion {
+                margin-left: 2%;
+            }        
+    
+        }
+
+        #equipoInscripcion {
+            grid-column: 2/2 ;
+            grid-row:4/4;
+            border-left: 0;
+            #inscripcionEventossectionEquipo{
+                width: 53%;
+                margin-left: 7%;
+            }
+    
+        }
+
+        #datosContactoInscripcion {
+            grid-column: 3/3 ;
+            grid-row:2/5;
+        }
+
+        #datosContactoInscripcion {
+            div {
+                align-content: space-between;
+                margin-top: 8%;
+                margin-left: 8%;
+                input{
+                    width: 90%;
+                }        
+            }
+        }
+
+        #divTerminosInscripcion {
+            grid-column: 1/4 ;
+            grid-row: 5/5;
+            padding-left: 5%;
+            padding-right: 5%;
+            padding-top: 1%;
+        }
+    }
+
+    .itemDatosInscripcion{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .frameTerminos{
+        width: 100%;
+    }
+    /* FIN Media Query min 1019px  INSCRIPCION EVENTOS  */
+}
+
+
+@media only screen and (max-width: 1020px){
+    
+    /* Media Query Proximos Eventos */
+    main {
+        .gridProximosEventos {
+            display: block;
+            margin-left: 10%;
+            margin-right: 10%;
+            text-align: center;
+
+            .itemCuandoyDonde {
+                display: block;
+            }
+            .maps {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                .divContenedorMaps{
+                    display: block;
+                    width: 100%;
+                    margin: 2%;
+                }
+            }
+
+            .categorias {
+                flex-direction: column;  
+                align-items: center; 
+                text-align: center;
+            }    
+        
+            .rangoEdades {
+                display: flex;
+                flex-direction: column;  
+                padding: 2%;
+            }
+        
+            .footerGridProximosEventos {
+                display: block;
+                padding-bottom: 2%;
+            }
+
+            .consideraciones {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                background-color: azure;
+                .tituloGridHijo {
+                    text-align: center;
+                }
+                .ConsideracionesFlex{
+                    display: inline-block;
+                    justify-items: center;
+                }
+            }
+            
+        }
+    }
+    /* FIN Media Query Proximos Eventos */
+
+    /* Media Query Inscripcion Evento */
     .gridInscripcionEventosDatosPers > * {
         border: $verdeBorder;
         background-color: whitesmoke;
@@ -173,149 +413,137 @@
         padding-bottom: 2%;
     }
 
-   .gridInscripcionEventosDatosPers{
-        display: grid;
-        grid-template-areas: 
-        "titulo titulo"
-        "apellido nombre"
-        "documento genero"
-        "fechanac equipo"
-        "contacto contacto"
-        "terminos terminos"
-        ;
-        margin-left: 5%;
-        margin-right: 5%;
-        #inscripcionEventosinputApellido{
-            margin-left: 7%;
-        }
-    
-        #tituloInscripcion {
-            grid-area: titulo;
-        }
-    
-        #apellidoInscripcion {
-            grid-area: apellido;
-            border-right: 0;
-        }
-    
-        #nombreInscripcion {
-            grid-area: nombre;
-            border-left: 0;
-        }
-    
-        #documentoInscripcion {
-            grid-area: documento;
-            border-right: 0;
-        }
-    
-        #generoInscripcion {
-            grid-area: genero;
-            border-left: 0;
-        }
-    
-        #fechaNacimientoInscripcion {
-            grid-area: fechanac;
-            border-right: 0;
-        }
-    
-        #equipoInscripcion {
-            grid-area: equipo;
-            border-left: 0;
-        }
-    
-        #datosContactoInscripcion {
-            grid-area: contacto;
+    form {
+        .gridInscripcionEventosDatosPers{
+            display: grid;
+            grid-template-areas: 
+            "titulo titulo"
+            "apellido nombre"
+            "documento genero"
+            "fechanac equipo"
+            "contacto contacto"
+            "terminos terminos"
+            ;
+            margin-left: 5%;
+            margin-right: 5%;
 
-        }
-    
+            #inscripcionEventosinputApellido{
+                margin-left: 7%;
+            }
         
-        #divTerminosInscripcion {
-            grid-area: terminos;
-            padding-left: 5%;
-            padding-right: 5%;
-            padding-top: 1%;
-        }    
-    
-        #inscripcionEventosinputApellido{
-            margin-left: 21px;
-        }
-        #inscripcionEventosinputNombre{
-            margin-left: 21px;
-        }
-    
-        #inscripcionEventosinputDocumento {
-            margin-left: 1%;
-        }
-        #inscripcionEventossectionEquipo{
-            width: 55%;
-            margin-left: 8%;
-    
-        }
-    
-        #inscripcionFechaNacimientoInscripcion {
-            margin-left: 2%;
-        }
-    } 
+            #tituloInscripcion {
+                grid-area: titulo;
+            }
+        
+            #apellidoInscripcion {
+                grid-area: apellido;
+                border-right: 0;
+            }
+        
+            #nombreInscripcion {
+                grid-area: nombre;
+                border-left: 0;
+            }
+        
+            #documentoInscripcion {
+                grid-area: documento;
+                border-right: 0;
+            }
+        
+            #generoInscripcion {
+                grid-area: genero;
+                border-left: 0;
+            }
+        
+            #fechaNacimientoInscripcion {
+                grid-area: fechanac;
+                border-right: 0;
+            }
+        
+            #equipoInscripcion {
+                grid-area: equipo;
+                border-left: 0;
+            }
+        
+            #datosContactoInscripcion {
+                grid-area: contacto;
+            }
+        
+            
+            #divTerminosInscripcion {
+                grid-area: terminos;
+                padding-left: 5%;
+                padding-right: 5%;
+                padding-top: 1%;
+            }    
+        
+            #inscripcionEventosinputApellido{
+                margin-left: 21px;
+            }
+        
+            #inscripcionEventosinputNombre{
+                margin-left: 21px;
+            }
+        
+            #inscripcionEventosinputDocumento {
+                margin-left: 1%;
+            }
+        
+            #inscripcionEventossectionEquipo{
+                width: 55%;
+                margin-left: 8%;
+            }
+        
+            #inscripcionFechaNacimientoInscripcion {
+                margin-left: 2%;
+            }
+        } 
+    }
+
     /* FIN Media Query Inscripcion Evento */
 
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1595px)
-{
-    .fotoVideoDer{
-        display: flex;
-        align-items: center;
-        justify-content: center;
 
-        #fotoNovedadDer {
-            transform: rotate(350deg) translate(30px, 30px);
-            height: 80%;
-            width: 30%;
-        }
-
-        #fotoNovedadDer2 {
-            transform: rotateZ(10deg) translate(0px, 10px) scale(-1, 1);
-            height: 60%;
-            width: 30%;
+@media screen and (min-width:451px) and (max-width: 1224px) {
+    /* Media query Contacto */
+    #sectionPrincipalContacto{
+        width: 80%;
+        #contactoDivGral {
+            display: block;    
+            align-content: center;
+            text-align:center;
+            width: 100%;
+            #textAreaConsulta{
+                width: auto;
+            }
         }
     }
 
-/* Media Query Novedades */
-    .sectionNovedades {
-        .novedadLayoutIzq{
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            padding-bottom: 2%;
-            border-bottom: 15px solid rgba(128, 128, 128, 0.801);
-        }
-
-        .novedadLayoutDer{
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            padding-bottom: 2%;
-            border-bottom: 5p1x solid rgba(128, 128, 128, 0.801);
-        }
-    }
-/* FIN Media Query Novedades */
+    /* Fin Media query Contacto */
 
 }
+
+/**** FIN MediaQuerys ***********/
+
 
 
 /* Footer */
-
 .classFooter {
-    /*background-color:rgba(0, 0, 0, 0.904) ;*/
-    /*display: grid;*/
     background-color:black;
-    padding-top: 2%;    
+    padding-top: 2%;      
+    .textoFooter{
+        text-align: center;
+        color: $azulBordesMenuPrincipal;
+    }
+
+    .derechosAutor {
+        text-align: center;
+        margin-top: 3%;
+        color: $azulBordesMenuPrincipal;
+    }    
 }
 
-.textoFooter{
-    text-align: center;
-    color: rgb(0, 102, 255);
-}
 .divIconosFooter {
     display: block;
     float: left;
@@ -325,35 +553,31 @@
                 transform: scale(1.3, 1.3);
             }
         }
+    }    
+}
+
+.imagenIconoRedes {
+    width: 55px;
+    height: 40px;
+    &:hover {
+        scale: (1.5, 1.5);
     }
 }
+
+
 
 .divIconosRedes {
     a {
         img{
             transform: scale(1,1);
             margin-right: 20px;
-            &:hover{
+            &hover{
                 transform: scale(1.3, 1.3);
             }
         }
     }
 }
 
-.imagenIconoRedes {
-    width: 55px;
-    height: 40px;
-
-    &:hover {
-        scale: (1.5, 1.5);
-    }
-}
-
-.derechosAutor {
-    text-align: center;
-    margin-top: 3%;
-    color: rgb(0, 102, 255);
-}
 
 
 /* Generales */
@@ -361,56 +585,51 @@
     padding-left: 1%; 
     padding-right: 1%;
     padding-top: 1%;
-    background-color: rgba(0, 0, 0, 0.904) ;    
-}
+    background-color: rgba(0, 0, 0, 0.904) ;
 
-.section_articlePrincipal {
-    border-style:inset;
-    display: inline-block;
-    background-color: whitesmoke;   
-    width: 100%; 
-}
+    .section_articlePrincipal {
+        border-style:inset;
+        display: inline-block;
+        background-color: whitesmoke;   
+        width: 100%; 
+    }
 
-.tituloArticulo {
-    font-family: 'Liberation Serif', sans-serif;
-    text-align: center;
-    font-size: xx-large; 
-    border-style: ridge;
-    background-color: rgba(57, 201, 141, 0.363);
-    margin: 10px;
-    background-image: linear-gradient(to right, rgba(0, 0, 255, 0.555), rgba(255, 255, 0, 0.521), rgba(90, 90, 155, 0.541), rgba(255, 166, 0, 0.514));
-}
-
-main{
-    background-color: black;
+    .tituloArticulo {
+        font-family: 'Liberation Serif', sans-serif;
+        text-align: center;
+        font-size: xx-large; 
+        border-style: ridge;
+        background-color: rgba(57, 201, 141, 0.363);
+        margin: 10px;
+        background-image: linear-gradient(to right, rgba(0, 0, 255, 0.555), rgba(255, 255, 0, 0.521), rgba(90, 90, 155, 0.541), rgba(255, 166, 0, 0.514));
+    }
 }
 /* -------------- FIN MASTER  ------------- */
 
 
 
-
+ 
 /* -------------- INDEX  ------------- */
 .imagenFondo{
     height: 800px; 
     background-image: linear-gradient(rgba(0, 0, 0, 0.692), rgba(0, 0, 0, 0.705)),  url('../img/foto_inicio_grey.jpg');
-
     background-repeat: no-repeat;
     background-position-x: center;
     background-size: cover;
     background-blend-mode: soft-light;
-}
 
-.h1Bienvenida{
-    font-size: 45px;
-    background: $colorFontBienvenida;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-    margin-top: 28%;
-    text-align: center;
-    animation-duration: 0.8s;
-    animation-name: animacionBienvenida;
-    animation-iteration-count: 1; /*infinite;*/
+    .h1Bienvenida{
+        font-size: 45px;
+        background: $colorFontBienvenida;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        margin-top: 28%;
+        text-align: center;
+        animation-duration: 0.8s;
+        animation-name: animacionBienvenida;
+        animation-iteration-count: 1; /*infinite;*/
+    }
 }
 
 @keyframes animacionBienvenida {
@@ -451,6 +670,7 @@ main{
         opacity: 0;
     }
 }
+/* FIN index - Burbuja Noticias */
 
 /* -------------- FIN INDEX  ------------- */
 
@@ -473,22 +693,6 @@ main{
     justify-content: space-evenly;
 }
 
-
-.resumenEvento {
-    font-size: x-large;
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-bottom: 2%;
-}
-
-.cuandoDonde {
-    font-size: medium;
-    padding-left: 5%;
-    padding-right: 5%;
-    margin-bottom: 150px;
-    height: auto;
-}
-
 table, th,  td {
     border: 1px solid black;
 }
@@ -496,195 +700,87 @@ th{
     font-style: inherit;
 }
 
+
+
 /* Grillas Proximos Eventos */
+
+.gridProximosEventos > * {
+    border: $verdeBorder;
+    background-color: whitesmoke;
+    background-image: $radialBackground-image;
+}
+
 .gridProximosEventos {
     display: grid;
     margin-left: 18%;
     margin-right: 10%;
     grid-template-columns: 1fr 2fr 2fr 1fr;
     grid-template-areas: 
-    "header header header"
+    "cabecera cabecera cabecera"
     "section1 section1 aside"
     "section2 section2 aside"
     "section3 section3 rango"
     "section4 section4 section4"
     "footer footer footer"    
-}
-
-.gridProximosEventos > * {
-    border: $verdeBorder;
-    background-color: whitesmoke;
-    background-image: $radialBackground-image;
-
-}
-
-.gridProximosEventos {
+    ;
     header {
-        grid-area: header;
+        grid-area: cabecera;
     }
     footer {
         grid-area: footer;
     }    
-}
 
-.itemsResumenEvento {
-    grid-area: section1;
-    padding-left: 2%;
-    padding-right: 2%;
-    font-size: x-large;
-}
+    .itemsResumenEvento {
+        grid-area: section1;
+        padding-left: 2%;
+        padding-right: 2%;
+        font-size: x-large;
+    }
+    
+    .itemCuandoyDonde {
+        grid-area: section2;
+        padding-left: 2%;
+    }
+    
+    .maps {
+        grid-area: aside;
+        padding-left:0;
+        .divContenedorMaps{
+            display: grid;
+            margin: 5%;
+        }
+    }
+    
+    .categorias {
+        grid-area: section3;
+        padding: 2%;
+    }
+    
+    .rangoEdades{
+        grid-area: rango;
+        .divContenedorTablaRangoEdades{
+            display: grid;
+            padding: 5%;
+        }
+    }
+    
+    .consideraciones{
+        grid-area: section4;
+        padding: 2%;
+        .ConsideracionesFlex{
+            display: flex;
+            flex-wrap: wrap;    
+            gap: 10px;
+        }    
+    }
 
-.itemCuandoyDonde{
-    grid-area: section2;
-    padding-left: 2%;
-}
-
-.maps {
-    grid-area: aside;
-    padding-left:0;
-}
-
-
-.categorias {
-    grid-area: section3;
-    padding: 2%;
-}
-
-.rangoEdades{
-    grid-area: rango;
-    padding-left: 20%;
-}
-
-.consideraciones{
-    grid-area: section4;
-    padding: 2%;
-}
-
-.ConsideracionesFlex{
-    display: flex;
-    flex-wrap: wrap;    
-    gap: 10px;
+    .tituloGridHijo{
+        margin: 20px;
+    }
     
 }
-.tituloGridHijo{
-    margin: 20px;
-}
+
 /* -------------- FIN PROXIMOS EVENTOS  ------------- */
-
-
-/*********** INSCRIPCION EVENTOS  ****************/
-
-@media only screen and (min-width: 1019px) {
-
-    .gridInscripcionEventosDatosPers > * {
-        border: $verdeBorder;
-        background-color: whitesmoke;
-        background-image: $radialBackground-image;
-    }
-
-    .gridInscripcionEventosDatosPers{
-        display: grid;
-        grid-template-columns: 2fr 2fr 2fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 4fr ;
-        margin-left: 10%;
-        margin-right: 10%;
-
-        #tituloInscripcion {
-            grid-column: 1/4 ;
-            grid-row:1/1;
-        }
-
-        #apellidoInscripcion {
-            grid-column: 1/1 ;
-            grid-row:2/2;
-            border-right: 0;
-        }
-
-        #nombreInscripcion {
-            grid-column: 2/2 ;
-            grid-row:2/2;
-            border-left: 0;
-        }        
-        #documentoInscripcion {
-            grid-column: 1/1 ;
-            grid-row:3/3;
-            border-right: 0;
-        }
-        #generoInscripcion {
-            grid-column: 2/2 ;
-            grid-row:3/3;
-            border-left: 0;
-        }
-    
-        #fechaNacimientoInscripcion {
-            grid-column: 1/1 ;
-            grid-row:4/4;
-            border-right: 0;
-        }
-        #equipoInscripcion {
-            grid-column: 2/2 ;
-            grid-row:4/4;
-            border-left: 0;
-        }
-    
-        #datosContactoInscripcion {
-            grid-column: 3/3 ;
-            grid-row:2/5;
-
-            div{
-                align-content: space-between;
-                margin-top: 8%;
-                margin-left: 8%;
-                input{
-                    width: 90%;
-                }
-            }
-        }
-    
-        #divTerminosInscripcion {
-            grid-column: 1/4 ;
-            grid-row: 5/5;
-            padding-left: 5%;
-            padding-right: 5%;
-            padding-top: 1%;
-        }
-
-        #inscripcionEventosinputApellido{
-            margin-left: 21px;
-        }
-        #inscripcionEventosinputNombre{
-            margin-left: 21px;
-        }
-    
-        #inscripcionEventosinputDocumento {
-            margin-left: 1%;
-        }
-        #inscripcionEventossectionEquipo{
-            width: 53%;
-            margin-left: 7%;
-    
-        }
-    
-        #inscripcionFechaNacimientoInscripcion {
-            margin-left: 2%;
-        }        
-    }
-
-
-    .itemDatosInscripcion{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .frameTerminos{
-        width: 100%;
-    }
-
-
-}
-
-/*********** FIN INSCRIPCION EVENTOS  ****************/
 
 /* -------------- FELICITACIONES  ------------- */
 #felicitacionesFelicitaciones{
@@ -695,185 +791,142 @@ th{
     padding-right: 20%;    
 }
 
-#imagenFelicitaciones{
-    width: 30%;
-    padding-left: 35%;
-}
-
 /* -------------- FIN FELICITACIONES  ------------- */
 
 
 /* -------------- MIS DATOS  ------------- */
-
-#sectionPrincipalMisDatos{
-    margin-left: 20%;
-    width: 60%;
-}
-
 #misDatosFormulario {
     margin: 10px;
-}
 
-#misDatosDatosPers {
-    text-align: center;
-}
+    #misDatosDatosPers {
+        text-align: center;
+    }
+    
+    #misDatosFoto {
+        text-align: center;
+        padding-left: 10%;
+    }
 
-#misDatosFoto {
-    text-align: center;
-    padding-left: 10%;
+    .misDatosFrameTerminos{
+        width: 100%;
+        height: 250px;
+        transition: height;
+        &:hover{
+            background-color: $colorHoverText;
+        }
+    }
+    #misDatosCheckAceptar {
+        margin-left: 20%;
+    
+    }
 }
-
 
 .divCargaDatosText {
     transition: height 1s;
     &:hover {
-        background-color: rgb(235, 243, 191);
+        background-color: $colorHoverText;
     }
 }
 
-
-.divCargaDatosTextArea {
-    transition: height 1s;
-    &:hover {
-        background-color: rgb(235, 243, 191);
-    }
-}
-.misDatosFrameTerminos{
-    margin-left: 12%;
-    margin-right: 12%;    
-    margin-bottom: 10px;
-    width: 60%;
-    height: 250px;
-    transition: height;
-}
-.textoTerminosDelSitio {
-    background-color: #359477;
-    height: 20px;
-
-    &:hover {
-
-        height: 300px;
-    }
-}
-
-#misDatosCheckAceptar {
-    margin-left: 20%;
-
-}
-
-
-.misDatosBotonIzq{
-    margin-right: 20px;
-    padding: 5px;
-}
-.misDatosBotonDer{
-    margin-left: 20px;
-    padding: 5px;
-}
 
 /* -------------- FIN MIS DATOS  ------------- */
 
 /* -------------- TERMINOS Y CONDICIONES DEL SITIO -----*/
-.classTerminos{
-    background-color: rgb(233, 234, 221);
-    transition: 1s;
-}
-.misDatosFrameTerminos:hover{
-    background-color: rgb(235, 243, 191);
+.textoTerminosDelSitio {
+    background-color: #359477;
+    height: 20px;
+    &:hover {
+        height: 300px;
+    }
 }
 /* -------------- FIN TERMINOS Y CONDICIONES DEL SITIO -----*/
 
 /* -------------- NOVEDADES  ------------- */
 
 .sectionNovedades {
-    /*background-color: rgba(195, 185, 241, 0.568);*/
     border-style:inset;
     background-color: whitesmoke;   
     width: 99%; 
-}
 
-.novedadLayoutIzq{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 3fr 1fr;
-    grid-template-areas: 
-        "titleIzq sectionRightIzq"
-        "sectionLeftIzq sectionRightIzq"
-        "fuenteIzq sectionRightIzq"
-        ;
-    padding-bottom: 2%;
-    border-bottom: 15px solid rgba(128, 128, 128, 0.801);
-}
+    .novedadLayoutIzq{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 3fr 1fr;
+        grid-template-areas: 
+            "titleIzq sectionRightIzq"
+            "sectionLeftIzq sectionRightIzq"
+            "fuenteIzq sectionRightIzq"
+            ;
+        padding-bottom: 2%;
+        border-bottom: 15px solid rgba(128, 128, 128, 0.801);
+    }
 
-.novedadLayoutDer{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 3fr 1fr;
-    grid-template-areas: 
-        "sectionRightDer titleDer "
-        "sectionRightDer sectionLeftDer"
-        "sectionRightDer fuenteDer"
-        ;
-    
-    border-bottom: 15px solid rgba(128, 128, 128, 0.801);
-}
+    .novedadLayoutDer{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 3fr 1fr;
+        grid-template-areas: 
+            "sectionRightDer titleDer "
+            "sectionRightDer sectionLeftDer"
+            "sectionRightDer fuenteDer"
+            ;
+        
+        border-bottom: 15px solid rgba(128, 128, 128, 0.801);
+    }
 
-.tituloNovedadIzq {
-    grid-area: titleIzq;
-    font-size: xx-large;
-    text-decoration: underline;
-    text-align: center;
-}
+    .tituloNovedadIzq {
+        grid-area: titleIzq;
+        font-size: xx-large;
+        text-decoration: underline;
+        text-align: center;
+    }
 
-.tituloNovedadDer {
-    grid-area: titleDer;
-    font-size: xx-large;
-    text-decoration: underline;
-    text-align: center;
-}
+    .tituloNovedadDer {
+        grid-area: titleDer;
+        font-size: xx-large;
+        text-decoration: underline;
+        text-align: center;
+    }
 
-.parrafoNovedadIzq {
-    grid-area: sectionLeftIzq;
-    font-size: x-large;
-    margin-left: 2%;
-}
-.parrafoNovedadDer {
-    grid-area: sectionLeftDer;
-    font-size: x-large;
-    margin-left: 2%;
-}
+    .parrafoNovedadIzq {
+        grid-area: sectionLeftIzq;
+        font-size: x-large;
+        margin-left: 2%;
+    }
+    .parrafoNovedadDer {
+        grid-area: sectionLeftDer;
+        font-size: x-large;
+        margin-left: 2%;
+    }
 
-.fotoVideoIzq {
-    grid-area: sectionRightIzq;
-    padding-left: 20%;
-    padding-right: 20%;
-}
+    .fotoVideoIzq {
+        grid-area: sectionRightIzq;
+        padding-left: 20%;
+        padding-right: 20%;
+        .imgvideoNovedad {
+            width: 100%;
+            height: 315px;
+            border: 0;
+        }
+        
+    }
 
-.fotoVideoDer {
-    grid-area: sectionRightDer;
-    /*transform: rotate(350deg);*/
-    /*transform: skew(10deg, 10deg);*/
-}
-#fotoNovedadDer {
-    transform: rotate(350deg) translate(30px, 30px);
-    height: 80%;
-    width: 50%;
+    .fotoVideoDer {
+        grid-area: sectionRightDer;
+    }
 
-}
-#fotoNovedadDer2 {
-    transform: rotateZ(10deg) translate(0px, 10px) scale(-0.8, 0.8);
-    height: 60%;
-    width: 40%;
+    #fotoNovedadDer {
+        transform: rotate(350deg) translate(30px, 30px);
+        height: 80%;
+        width: 50%;
 
-
-}
-
-.imgvideoNovedad {
-    width: 100%;
-    height: 315px;
-    border: 0;
-}
-
+    }
+    #fotoNovedadDer2 {
+        transform: rotateZ(10deg) translate(0px, 10px) scale(-0.8, 0.8);
+        height: 60%;
+        width: 40%;
+    }
+}    
 
 /* -------------- FIN NOVEDADES  ------------- */
 
@@ -882,83 +935,48 @@ th{
 
 #formContacto {
     width: auto;
-}
-
-#contactoDivGral {
-    border-style:inset; 
-    /*padding-left: 5%; */
-    /*padding-right: 50%;*/
-    align-items: center;
-    display: grid;    
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 2fr 0.5fr;
-    grid-template-areas: 
-    "imagenTrabajoEquipo datos"
-    "botones1 botones";
-    
-}
-
-#imgTrabajoEquipo {
-    grid-area: imagenTrabajoEquipo;
-}
-
-#botonesContacto{
-    grid-area: botones;
-
-}
-
-#griddatosContacto {
-    grid-area: datos;
-}
-
-
-#labelNombre{
-    padding-right: 3px;
-}
-
-#labelCorreo {
-    padding-right: 11px;
-}
-
-
-#textAreaConsulta{
-    padding-right: 15%;
-}
-
-@media screen and (max-width: 450px) {
-
-    #formContacto {
-        width: 100%;
-    }
-    
-    #contactoDivGral {
-        display: block;    
-        align-content: center;
-        text-align:center;
-        width: 100%;
-    }
-
-    #textAreaConsulta{
-        width: 100%;
-    }
-}
-
-
-
-@media screen and (min-width:451px) and (max-width: 1224px) {
-    #sectionPrincipalContacto{
-        width: 80%;
-    }
 
     #contactoDivGral {
-        display: block;    
-        align-content: center;
-        text-align:center;
-        width: 100%;
-    }
+        border-style:inset; 
+        align-items: center;
+        display: grid;    
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2fr 0.5fr;
+        grid-template-areas: 
+        "imagenTrabajoEquipo datos"
+        "botones1 botones";
+        
+        #imgTrabajoEquipo {
+            grid-area: imagenTrabajoEquipo;
+        }
 
-    #textAreaConsulta{
-        width: auto;
+        #botonesContacto{
+            grid-area: botones;
+        }
+
+        #griddatosContacto {
+            grid-area: datos;
+            #labelNombre{
+                padding-right: 3px;
+            }
+        
+            #labelCorreo {
+                padding-right: 11px;
+            }
+
+            #textAreaConsulta{
+                padding-right: 15%;
+            }
+                
+            .divCargaDatosTextArea {
+                transition: height 1s;
+                &:hover {
+                    background-color: $colorHoverText;
+                }
+            }
+        
+        }
+            
     }
 }
 
@@ -969,19 +987,13 @@ th{
 
 /*---------------- AYUDA ------------------*/
 
-#sectionAyuda {
-    background-color: black;
-    padding-top: 1%;
-    margin-left: 10%;
-    margin-right: 10%;
-    padding-right: 8%;
-}
 
 .detalleAyuda {
     display: grid;
     grid-template-areas: 
     "titulo titulo titulo"
     "detalle detalle icono"
+    "arriba arriba arriba"
     ;
     grid-template-columns: 1fr 2fr 0.5fr;
     margin: 1%;
@@ -989,39 +1001,43 @@ th{
     border-color: blue;
     background-color: whitesmoke;
     background-image: radial-gradient(rgba(0, 89, 255, 0.445), rgba(141, 216, 97, 0.644))
-}
 
-.detalleAyuda {
     p {
-    margin-top: 1%;
-    margin-left: 2%;
-    margin-right: 2%;
-    margin-bottom: 2%;
-    grid-area: detalle;
+        margin-top: 1%;
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-bottom: 2%;
+        grid-area: detalle;
     }
-    
+
     h2{
         background-image: linear-gradient(to right, rgba(0, 0, 99, 0.411), rgba(121, 121, 25, 0.521), rgba(90, 90, 155, 0.541), rgba(255, 166, 0, 0.281));
         grid-area: titulo;
     }
+
+    a{
+        grid-area: arriba;
+    }
+
+    .divImagenAyuda{
+        grid-area: icono;
+        align-self: center;
+        justify-self: center;
+        .iconosAyuda{
+            /*transform: scale(0.8,0.8);*/
+            animation-iteration-count: infinite;
+            animation-name: movimientoIcono;
+            animation-duration: 4s;
+            animation-timing-function: ease-in-out;
+            max-width:100%;
+            width:auto;
+            height:auto;    
+        }
+    }
+    
 }
 
-.divImagenAyuda{
-    grid-area: icono;
-    align-self: center;
-    justify-self: center;
-}
 
-.iconosAyuda{
-    /*transform: scale(0.8,0.8);*/
-    animation-iteration-count: infinite;
-    animation-name: movimientoIcono;
-    animation-duration: 4s;
-    animation-timing-function: ease-in-out;
-    max-width:100%;
-    width:auto;
-    height:auto;    
-}
 @keyframes movimientoIcono{
     0%{width: 50px; }
     25%{width: 60px; }
@@ -1029,5 +1045,6 @@ th{
     75%{width: 60px; }
     100%{width: 50px;}
 }
+
 
 /*---------------- FIN AYUDA ------------------*/

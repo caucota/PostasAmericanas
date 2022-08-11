@@ -12,16 +12,22 @@
 <body class="classBody">
     <header class="menuSticky">
         <div class="container">
-            <section class="row">
-                <div class="col-2">
+            <section class="divHeaderGeneralNombreSitio">
+                <div id="divLogo" class="col-2">
                     <img class="divLogoNombreSitio__imagenLogoSitio" src="../img/IconoPostas.jpg">
                 </div>
-                <div class="col-9 text-center">
-                    <h1 class="divLogoNombreSitio__nombreSitio" >Postas Americanas  </h1>
+                <div id="divNombreSitio" class="row col-12 col-sm-10 col-md-10 col-lg-10 col-xl-10 align-items-center">
+                    <div class="col-12 text-center" >
+                        <h1 class="divLogoNombreSitio__nombreSitio" >Postas Americanas  </h1>
+                    </div>
                 </div>
-                <div class="col-1">
+                <div id="divHelp" class="col-1">
                     <a href="./ayuda.html"><img class="iconHelp " src="../img/help.png"></a>
                 </div>
+            </section>
+        </div>
+        <div class="container">
+            <div class="row">
                 <nav class="navMenu container">
                     <ul class="nav nav-justified">
                         <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
@@ -36,7 +42,7 @@
                         <li class="nav-item"><a class="nav-link" href="./construccion.html">Ingreso</a></li>
                     </ul>
                 </nav>
-            </section>
+            </div>
         </div>
     </header>    
 
@@ -77,14 +83,11 @@
             </article>
         </section>
     </main>
-
-
-
     <footer class="classFooter container">
         <div class="textoFooter row">
             <label class="col-12">Por una vida saludable, subite a la Cauconeta y no dejes pasar el tiempo!!!</label>
         </div>
-        <section class="row">
+        <section id="sectionIconsFooter" class="row">
             <div class="col-1 align-self-center divIconosFooter">
                 <a href="./mapadelsitio.html"><img class="btn btn-outline-light btn-floating m-1 imagenIconoRedes" src="../img/organigrama_amarillo.png"></a>
             </div>

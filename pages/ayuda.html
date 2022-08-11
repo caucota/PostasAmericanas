@@ -8,25 +8,27 @@
     <link rel="stylesheet" href="../css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Rubik+Moonrocks&family=Reenie+Beanie&display=swap"  rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> 
 </head>
 <body class="classBody">
     <header class="menuSticky">
         <div class="container">
-            <section class="row">
-                <div class="col-2">
+            <section class="divHeaderGeneralNombreSitio">
+                <div id="divLogo" class="col-2">
                     <img class="divLogoNombreSitio__imagenLogoSitio" src="../img/IconoPostas.jpg">
                 </div>
-                <div class="col-9 text-center">
-                    <h1 class="divLogoNombreSitio__nombreSitio" >Postas Americanas  </h1>
+                <div id="divNombreSitio" class="row col-12 col-sm-10 col-md-10 col-lg-10 col-xl-10 align-items-center">
+                    <div class="col-12 text-center" >
+                        <h1 class="divLogoNombreSitio__nombreSitio" >Postas Americanas  </h1>
+                    </div>
                 </div>
-                <div class="col-1">
+                <div id="divHelp" class="col-1">
                     <a href="./ayuda.html"><img class="iconHelp " src="../img/help.png"></a>
                 </div>
+            </section>
+        </div>
+        <div class="container">
+            <div class="row">
                 <nav class="navMenu container">
                     <ul class="nav nav-justified">
                         <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
@@ -41,12 +43,12 @@
                         <li class="nav-item"><a class="nav-link" href="./construccion.html">Ingreso</a></li>
                     </ul>
                 </nav>
-            </section>
+            </div>
         </div>
     </header>    
     <main>
 
-        <h2 class="text-center">¿ DUDAS ?</h2>
+        <h2 class="text-center" style="color: wheat;">¿ DUDAS ?</h2>
         <div class="container">
             <ul class="nav nav-pills">
                 <li class="active"><a data-toggle="pill" href="#quienesSomos">¿Quienes somos?</a></li>
@@ -56,53 +58,50 @@
             </ul>
             
             <div class="tab-content">
-            <div id="quienesSomos" class="tab-pane fade in active">
-                <article class="detalleAyuda">
-                    <h2> ¿Quienes somos?</h2>
-                    <p id="ayudaQuienesSomos" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim recusandae dolore in quod eaque? Delectus nulla voluptas deserunt, provident amet exercitationem sit quia minima, corporis, nihil expedita pariatur necessitatibus accusamus consequatur odit doloribus possimus reiciendis sequi eaque dolorem perferendis eius error! Fuga aspernatur illo doloribus nesciunt cum sunt fugiat? Iste fugit aliquid ipsam veniam hic obcaecati deserunt, soluta asperiores non, ratione odio voluptas eaque illo voluptatibus dolorum natus nihil. Perferendis quo eligendi cum repudiandae! Voluptates perspiciatis voluptatibus similique impedit corporis qui voluptas. Iste, voluptate quibusdam minus officia laborum suscipit nihil mollitia quam atque et aliquam veritatis provident distinctio repellendus ad, nisi explicabo nostrum cumque iure. Autem totam, minus eius, beatae soluta cum tenetur culpa fuga asperiores odio ducimus veritatis, molestiae porro distinctio cumque assumenda vero facere similique inventore. Minus sit, ex nulla nobis explicabo id enim magni eaque sed autem, dignissimos, blanditiis impedit ut iste sequi asperiores dolores sunt delectus est eum quis illum tempora ipsa nesciunt. Aut laudantium illum optio, nostrum dolore at vel quas nisi iusto, voluptatem pariatur commodi. Iste vitae praesentium culpa saepe cum! Fuga, eius accusamus cum quibusdam, sit delectus qui aliquam eligendi itaque dolorem, magni corrupti voluptatibus saepe minima eos officia eaque amet beatae temporibus.</p>
-                    <div class="divImagenAyuda">
-                        <img class="iconosAyuda" src="../img/help2.png" alt="">
-                    </div>
-                </article>
-            </div>
-            <div id="comoMeRegistro" class="tab-pane fade">
-                <article class="detalleAyuda">
-                    <h2>¿Cómo me registro?</h2>
-                    <p id="ayudaComoMeRegistro" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim recusandae dolore in quod eaque? Delectus nulla voluptas deserunt, provident amet exercitationem sit quia minima, corporis, nihil expedita pariatur necessitatibus accusamus consequatur odit doloribus possimus reiciendis sequi eaque dolorem perferendis eius error! Fuga aspernatur illo doloribus nesciunt cum sunt fugiat? Iste fugit aliquid ipsam veniam hic obcaecati deserunt, soluta asperiores non, ratione odio voluptas eaque illo voluptatibus dolorum natus nihil. Perferendis quo eligendi cum repudiandae! Voluptates perspiciatis voluptatibus similique impedit corporis qui voluptas. Iste, voluptate quibusdam minus officia laborum suscipit nihil mollitia quam atque et aliquam veritatis provident distinctio repellendus ad, nisi explicabo nostrum cumque iure. Autem totam, minus eius, beatae soluta cum tenetur culpa fuga asperiores odio ducimus veritatis, molestiae porro distinctio cumque assumenda vero facere similique inventore. Minus sit, ex nulla nobis explicabo id enim magni eaque sed autem, dignissimos, blanditiis impedit ut iste sequi asperiores dolores sunt delectus est eum quis illum tempora ipsa nesciunt. Aut laudantium illum optio, nostrum dolore at vel quas nisi iusto, voluptatem pariatur commodi. Iste vitae praesentium culpa saepe cum! Fuga, eius accusamus cum quibusdam, sit delectus qui aliquam eligendi itaque dolorem, magni corrupti voluptatibus saepe minima eos officia eaque amet beatae temporibus.</p>
-                    <div class="divImagenAyuda">
-                        <img class="iconosAyuda" src="../img/Regisrar.jpg" alt="">
-                    </div>
-                </article>
-            </div>
-            <div id="dondeVeoLasFotos" class="tab-pane fade">
-                <article class="detalleAyuda">
-                    <h2>¿Dónde veo las fotos?</h2>
-                    <p id="ayudaComoVeoLasFotos">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim recusandae dolore in quod eaque? Delectus nulla voluptas deserunt, provident amet exercitationem sit quia minima, corporis, nihil expedita pariatur necessitatibus accusamus consequatur odit doloribus possimus reiciendis sequi eaque dolorem perferendis eius error! Fuga aspernatur illo doloribus nesciunt cum sunt fugiat? Iste fugit aliquid ipsam veniam hic obcaecati deserunt, soluta asperiores non, ratione odio voluptas eaque illo voluptatibus dolorum natus nihil. Perferendis quo eligendi cum repudiandae! Voluptates perspiciatis voluptatibus similique impedit corporis qui voluptas. Iste, voluptate quibusdam minus officia laborum suscipit nihil mollitia quam atque et aliquam veritatis provident distinctio repellendus ad, nisi explicabo nostrum cumque iure. Autem totam, minus eius, beatae soluta cum tenetur culpa fuga asperiores odio ducimus veritatis, molestiae porro distinctio cumque assumenda vero facere similique inventore. Minus sit, ex nulla nobis explicabo id enim magni eaque sed autem, dignissimos, blanditiis impedit ut iste sequi asperiores dolores sunt delectus est eum quis illum tempora ipsa nesciunt. Aut laudantium illum optio, nostrum dolore at vel quas nisi iusto, voluptatem pariatur commodi. Iste vitae praesentium culpa saepe cum! Fuga, eius accusamus cum quibusdam, sit delectus qui aliquam eligendi itaque dolorem, magni corrupti voluptatibus saepe minima eos officia eaque amet beatae temporibus.</p>
-                    <div class="divImagenAyuda">
-                        <img class="iconosAyuda" src="../img/album-de-fotos.png" alt="">
-                    </div>
-                </article>
-            </div>
-            <div id="porqueRegistrar" class="tab-pane fade">
-                <article class="detalleAyuda">
-                    <h2>¿Porque debo registrar mis datos en cada evento?</h2>
-                    <p id="ayudaPorqueRegistrarMisDatos">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim recusandae dolore in quod eaque? Delectus nulla voluptas deserunt, provident amet exercitationem sit quia minima, corporis, nihil expedita pariatur necessitatibus accusamus consequatur odit doloribus possimus reiciendis sequi eaque dolorem perferendis eius error! Fuga aspernatur illo doloribus nesciunt cum sunt fugiat? Iste fugit aliquid ipsam veniam hic obcaecati deserunt, soluta asperiores non, ratione odio voluptas eaque illo voluptatibus dolorum natus nihil. Perferendis quo eligendi cum repudiandae! Voluptates perspiciatis voluptatibus similique impedit corporis qui voluptas. Iste, voluptate quibusdam minus officia laborum suscipit nihil mollitia quam atque et aliquam veritatis provident distinctio repellendus ad, nisi explicabo nostrum cumque iure. Autem totam, minus eius, beatae soluta cum tenetur culpa fuga asperiores odio ducimus veritatis, molestiae porro distinctio cumque assumenda vero facere similique inventore. Minus sit, ex nulla nobis explicabo id enim magni eaque sed autem, dignissimos, blanditiis impedit ut iste sequi asperiores dolores sunt delectus est eum quis illum tempora ipsa nesciunt. Aut laudantium illum optio, nostrum dolore at vel quas nisi iusto, voluptatem pariatur commodi. Iste vitae praesentium culpa saepe cum! Fuga, eius accusamus cum quibusdam, sit delectus qui aliquam eligendi itaque dolorem, magni corrupti voluptatibus saepe minima eos officia eaque amet beatae temporibus.</p>
-                    <div class="divImagenAyuda">
-                        <img class="iconosAyuda" src="../img/problem.png" alt="">
-                    </div>
-                </article>
+                <div id="quienesSomos" class="tab-pane fade in active">
+                    <article class="detalleAyuda">
+                        <h2> ¿Quienes somos?</h2>
+                        <p id="ayudaQuienesSomos" class="text-reset">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim recusandae dolore in quod eaque? Delectus nulla voluptas deserunt, provident amet exercitationem sit quia minima, corporis, nihil expedita pariatur necessitatibus accusamus consequatur odit doloribus possimus reiciendis sequi eaque dolorem perferendis eius error! Fuga aspernatur illo doloribus nesciunt cum sunt fugiat? Iste fugit aliquid ipsam veniam hic obcaecati deserunt, soluta asperiores non, ratione odio voluptas eaque illo voluptatibus dolorum natus nihil. Perferendis quo eligendi cum repudiandae! Voluptates perspiciatis voluptatibus similique impedit corporis qui voluptas. Iste, voluptate quibusdam minus officia laborum suscipit nihil mollitia quam atque et aliquam veritatis provident distinctio repellendus ad, nisi explicabo nostrum cumque iure. Autem totam, minus eius, beatae soluta cum tenetur culpa fuga asperiores odio ducimus veritatis, molestiae porro distinctio cumque assumenda vero facere similique inventore. Minus sit, ex nulla nobis explicabo id enim magni eaque sed autem, dignissimos, blanditiis impedit ut iste sequi asperiores dolores sunt delectus est eum quis illum tempora ipsa nesciunt. Aut laudantium illum optio, nostrum dolore at vel quas nisi iusto, voluptatem pariatur commodi. Iste vitae praesentium culpa saepe cum! Fuga, eius accusamus cum quibusdam, sit delectus qui aliquam eligendi itaque dolorem, magni corrupti voluptatibus saepe minima eos officia eaque amet beatae temporibus.</p>
+                        <div class="divImagenAyuda">
+                            <img class="iconosAyuda" src="../img/help2.png" alt="">
+                        </div>
+                    </article>
+                </div>
+                <div id="comoMeRegistro" class="tab-pane fade">
+                    <article class="detalleAyuda">
+                        <h2>¿Cómo me registro?</h2>
+                        <p id="ayudaComoMeRegistro" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim recusandae dolore in quod eaque? Delectus nulla voluptas deserunt, provident amet exercitationem sit quia minima, corporis, nihil expedita pariatur necessitatibus accusamus consequatur odit doloribus possimus reiciendis sequi eaque dolorem perferendis eius error! Fuga aspernatur illo doloribus nesciunt cum sunt fugiat? Iste fugit aliquid ipsam veniam hic obcaecati deserunt, soluta asperiores non, ratione odio voluptas eaque illo voluptatibus dolorum natus nihil. Perferendis quo eligendi cum repudiandae! Voluptates perspiciatis voluptatibus similique impedit corporis qui voluptas. Iste, voluptate quibusdam minus officia laborum suscipit nihil mollitia quam atque et aliquam veritatis provident distinctio repellendus ad, nisi explicabo nostrum cumque iure. Autem totam, minus eius, beatae soluta cum tenetur culpa fuga asperiores odio ducimus veritatis, molestiae porro distinctio cumque assumenda vero facere similique inventore. Minus sit, ex nulla nobis explicabo id enim magni eaque sed autem, dignissimos, blanditiis impedit ut iste sequi asperiores dolores sunt delectus est eum quis illum tempora ipsa nesciunt. Aut laudantium illum optio, nostrum dolore at vel quas nisi iusto, voluptatem pariatur commodi. Iste vitae praesentium culpa saepe cum! Fuga, eius accusamus cum quibusdam, sit delectus qui aliquam eligendi itaque dolorem, magni corrupti voluptatibus saepe minima eos officia eaque amet beatae temporibus.</p>
+                        <div class="divImagenAyuda">
+                            <img class="iconosAyuda" src="../img/Regisrar.jpg" alt="">
+                        </div>
+                    </article>
+                </div>
+                <div id="dondeVeoLasFotos" class="tab-pane fade">
+                    <article class="detalleAyuda">
+                        <h2>¿Dónde veo las fotos?</h2>
+                        <p id="ayudaComoVeoLasFotos">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim recusandae dolore in quod eaque? Delectus nulla voluptas deserunt, provident amet exercitationem sit quia minima, corporis, nihil expedita pariatur necessitatibus accusamus consequatur odit doloribus possimus reiciendis sequi eaque dolorem perferendis eius error! Fuga aspernatur illo doloribus nesciunt cum sunt fugiat? Iste fugit aliquid ipsam veniam hic obcaecati deserunt, soluta asperiores non, ratione odio voluptas eaque illo voluptatibus dolorum natus nihil. Perferendis quo eligendi cum repudiandae! Voluptates perspiciatis voluptatibus similique impedit corporis qui voluptas. Iste, voluptate quibusdam minus officia laborum suscipit nihil mollitia quam atque et aliquam veritatis provident distinctio repellendus ad, nisi explicabo nostrum cumque iure. Autem totam, minus eius, beatae soluta cum tenetur culpa fuga asperiores odio ducimus veritatis, molestiae porro distinctio cumque assumenda vero facere similique inventore. Minus sit, ex nulla nobis explicabo id enim magni eaque sed autem, dignissimos, blanditiis impedit ut iste sequi asperiores dolores sunt delectus est eum quis illum tempora ipsa nesciunt. Aut laudantium illum optio, nostrum dolore at vel quas nisi iusto, voluptatem pariatur commodi. Iste vitae praesentium culpa saepe cum! Fuga, eius accusamus cum quibusdam, sit delectus qui aliquam eligendi itaque dolorem, magni corrupti voluptatibus saepe minima eos officia eaque amet beatae temporibus.</p>
+                        <div class="divImagenAyuda">
+                            <img class="iconosAyuda" src="../img/album-de-fotos.png" alt="">
+                        </div>
+                    </article>
+                </div>
+                <div id="porqueRegistrar" class="tab-pane fade">
+                    <article class="detalleAyuda">
+                        <h2>¿Porque debo registrar mis datos en cada evento?</h2>
+                        <p id="ayudaPorqueRegistrarMisDatos">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim recusandae dolore in quod eaque? Delectus nulla voluptas deserunt, provident amet exercitationem sit quia minima, corporis, nihil expedita pariatur necessitatibus accusamus consequatur odit doloribus possimus reiciendis sequi eaque dolorem perferendis eius error! Fuga aspernatur illo doloribus nesciunt cum sunt fugiat? Iste fugit aliquid ipsam veniam hic obcaecati deserunt, soluta asperiores non, ratione odio voluptas eaque illo voluptatibus dolorum natus nihil. Perferendis quo eligendi cum repudiandae! Voluptates perspiciatis voluptatibus similique impedit corporis qui voluptas. Iste, voluptate quibusdam minus officia laborum suscipit nihil mollitia quam atque et aliquam veritatis provident distinctio repellendus ad, nisi explicabo nostrum cumque iure. Autem totam, minus eius, beatae soluta cum tenetur culpa fuga asperiores odio ducimus veritatis, molestiae porro distinctio cumque assumenda vero facere similique inventore. Minus sit, ex nulla nobis explicabo id enim magni eaque sed autem, dignissimos, blanditiis impedit ut iste sequi asperiores dolores sunt delectus est eum quis illum tempora ipsa nesciunt. Aut laudantium illum optio, nostrum dolore at vel quas nisi iusto, voluptatem pariatur commodi. Iste vitae praesentium culpa saepe cum! Fuga, eius accusamus cum quibusdam, sit delectus qui aliquam eligendi itaque dolorem, magni corrupti voluptatibus saepe minima eos officia eaque amet beatae temporibus.</p>
+                        <div class="divImagenAyuda">
+                            <img class="iconosAyuda" src="../img/problem.png" alt="">
+                        </div>
+                    </article>
+                </div>
             </div>
         </div>
-    </div>
-
-
     </main>
-
     <footer class="classFooter container">
         <div class="textoFooter row">
             <label class="col-12">Por una vida saludable, subite a la Cauconeta y no dejes pasar el tiempo!!!</label>
         </div>
-        <section class="row">
+        <section id="sectionIconsFooter" class="row">
             <div class="col-1 align-self-center divIconosFooter">
                 <a href="./mapadelsitio.html"><img class="btn btn-outline-light btn-floating m-1 imagenIconoRedes" src="../img/organigrama_amarillo.png"></a>
             </div>
@@ -118,6 +117,8 @@
             <p>© Todos los derechos reservados</p>
         </div>
     </footer>    
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>

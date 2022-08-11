@@ -26,8 +26,18 @@
     }
 }
 
-/*menu*/
+.divHeaderGeneralNombreSitio{
+    display: flex;
+}
 
+.divNombreSitio{
+    padding: 0;
+    margin: 0;
+}
+
+
+
+/*menu*/
 .menuSticky {
     position: sticky;
     top: 0px;
@@ -41,61 +51,50 @@
         font-size: 0;
         margin-left: 0%;
         margin-top: 2%;
-
-        ul {
-            position: absolute;
-            display: none;
-            /*background-color: blanchedalmond;*/
-            border-color: $azulBordesMenuPrincipal;
-            border: 1px solid $azulBordesMenuPrincipal;
-            width: 225px;
-            padding-left: 0;
-            margin-top: 0%;
-        }
         li{
             display: inline-block;
             width: 15%;
-            /*position: relative;*/
             font-size: 17px;
-            /*border: 1px solid rgb(54, 54, 27);*/
             text-align: center;
             margin: 1%;
+            a {
+                text-decoration: none;
+            }
             ul {
+                position: absolute;
+                display: none;
+                border-color: $azulBordesMenuPrincipal;
+                border: 1px solid $azulBordesMenuPrincipal; /* rgb(54, 54, 27);*/
+                width: 225px;
+                padding-left: 0;
+                margin-top: 0%;
                 li {
                     display: block;
                     text-align: left;
                     width: auto;
-                    border: 1px solid $azulBordesMenuPrincipal;
+                    border: 1px solid $azulBordesMenuPrincipal; /* rgb(54, 54, 27);*/
                     background-color:rgba(0, 0, 0, 0.904) ;    
-                }
-            }
-            
-            a {
-                text-decoration: none;
-            }  
+                }            
+            } 
             &:hover ul {
                 display: block;
-            }
+            }       
         }
     }
 }
-
-
 
 .classBody {
     background-color: black;
     
 }
 
-
-nav{
-    ul{
-        li{
+nav {
+    ul {
+        li {
             border-style: inset;
             border-color: $azulBordesMenuPrincipal;
-            /*background-color: blanchedalmond;*/
             border-radius: 10%;
-            a{
+            a {
                 color: $azulBordesMenuPrincipal;
             }
             &:hover > a {
@@ -103,4 +102,8 @@ nav{
             }
         }
     }
+}
+
+.liSeleccionado {
+    border-color: rgb(0, 255, 191);
 }
