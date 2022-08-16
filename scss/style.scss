@@ -4,6 +4,40 @@
 @import "elementos";
 @import "fuentes";
 
+/*---------- MIXINS -------------*/
+@mixin setSizeWidthHeight($ancho, $alto) {
+    @if $ancho > 0 {
+        width: $ancho;
+    } ;
+    @if $alto > 0{
+        height: $alto;
+    };
+}
+/*---------- FIN MIXINS -------------*/
+
+/*---------- MAPS ----------------*/
+$mapContactoDivGral: (
+    modo_display_block:block,
+    modo_display_grid: grid,
+    estilo_borde: inset,
+    alineacion_contenido: center,
+    alineacion_items: center,
+    alineacion_texto : center,
+    ancho100p: 100%
+);
+
+$novedadLayout767: (
+    modo_display_flex: flex,
+    direction_flex: column,
+    gap_novedad: 10px,
+    padding-bottom_novedad: 2%,
+    border-bottom_novedad: 15px solid rgba(128, 128, 128, 0.801)
+);
+
+
+
+/*---------- FIN MAPS ----------------*/
+
 /* -------------- MASTER  ------------- */
 *{
     margin: 0;
@@ -34,7 +68,7 @@
     float: left;
     a {
         img {
-            hover{
+            &:hover{
                 transform: scale(1.3, 1.3);
             }
         }
@@ -42,8 +76,7 @@
 }
 
 .imagenIconoRedes {
-    width: 55px;
-    height: 40px;
+    @include setSizeWidthHeight(55px, 40px);
     &:hover {
         scale: (1.5, 1.5);
     }
@@ -56,7 +89,7 @@
         img{
             transform: scale(1,1);
             margin-right: 20px;
-            &hover{
+            &:hover{
                 transform: scale(1.3, 1.3);
             }
         }
@@ -76,11 +109,11 @@
         border-style:inset;
         display: inline-block;
         background-color: whitesmoke;   
-        width: 100%; 
+        @include setSizeWidthHeight(100%, 0);
     }
 
     .tituloArticulo {
-        font-family: 'Liberation Serif', sans-serif;
+        font-family: $font_family_titulo_articulo;
         text-align: center;
         font-size: xx-large; 
         border-style: ridge;
@@ -93,7 +126,7 @@
 
 
 
- 
+
 /* -------------- INDEX  ------------- */
 .imagenFondo{
     height: 800px; 
@@ -133,12 +166,11 @@
 #noticia{
     background-color: burlywood;
     top: 10%;
-    width: 170px;
-    height: 80px;
     position: fixed;
     right: 100px;
     text-align: center;
     border-radius: 50%;
+    @include setSizeWidthHeight(170px, 80px );
 }
 
 #noticia__titulo {
@@ -162,7 +194,7 @@
 /* -------------- CONSTRUCCION  ------------- */
 
 .imagenFondoConstruccion{
-    width: 30%;
+    @include setSizeWidthHeight(30%, 0);
     padding-left: 30%;
     background-repeat: no-repeat;
     background-position-x: center;
@@ -263,6 +295,8 @@ th{
         margin: 20px;
     }
     
+
+
 }
 
 /* -------------- FIN PROXIMOS EVENTOS  ------------- */
@@ -293,8 +327,7 @@ th{
     }
 
     .misDatosFrameTerminos{
-        width: 100%;
-        height: 250px;
+        @include setSizeWidthHeight(100%, 250px);
         transition: height;
         &:hover{
             background-color: $colorHoverText;
@@ -331,57 +364,59 @@ th{
 .sectionNovedades {
     border-style:inset;
     background-color: whitesmoke;   
-    width: 99%; 
+    @include setSizeWidthHeight(99%, 0); 
 
-    .novedadLayoutIzq{
+    .novedadLayout{
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 3fr 1fr;
+        border-bottom: 15px solid rgba(128, 128, 128, 0.801);
         grid-template-areas: 
             "titleIzq sectionRightIzq"
             "sectionLeftIzq sectionRightIzq"
             "fuenteIzq sectionRightIzq"
             ;
+    }
+    .novedadLayout--Izq{
+        @extend .novedadLayout;
         padding-bottom: 2%;
-        border-bottom: 15px solid rgba(128, 128, 128, 0.801);
     }
 
-    .novedadLayoutDer{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 3fr 1fr;
+    .novedadLayout--Der{
+        @extend .novedadLayout;
         grid-template-areas: 
             "sectionRightDer titleDer "
             "sectionRightDer sectionLeftDer"
             "sectionRightDer fuenteDer"
             ;
-        
-        border-bottom: 15px solid rgba(128, 128, 128, 0.801);
     }
 
-    .tituloNovedadIzq {
+    .tituloNovedad{
+        font-size: xx-large;
+        text-decoration: underline;
+        text-align: center;
+    }
+    .tituloNovedad--Izq {
+        @extend .tituloNovedad;
         grid-area: titleIzq;
-        font-size: xx-large;
-        text-decoration: underline;
-        text-align: center;
     }
 
-    .tituloNovedadDer {
+    .tituloNovedad--Der {
+        @extend .tituloNovedad;
         grid-area: titleDer;
-        font-size: xx-large;
-        text-decoration: underline;
-        text-align: center;
     }
 
-    .parrafoNovedadIzq {
-        grid-area: sectionLeftIzq;
+    .parrafoNovedad{
         font-size: x-large;
         margin-left: 2%;
     }
-    .parrafoNovedadDer {
+    .parrafoNovedad--Izq {
+        @extend .parrafoNovedad;
+        grid-area: sectionLeftIzq;
+    }
+    .parrafoNovedad--Der {
+        @extend .parrafoNovedad;
         grid-area: sectionLeftDer;
-        font-size: x-large;
-        margin-left: 2%;
     }
 
     .fotoVideoIzq {
@@ -389,8 +424,7 @@ th{
         padding-left: 20%;
         padding-right: 20%;
         .imgvideoNovedad {
-            width: 100%;
-            height: 315px;
+            @include setSizeWidthHeight(100%, 315px);
             border: 0;
         }
         
@@ -402,14 +436,12 @@ th{
 
     #fotoNovedadDer {
         transform: rotate(350deg) translate(30px, 30px);
-        height: 80%;
-        width: 50%;
+        @include setSizeWidthHeight(50%, 80%);
 
     }
     #fotoNovedadDer2 {
         transform: rotateZ(10deg) translate(0px, 10px) scale(-0.8, 0.8);
-        height: 60%;
-        width: 40%;
+        @include setSizeWidthHeight(40%, 60%);
     }
 }    
 
@@ -422,9 +454,9 @@ th{
     width: auto;
 
     #contactoDivGral {
-        border-style:inset; 
-        align-items: center;
-        display: grid;    
+        border-style:map-get($mapContactoDivGral, estilo_borde); 
+        align-items: map-get($mapContactoDivGral , alineacion_item );
+        display: map-get($mapContactoDivGral, modo_display_grid);    
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 2fr 0.5fr;
         grid-template-areas: 
@@ -545,32 +577,30 @@ th{
         justify-content: center;
         #fotoNovedadDer {
             transform: rotate(350deg) translate(30px, 30px);
-            height: 80%;
-            width: 30%;
+            @include setSizeWidthHeight(30%, 80%);
         }
         #fotoNovedadDer2 {
             transform: rotateZ(10deg) translate(0px, 10px) scale(-1, 1);
-            height: 60%;
-            width: 30%;
+            @include setSizeWidthHeight(30%, 60%);
         }
     }
 
 
     /* Media Query Novedades */
     .sectionNovedades {
-        .novedadLayoutIzq{
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            padding-bottom: 2%;
-            border-bottom: 15px solid rgba(128, 128, 128, 0.801);
+        .novedadLayout--Izq{
+            display: map-get($novedadLayout767, modo_display_flex);
+            flex-direction: map-get($novedadLayout767 , direction_flex);
+            gap: map-get($novedadLayout767, gap_novedad);
+            padding-bottom: map-get($novedadLayout767, padding-bottom_novedad);
+            border-bottom: map-get($novedadLayout767, border-bottom_novedad);
         }
-        .novedadLayoutDer{
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            padding-bottom: 2%;
-            border-bottom: 5p1x solid rgba(128, 128, 128, 0.801);
+        .novedadLayout--Der{
+            display: map-get($novedadLayout767, modo_display_flex);
+            flex-direction: map-get($novedadLayout767 , direction_flex);
+            gap: map-get($novedadLayout767, gap_novedad);
+            padding-bottom: map-get($novedadLayout767, padding-bottom_novedad);
+            border-bottom: map-get($novedadLayout767, border-bottom_novedad);
         }
     }
     /* FIN Media Query Novedades */
@@ -581,12 +611,12 @@ th{
 @media screen and (max-width: 1224px) {
     /* Media query Contacto */
     #sectionPrincipalContacto{
-        width: 80%;
+        @include setSizeWidthHeight(80%, 0);
         #contactoDivGral {
-            display: block;    
-            align-content: center;
-            text-align:center;
-            width: 100%;
+            display: map-get($mapContactoDivGral, modo_display_block);    
+            align-content: map-get($mapContactoDivGral, alineacion_contenido);
+            text-align: map-get($mapContactoDivGral, alineacion_texto);
+            width: map-get($mapContactoDivGral, ancho100p);
             #textAreaConsulta{
                 width: 20rem;
             }
@@ -928,19 +958,19 @@ th{
 
     /* Media Query Novedades */
     .sectionNovedades {
-        .novedadLayoutIzq{
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            padding-bottom: 2%;
-            border-bottom: 15px solid rgba(128, 128, 128, 0.801);
+        .novedadLayout--Izq{
+            display: map-get($novedadLayout767, modo_display_flex);
+            flex-direction: map-get($novedadLayout767 , direction_flex);
+            gap: map-get($novedadLayout767, gap_novedad);
+            padding-bottom: map-get($novedadLayout767, padding-bottom_novedad);
+            border-bottom: map-get($novedadLayout767, border-bottom_novedad);
         }
-        .novedadLayoutDer{
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            padding-bottom: 2%;
-            border-bottom: 5p1x solid rgba(128, 128, 128, 0.801);
+        .novedadLayout--Der{
+            display: map-get($novedadLayout767, modo_display_flex);
+            flex-direction: map-get($novedadLayout767 , direction_flex);
+            gap: map-get($novedadLayout767, gap_novedad);
+            padding-bottom: map-get($novedadLayout767, padding-bottom_novedad);
+            border-bottom: map-get($novedadLayout767, border-bottom_novedad);
         }
     }
     /* FIN Media Query Novedades */
@@ -1007,10 +1037,10 @@ th{
     }
 
     #contactoDivGral {
-        display: block;    
-        align-content: center;
-        text-align:center;
-        width: 100%;
+        display: map-get($mapContactoDivGral, modo_display_block );    
+        align-content: map-get($mapContactoDivGral, alineacion_contenido);
+        text-align: map-get($mapContactoDivGral, alineacion_texto);
+        width: map-get($mapContactoDivGral, ancho100p);
     }
 
     #sectionPrincipalContacto{

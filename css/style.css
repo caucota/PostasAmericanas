@@ -417,12 +417,10 @@ nav ul li {
   width: 100px;
   height: 100px; }
 
-/*font-family: 'Rubik Moonrocks', cursive;*/
-/*font-family: 'Fredericka the Great', cursive;*/
-/*font-family: 'Reenie Beanie', cursive;    */
-/*font-style: italic;*/
-/*color:rgb(228, 243, 22);*/
-/*text-shadow: black 0 -3px;*/
+/*---------- MIXINS -------------*/
+/*---------- FIN MIXINS -------------*/
+/*---------- MAPS ----------------*/
+/*---------- FIN MAPS ----------------*/
 /* -------------- MASTER  ------------- */
 * {
   margin: 0;
@@ -444,7 +442,7 @@ nav ul li {
 .divIconosFooter {
   display: block;
   float: left; }
-  .divIconosFooter a img hover {
+  .divIconosFooter a img:hover {
     transform: scale(1.3, 1.3); }
 
 .imagenIconoRedes {
@@ -456,7 +454,7 @@ nav ul li {
 .divIconosRedes a img {
   transform: scale(1, 1);
   margin-right: 20px; }
-  .divIconosRedes a imghover {
+  .divIconosRedes a img:hover {
     transform: scale(1.3, 1.3); }
 
 /* Generales */
@@ -471,7 +469,7 @@ nav ul li {
     background-color: whitesmoke;
     width: 100%; }
   .sectionPrincipal .tituloArticulo {
-    font-family: 'Liberation Serif', sans-serif;
+    font-family: "Liberation Serif", sans-serif;
     text-align: center;
     font-size: xx-large;
     border-style: ridge;
@@ -525,12 +523,12 @@ nav ul li {
 #noticia {
   background-color: burlywood;
   top: 10%;
-  width: 170px;
-  height: 80px;
   position: fixed;
   right: 100px;
   text-align: center;
-  border-radius: 50%; }
+  border-radius: 50%;
+  width: 170px;
+  height: 80px; }
 
 #noticia__titulo {
   text-decoration: underline;
@@ -659,37 +657,31 @@ th {
   border-style: inset;
   background-color: whitesmoke;
   width: 99%; }
-  .sectionNovedades .novedadLayoutIzq {
+  .sectionNovedades .novedadLayout, .sectionNovedades .novedadLayout--Izq, .sectionNovedades .novedadLayout--Der {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 3fr 1fr;
-    grid-template-areas: "titleIzq sectionRightIzq" "sectionLeftIzq sectionRightIzq" "fuenteIzq sectionRightIzq";
-    padding-bottom: 2%;
-    border-bottom: 15px solid rgba(128, 128, 128, 0.801); }
-  .sectionNovedades .novedadLayoutDer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 3fr 1fr;
-    grid-template-areas: "sectionRightDer titleDer " "sectionRightDer sectionLeftDer" "sectionRightDer fuenteDer";
-    border-bottom: 15px solid rgba(128, 128, 128, 0.801); }
-  .sectionNovedades .tituloNovedadIzq {
-    grid-area: titleIzq;
+    border-bottom: 15px solid rgba(128, 128, 128, 0.801);
+    grid-template-areas: "titleIzq sectionRightIzq" "sectionLeftIzq sectionRightIzq" "fuenteIzq sectionRightIzq"; }
+  .sectionNovedades .novedadLayout--Izq {
+    padding-bottom: 2%; }
+  .sectionNovedades .novedadLayout--Der {
+    grid-template-areas: "sectionRightDer titleDer " "sectionRightDer sectionLeftDer" "sectionRightDer fuenteDer"; }
+  .sectionNovedades .tituloNovedad, .sectionNovedades .tituloNovedad--Izq, .sectionNovedades .tituloNovedad--Der {
     font-size: xx-large;
     text-decoration: underline;
     text-align: center; }
-  .sectionNovedades .tituloNovedadDer {
-    grid-area: titleDer;
-    font-size: xx-large;
-    text-decoration: underline;
-    text-align: center; }
-  .sectionNovedades .parrafoNovedadIzq {
-    grid-area: sectionLeftIzq;
+  .sectionNovedades .tituloNovedad--Izq {
+    grid-area: titleIzq; }
+  .sectionNovedades .tituloNovedad--Der {
+    grid-area: titleDer; }
+  .sectionNovedades .parrafoNovedad, .sectionNovedades .parrafoNovedad--Izq, .sectionNovedades .parrafoNovedad--Der {
     font-size: x-large;
     margin-left: 2%; }
-  .sectionNovedades .parrafoNovedadDer {
-    grid-area: sectionLeftDer;
-    font-size: x-large;
-    margin-left: 2%; }
+  .sectionNovedades .parrafoNovedad--Izq {
+    grid-area: sectionLeftIzq; }
+  .sectionNovedades .parrafoNovedad--Der {
+    grid-area: sectionLeftDer; }
   .sectionNovedades .fotoVideoIzq {
     grid-area: sectionRightIzq;
     padding-left: 20%;
@@ -702,12 +694,12 @@ th {
     grid-area: sectionRightDer; }
   .sectionNovedades #fotoNovedadDer {
     transform: rotate(350deg) translate(30px, 30px);
-    height: 80%;
-    width: 50%; }
+    width: 50%;
+    height: 80%; }
   .sectionNovedades #fotoNovedadDer2 {
     transform: rotateZ(10deg) translate(0px, 10px) scale(-0.8, 0.8);
-    height: 60%;
-    width: 40%; }
+    width: 40%;
+    height: 60%; }
 
 /* -------------- FIN NOVEDADES  ------------- */
 /* -------------- CONTACTO ------------- */
@@ -715,7 +707,6 @@ th {
   width: auto; }
   #formContacto #contactoDivGral {
     border-style: inset;
-    align-items: center;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 2fr 0.5fr;
@@ -794,25 +785,25 @@ th {
     justify-content: center; }
     .fotoVideoDer #fotoNovedadDer {
       transform: rotate(350deg) translate(30px, 30px);
-      height: 80%;
-      width: 30%; }
+      width: 30%;
+      height: 80%; }
     .fotoVideoDer #fotoNovedadDer2 {
       transform: rotateZ(10deg) translate(0px, 10px) scale(-1, 1);
-      height: 60%;
-      width: 30%; }
+      width: 30%;
+      height: 60%; }
   /* Media Query Novedades */
-  .sectionNovedades .novedadLayoutIzq {
+  .sectionNovedades .novedadLayout--Izq {
     display: flex;
     flex-direction: column;
     gap: 10px;
     padding-bottom: 2%;
     border-bottom: 15px solid rgba(128, 128, 128, 0.801); }
-  .sectionNovedades .novedadLayoutDer {
+  .sectionNovedades .novedadLayout--Der {
     display: flex;
     flex-direction: column;
     gap: 10px;
     padding-bottom: 2%;
-    border-bottom: 5p1x solid rgba(128, 128, 128, 0.801); }
+    border-bottom: 15px solid rgba(128, 128, 128, 0.801); }
   /* FIN Media Query Novedades */ }
 
 /*@media screen and (min-width:451px) and (max-width: 1224px) {*/
@@ -1021,18 +1012,18 @@ th {
     font-size: 15px; }
   /* FIN Media Query Header */
   /* Media Query Novedades */
-  .sectionNovedades .novedadLayoutIzq {
+  .sectionNovedades .novedadLayout--Izq {
     display: flex;
     flex-direction: column;
     gap: 10px;
     padding-bottom: 2%;
     border-bottom: 15px solid rgba(128, 128, 128, 0.801); }
-  .sectionNovedades .novedadLayoutDer {
+  .sectionNovedades .novedadLayout--Der {
     display: flex;
     flex-direction: column;
     gap: 10px;
     padding-bottom: 2%;
-    border-bottom: 5p1x solid rgba(128, 128, 128, 0.801); }
+    border-bottom: 15px solid rgba(128, 128, 128, 0.801); }
   /* FIN Media Query Novedades */ }
 
 @media only screen and (max-width: 455px) {
