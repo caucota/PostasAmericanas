@@ -457,6 +457,10 @@ nav ul li {
   .divIconosRedes a img:hover {
     transform: scale(1.3, 1.3); }
 
+.aMenuPrincipal{
+    color:blue !important;
+  };
+
 /* Generales */
 .sectionPrincipal {
   padding-left: 1%;
@@ -574,7 +578,12 @@ th {
   margin-left: 18%;
   margin-right: 10%;
   grid-template-columns: 1fr 2fr 2fr 1fr;
-  grid-template-areas: "cabecera cabecera cabecera" "section1 section1 aside" "section2 section2 aside" "section3 section3 rango" "section4 section4 section4" "footer footer footer"; }
+  grid-template-areas: "cabecera cabecera cabecera"
+ "section1 section1 aside"
+ "section2 section2 aside"
+ "section3 section3 rango"
+ "section4 section4 section4"
+ "footer footer footer"; }
   .gridProximosEventos header {
     grid-area: cabecera; }
   .gridProximosEventos footer {
@@ -662,11 +671,15 @@ th {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 3fr 1fr;
     border-bottom: 15px solid rgba(128, 128, 128, 0.801);
-    grid-template-areas: "titleIzq sectionRightIzq" "sectionLeftIzq sectionRightIzq" "fuenteIzq sectionRightIzq"; }
+    grid-template-areas: "titleIzq sectionRightIzq"
+ "sectionLeftIzq sectionRightIzq"
+ "fuenteIzq sectionRightIzq"; }
   .sectionNovedades .novedadLayout--Izq {
     padding-bottom: 2%; }
   .sectionNovedades .novedadLayout--Der {
-    grid-template-areas: "sectionRightDer titleDer " "sectionRightDer sectionLeftDer" "sectionRightDer fuenteDer"; }
+    grid-template-areas: "sectionRightDer titleDer "
+ "sectionRightDer sectionLeftDer"
+ "sectionRightDer fuenteDer"; }
   .sectionNovedades .tituloNovedad, .sectionNovedades .tituloNovedad--Izq, .sectionNovedades .tituloNovedad--Der {
     font-size: xx-large;
     text-decoration: underline;
@@ -710,7 +723,8 @@ th {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 2fr 0.5fr;
-    grid-template-areas: "imagenTrabajoEquipo datos" "botones1 botones"; }
+    grid-template-areas: "imagenTrabajoEquipo datos"
+ "botones1 botones"; }
     #formContacto #contactoDivGral #imgTrabajoEquipo {
       grid-area: imagenTrabajoEquipo; }
     #formContacto #contactoDivGral #botonesContacto {
@@ -732,7 +746,9 @@ th {
 /*---------------- AYUDA ------------------*/
 .detalleAyuda {
   display: grid;
-  grid-template-areas: "titulo titulo titulo" "detalle detalle icono" "arriba arriba arriba";
+  grid-template-areas: "titulo titulo titulo"
+ "detalle detalle icono"
+ "arriba arriba arriba";
   grid-template-columns: 1fr 2fr 0.5fr;
   margin: 1%;
   border-style: double;
@@ -941,7 +957,12 @@ th {
     padding-bottom: 2%; }
   form .gridInscripcionEventosDatosPers {
     display: grid;
-    grid-template-areas: "titulo titulo" "apellido nombre" "documento genero" "fechanac equipo" "contacto contacto" "terminos terminos";
+    grid-template-areas: "titulo titulo"
+ "apellido nombre"
+ "documento genero"
+ "fechanac equipo"
+ "contacto contacto"
+ "terminos terminos";
     margin-left: 5%;
     margin-right: 5%; }
     form .gridInscripcionEventosDatosPers #inscripcionEventosinputApellido {
@@ -1040,7 +1061,8 @@ th {
     padding-left: 13%; }
   .divHeaderGeneralNombreSitio {
     display: grid;
-    grid-template-areas: "icono nada ayuda" "nombre nombre nombre";
+    grid-template-areas: "icono nada ayuda"
+ "nombre nombre nombre";
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 0.6fr 1fr; }
   #divLogo {
