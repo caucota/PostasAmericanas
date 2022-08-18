@@ -81,6 +81,33 @@
   /* IE6-9 fallback on horizontal gradient */ }
 
 /* Header */
+
+.navbar-nav > li{
+  margin-right:22px;
+  font-weight: 500;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.navbar-toggler {
+  background-color: rgb(0, 102, 255) !important;
+}
+
+.row > .navbar{
+  background-color: rgba(0, 0, 0, 0.904) !important;
+}
+.dropdown-menu > .dropdown-item{
+  background-color: rgba(0, 0, 0, 0.904);
+  color: #0066ff;
+  border: 1px solid #0066ff;
+
+}
+
+.dropdown > .dropdown-menu{
+  background-color: rgba(0, 0, 0, 0.904);
+  color: #0066ff;
+  border-color: #0066ff;
+}
 .divLogoNombreSitio__imagenLogoSitio {
   width: 120px;
   height: 120px; }
