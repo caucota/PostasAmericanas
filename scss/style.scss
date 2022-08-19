@@ -118,7 +118,7 @@ $novedadLayout767: (
         border-style: ridge;
         background-color: rgba(57, 201, 141, 0.363);
         margin: 10px;
-        background-image: linear-gradient(to right, rgba(0, 0, 255, 0.555), rgba(255, 255, 0, 0.521), rgba(90, 90, 155, 0.541), rgba(255, 166, 0, 0.514));
+        background-image: $gradienteBackroundImgTituloArt;
     }
 }
 /* -------------- FIN MASTER  ------------- */
@@ -299,6 +299,15 @@ th{
 }
 
 /* -------------- FIN PROXIMOS EVENTOS  ------------- */
+/* --------------- INSCRIPCION EVENTO ----------------*/
+.gridInscripcionEventosDatosPers > * {
+    border: $verdeBorder;
+    background-color: whitesmoke;
+    background-image: $radialBackground-image;
+}
+/* --------------- FIN INSCRIPCION EVENTO ----------------*/
+
+
 
 /* -------------- FELICITACIONES  ------------- */
 #felicitacionesFelicitaciones{
@@ -737,9 +746,7 @@ th{
     .frameTerminos{
         width: 100%;
     }
-/* FIN Media Query min 1019px  INSCRIPCION EVENTOS  */
-/*}
-@media only screen and (max-width: 1020px){*/
+    /* FIN Media Query min 1019px  INSCRIPCION EVENTOS  */
 
     /* Media Query Proximos Eventos */
     main {
@@ -898,20 +905,7 @@ th{
 
 }
 
-@media only screen and (max-width: 1000px){
-    .navMenu {
-        ul {
-            li {
-                display: inline-table;
-                font-size: 17px;
-            }
-        }
-    }
-}
 
-
-
-/*@media only screen and (min-width: 457px) and (max-width: 767px){*/
 @media only screen and (max-width: 767px){
     .divLogoNombreSitio__nombreSitio{
         font-size: xx-large;
@@ -941,15 +935,6 @@ th{
     }
 
 
-    .navMenu {
-        ul {
-            li {
-                display: block;
-                width: 80%;
-                font-size: 15px;
-            }
-        }
-    }
 
     /* FIN Media Query Header */
 

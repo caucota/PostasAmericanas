@@ -81,33 +81,6 @@
   /* IE6-9 fallback on horizontal gradient */ }
 
 /* Header */
-
-.navbar-nav > li{
-  margin-right:22px;
-  font-weight: 500;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-
-}
-
-.navbar-toggler {
-  background-color: rgb(0, 102, 255) !important;
-}
-
-.row > .navbar{
-  background-color: rgba(0, 0, 0, 0.904) !important;
-}
-.dropdown-menu > .dropdown-item{
-  background-color: rgba(0, 0, 0, 0.904);
-  color: #0066ff;
-  border: 1px solid #0066ff;
-
-}
-
-.dropdown > .dropdown-menu{
-  background-color: rgba(0, 0, 0, 0.904);
-  color: #0066ff;
-  border-color: #0066ff;
-}
 .divLogoNombreSitio__imagenLogoSitio {
   width: 120px;
   height: 120px; }
@@ -144,37 +117,30 @@
   padding-left: 0%;
   z-index: 100; }
 
-.navMenu ul {
-  list-style: none;
-  font-size: 0;
-  margin-left: 0%;
-  margin-top: 2%; }
-  .navMenu ul li {
-    display: inline-block;
-    width: 15%;
-    font-size: 17px;
-    text-align: center;
-    margin: 1%; }
-    .navMenu ul li a {
-      text-decoration: none; }
-    .navMenu ul li ul {
-      position: absolute;
-      display: none;
-      border-color: #0066ff;
-      border: 1px solid #0066ff;
-      /* rgb(54, 54, 27);*/
-      width: 225px;
-      padding-left: 0;
-      margin-top: 0%; }
-      .navMenu ul li ul li {
-        display: block;
-        text-align: left;
-        width: auto;
-        border: 1px solid #0066ff;
-        /* rgb(54, 54, 27);*/
-        background-color: rgba(0, 0, 0, 0.904); }
-    .navMenu ul li:hover ul {
-      display: block; }
+.row > .navbar {
+  background-color: rgba(0, 0, 0, 0.904) !important; }
+
+.dropdown .dropdown-menu {
+  background-color: rgba(0, 0, 0, 0.904);
+  color: #0066ff;
+  border-color: #0066ff; }
+  .dropdown .dropdown-menu .dropdown-item {
+    background-color: rgba(0, 0, 0, 0.904);
+    color: #0066ff;
+    border: 1px solid #0066ff; }
+
+.aMenuPrincipal {
+  color: #0066ff !important;
+  font-size: 16px; }
+
+.navbar-nav > li {
+  margin-right: 22px;
+  font-weight: 500;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #0066ff; }
+
+.navbar-toggler {
+  background-color: #0066ff !important; }
 
 .classBody {
   background-color: black; }
@@ -484,10 +450,6 @@ nav ul li {
   .divIconosRedes a img:hover {
     transform: scale(1.3, 1.3); }
 
-.aMenuPrincipal{
-    color:blue !important;
-  };
-
 /* Generales */
 .sectionPrincipal {
   padding-left: 1%;
@@ -605,12 +567,7 @@ th {
   margin-left: 18%;
   margin-right: 10%;
   grid-template-columns: 1fr 2fr 2fr 1fr;
-  grid-template-areas: "cabecera cabecera cabecera"
- "section1 section1 aside"
- "section2 section2 aside"
- "section3 section3 rango"
- "section4 section4 section4"
- "footer footer footer"; }
+  grid-template-areas: "cabecera cabecera cabecera" "section1 section1 aside" "section2 section2 aside" "section3 section3 rango" "section4 section4 section4" "footer footer footer"; }
   .gridProximosEventos header {
     grid-area: cabecera; }
   .gridProximosEventos footer {
@@ -648,6 +605,13 @@ th {
     margin: 20px; }
 
 /* -------------- FIN PROXIMOS EVENTOS  ------------- */
+/* --------------- INSCRIPCION EVENTO ----------------*/
+.gridInscripcionEventosDatosPers > * {
+  border: 2px solid rgba(57, 201, 141, 0.363);
+  background-color: whitesmoke;
+  background-image: radial-gradient(rgba(135, 233, 187, 0.356), rgba(184, 180, 128, 0.89)); }
+
+/* --------------- FIN INSCRIPCION EVENTO ----------------*/
 /* -------------- FELICITACIONES  ------------- */
 #felicitacionesFelicitaciones {
   text-align: center;
@@ -698,15 +662,11 @@ th {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 3fr 1fr;
     border-bottom: 15px solid rgba(128, 128, 128, 0.801);
-    grid-template-areas: "titleIzq sectionRightIzq"
- "sectionLeftIzq sectionRightIzq"
- "fuenteIzq sectionRightIzq"; }
+    grid-template-areas: "titleIzq sectionRightIzq" "sectionLeftIzq sectionRightIzq" "fuenteIzq sectionRightIzq"; }
   .sectionNovedades .novedadLayout--Izq {
     padding-bottom: 2%; }
   .sectionNovedades .novedadLayout--Der {
-    grid-template-areas: "sectionRightDer titleDer "
- "sectionRightDer sectionLeftDer"
- "sectionRightDer fuenteDer"; }
+    grid-template-areas: "sectionRightDer titleDer " "sectionRightDer sectionLeftDer" "sectionRightDer fuenteDer"; }
   .sectionNovedades .tituloNovedad, .sectionNovedades .tituloNovedad--Izq, .sectionNovedades .tituloNovedad--Der {
     font-size: xx-large;
     text-decoration: underline;
@@ -750,8 +710,7 @@ th {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 2fr 0.5fr;
-    grid-template-areas: "imagenTrabajoEquipo datos"
- "botones1 botones"; }
+    grid-template-areas: "imagenTrabajoEquipo datos" "botones1 botones"; }
     #formContacto #contactoDivGral #imgTrabajoEquipo {
       grid-area: imagenTrabajoEquipo; }
     #formContacto #contactoDivGral #botonesContacto {
@@ -773,9 +732,7 @@ th {
 /*---------------- AYUDA ------------------*/
 .detalleAyuda {
   display: grid;
-  grid-template-areas: "titulo titulo titulo"
- "detalle detalle icono"
- "arriba arriba arriba";
+  grid-template-areas: "titulo titulo titulo" "detalle detalle icono" "arriba arriba arriba";
   grid-template-columns: 1fr 2fr 0.5fr;
   margin: 1%;
   border-style: double;
@@ -935,8 +892,6 @@ th {
   .frameTerminos {
     width: 100%; }
   /* FIN Media Query min 1019px  INSCRIPCION EVENTOS  */
-  /*}
-@media only screen and (max-width: 1020px){*/
   /* Media Query Proximos Eventos */
   main .gridProximosEventos {
     display: block;
@@ -984,12 +939,7 @@ th {
     padding-bottom: 2%; }
   form .gridInscripcionEventosDatosPers {
     display: grid;
-    grid-template-areas: "titulo titulo"
- "apellido nombre"
- "documento genero"
- "fechanac equipo"
- "contacto contacto"
- "terminos terminos";
+    grid-template-areas: "titulo titulo" "apellido nombre" "documento genero" "fechanac equipo" "contacto contacto" "terminos terminos";
     margin-left: 5%;
     margin-right: 5%; }
     form .gridInscripcionEventosDatosPers #inscripcionEventosinputApellido {
@@ -1034,12 +984,6 @@ th {
       margin-left: 2%; }
   /* FIN Media Query Inscripcion Evento */ }
 
-@media only screen and (max-width: 1000px) {
-  .navMenu ul li {
-    display: inline-table;
-    font-size: 17px; } }
-
-/*@media only screen and (min-width: 457px) and (max-width: 767px){*/
 @media only screen and (max-width: 767px) {
   .divLogoNombreSitio__nombreSitio {
     font-size: xx-large; }
@@ -1054,10 +998,6 @@ th {
   .menuSticky {
     position: static;
     width: 100%; }
-  .navMenu ul li {
-    display: block;
-    width: 80%;
-    font-size: 15px; }
   /* FIN Media Query Header */
   /* Media Query Novedades */
   .sectionNovedades .novedadLayout--Izq {
@@ -1088,8 +1028,7 @@ th {
     padding-left: 13%; }
   .divHeaderGeneralNombreSitio {
     display: grid;
-    grid-template-areas: "icono nada ayuda"
- "nombre nombre nombre";
+    grid-template-areas: "icono nada ayuda" "nombre nombre nombre";
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 0.6fr 1fr; }
   #divLogo {
