@@ -64,48 +64,54 @@
             <article id="sectionPrincipalMisDatos" class="section_articlePrincipal col-md-10 col-lg-10 col-xl-9" >
                 <h1 class="tituloArticulo">INSCRIPCION CLUB ALAS ARGENTINAS</h1>
                 <form id="misDatosFormulario" class= "form-horizontal novedadRadial" action="felicitaciones.html" method="post">
-                    <div class="form-group" >
-                        <label for="apellido" class="form-label col-xl-2 col-sm-2">Apellido</label>
-                        <input  id="inscripcionEventosinputApellido" class="divCargaDatosText col-11 col-sm-7 col-md-7 col-lg-6 col-xl-4" type="text" name="apellido" required>
-                    </div>
-                    <div class="form-group" >
-                        <label for="apellido" class="form-label col-xl-2 col-sm-2">Nombre</label>
-                        <input  id="inscripcionEventosinputNombre" class="divCargaDatosText col-11 col-sm-7 col-md-7 col-lg-6 col-xl-4" type="text" name="apellido" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="documento" class="form-label col-xl-2 col-sm-2">Documento</label>
-                        <input id="inscripcionEventosinputDocumento" type="number" name="documento" required>
-                    </div>
-                    <div class="form-group">
-                        <div>
-                            <input type="radio" name="genero" value="Masculino">Masculino
-                            <input type="radio" name="genero" value="Femenino">Femenino
+                    <div class="row justify-content-center">
+                        <div class="form-group col-md-4">
+                            <label for="apellido" class="form-label">Apellido</label>
+                            <input  id="inscripcionEventosinputApellido" class="divCargaDatosText form-control" type="text" name="apellido" required>
+                        </div>
+                        <div class="form-group col-md-4" >
+                            <label for="nombre" class="form-label">Nombre</label>
+                            <input  id="inscripcionEventosinputNombre" class="divCargaDatosText form-control"  type="text" name="nombre" required>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label for="fechanacimiento">Fec.Nacimiento</label>
-                        <input id="inscripcionFechaNacimientoInscripcion" type="date" name="fechanacimiento" required>
+                    <div class="row justify-content-center">
+                        <div class="form-group col-md-4" >
+                            <label for="documento" class="form-label">Documento</label>
+                            <input id="inscripcionEventosinputDocumento" class="divCargaDatosText form-control" type="number" name="documento" required>
+                        </div>
+                        <div class="form-group col-md-4" >
+                            <div >
+                                <input type="radio" name="genero" value="Masculino">Masculino
+                                <input type="radio" name="genero" value="Femenino">Femenino
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="equipo">Equipo</label>
-                        <select id="inscripcionEventossectionEquipo" name="equipo" class="form-select" aria-label="Default select example">
-                            <option selected>Elija el Equipo</option>
-                            <option value="4fantasticos">Los 4 Fantasticos</option>
-                            <option value="unclasico">Un Clásico</option>
-                            <option value="siemprepresentes">Siempre Presentes</option>
-                        </select>
+                    <div class="row justify-content-center">
+                        <div class="form-group col-md-4">
+                            <label for="fechanacimiento">Fec.Nacimiento</label>
+                            <input id="inscripcionFechaNacimientoInscripcion" type="date" name="fechanacimiento" required>
+                        </div>
+                        <div class="form-group  col-md-4">
+                            <label for="equipo">Equipo</label>
+                            <select id="inscripcionEventossectionEquipo" name="equipo" class="form-select" aria-label="Default select example">
+                                <option selected>Elija el Equipo</option>
+                                <option value="4fantasticos">Los 4 Fantasticos</option>
+                                <option value="unclasico">Un Clásico</option>
+                                <option value="siemprepresentes">Siempre Presentes</option>
+                            </select>
+                        </div>
                     </div>
                     <div id="datosContactoInscripcion" class="content">
-                        <div class="row">
-                            <h3 class="col-12">Datos Contacto en caso de Emergencia</h3>
+                        <div class="row justify-content-center">
+                            <h3 class="justify-content-center">Datos Contacto en caso de Emergencia</h3>
                             <div id="nombreContactoInscripcion" class="col-12">
                                 <label for="nombrecontacto">Nombre:</label>
-                                <input id="inputnombreContacto"  type="text" name="nombrecontacto" placeholder="nombre de su contacto"
+                                <input id="inputnombreContacto"  class="form-control" type="text" name="nombrecontacto" placeholder="nombre de su contacto"
                                     required class="col-10">
                             </div>
                             <div id="telefonoContactoInscripcion" class="col-12">
                                 <label for="telcontacto">Telefono:</label>
-                                <input type="tel" name="telcontacto" required class="col-10">
+                                <input class="form-control" type="tel" name="telcontacto" required class="col-10">
                             </div>
                         </div>
                     </div>
