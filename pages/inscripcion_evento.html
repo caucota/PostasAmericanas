@@ -63,37 +63,37 @@
         <section class="sectionPrincipal row justify-content-center">
             <article id="sectionPrincipalMisDatos" class="section_articlePrincipal col-md-10 col-lg-10 col-xl-9" >
                 <h1 class="tituloArticulo">INSCRIPCION CLUB ALAS ARGENTINAS</h1>
-                <form id="misDatosFormulario" class= "form-horizontal novedadRadial" action="felicitaciones.html" method="post">
+                <form id="formInscripcionEvento" class= "form-horizontal novedadRadial" action="felicitaciones.html" method="post">
                     <div class="row justify-content-center">
-                        <div class="form-group col-md-4">
+                        <div class="form-group col-10 col-md-5">
                             <label for="apellido" class="form-label">Apellido</label>
                             <input  id="inscripcionEventosinputApellido" class="divCargaDatosText form-control" type="text" name="apellido" required>
                         </div>
-                        <div class="form-group col-md-4" >
+                        <div class="form-group col-10 col-md-5" >
                             <label for="nombre" class="form-label">Nombre</label>
                             <input  id="inscripcionEventosinputNombre" class="divCargaDatosText form-control"  type="text" name="nombre" required>
                         </div>
                     </div>
                     <div class="row justify-content-center">
-                        <div class="form-group col-md-4" >
+                        <div class="form-group col-10 col-md-5" >
                             <label for="documento" class="form-label">Documento</label>
                             <input id="inscripcionEventosinputDocumento" class="divCargaDatosText form-control" type="number" name="documento" required>
                         </div>
-                        <div class="form-group col-md-4" >
-                            <div >
-                                <input type="radio" name="genero" value="Masculino">Masculino
-                                <input type="radio" name="genero" value="Femenino">Femenino
+                        <div class="form-check col-10 col-md-5 align-self-center" >
+                            <div class="row">
+                                <input type="radio" name="genero" value="Masculino" class="col-2">Masculino
+                                <input type="radio" name="genero" value="Femenino" class="col-2">Femenino
                             </div>
                         </div>
                     </div>
                     <div class="row justify-content-center">
-                        <div class="form-group col-md-4">
-                            <label for="fechanacimiento">Fec.Nacimiento</label>
-                            <input id="inscripcionFechaNacimientoInscripcion" type="date" name="fechanacimiento" required>
+                        <div class="form-group col-10 col-md-5">
+                            <label for="fechanacimiento" class="form-label">Fec.Nacimiento</label>
+                            <input id="inscripcionFechaNacimientoInscripcion" class="form-control" type="date" name="fechanacimiento" required>
                         </div>
-                        <div class="form-group  col-md-4">
-                            <label for="equipo">Equipo</label>
-                            <select id="inscripcionEventossectionEquipo" name="equipo" class="form-select" aria-label="Default select example">
+                        <div class="form-group col-10 col-md-5">
+                            <label for="equipo" class="form-label" >Equipo</label>
+                            <select id="inscripcionEventossectionEquipo" name="equipo" class="form-select form-control" aria-label="Default select example">
                                 <option selected>Elija el Equipo</option>
                                 <option value="4fantasticos">Los 4 Fantasticos</option>
                                 <option value="unclasico">Un Clásico</option>
@@ -102,132 +102,51 @@
                         </div>
                     </div>
                     <div id="datosContactoInscripcion" class="content">
+                        <div class="row justify-content-center text-center col-12">
+                            <h3>Datos Contacto en caso de Emergencia</h3>
+                        </div>
                         <div class="row justify-content-center">
-                            <h3 class="justify-content-center">Datos Contacto en caso de Emergencia</h3>
-                            <div id="nombreContactoInscripcion" class="col-12">
+                            <div id="nombreContactoInscripcion" class="form-group col-10 col-md-5">
                                 <label for="nombrecontacto">Nombre:</label>
                                 <input id="inputnombreContacto"  class="form-control" type="text" name="nombrecontacto" placeholder="nombre de su contacto"
                                     required class="col-10">
                             </div>
-                            <div id="telefonoContactoInscripcion" class="col-12">
+                            <div id="telefonoContactoInscripcion" class="form-group col-10 col-md-5">
                                 <label for="telcontacto">Telefono:</label>
                                 <input class="form-control" type="tel" name="telcontacto" required class="col-10">
                             </div>
                         </div>
                     </div>
                     <div id="divTerminosInscripcion" class="content">
-            
-                        <h3>Términos y Condiciones</h3>
+                        <div class="row justify-content-center text-center col-12">
+                            <h3>Términos y Condiciones</h3>
+                        </div>
                         <!--iframe src="./terminos_y_condiciones_evento.html" frameborder="2"     style="width: 100%;"></iframe> -->
-                        <div class="row">
-                            <iframe src="./terminos_y_condiciones_evento.html" frameborder="2" class="frameTerminos col-10"></iframe>
+                        <div class="row justify-content-center">
+                            <iframe src="./terminos_y_condiciones_evento.html" frameborder="1" class="frameTerminos col-10"></iframe>
                         </div>
                         <!--checkbox-->
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="aceptotc" id="aceptarterminos">
-                            <label class="form-check-label" for="aceptarterminos">
-                                Acepto los términos y condiciones
-                            </label>
-                        </div>                    
-                        <div class="text-center" >
-                            <input class="btn btn-default" type="submit" value="Enviar Inscripción">
-                            <input class="btn btn-default" type="reset" value="Limpiar formulario">
-                            <!--Envia la info al archivo que figura en action-->
+                        <div class="row justify-content-center">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="aceptotc" id="aceptarterminos">
+                                <label class="form-check-label" for="aceptarterminos">
+                                    Acepto los términos y condiciones
+                                </label>
+                            </div>                    
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="text-center" >
+                                <input class="btn btn-info" type="submit" value="Enviar Inscripción">
+                                <input class="btn btn-info" type="reset" value="Limpiar formulario">
+                                <!--Envia la info al archivo que figura en action-->
+                            </div>
                         </div>
                     </div>
-
-
                 </form>
             </article>
         </section>
     </main>
 
-    <main class="content">
-        <section class="sectionPrincipal row justify-content-center">
-                <section class="gridInscripcionEventosDatosPers">
-                    <!-- <article id="sectionPrincipalMisDatos" class="section_articlePrincipal col-md-10 col-lg-10 col-xl-12" > --->
-                        <header id="tituloInscripcion">
-                            <h1 class="tituloArticulo">INSCRIPCION CLUB ALAS ARGENTINAS</h1>
-                        </header>
-                        <form action="felicitaciones.html" method="post" class="form-horizontal novedadRadial">
-                            <div id="apellidoInscripcion" class="itemDatosInscripcion">
-                                <div class="form-group">
-                                    <label class="form-label" for="apellido">Apellido</label>
-                                    <input id="inscripcionEventosinputApellido" type="text" name="apellido" required>
-                                </div>
-                            </div>
-                            <div id="nombreInscripcion" class="itemDatosInscripcion">
-                                <div class="form-group">
-                                    <label for="nombre">Nombre</label>
-                                    <input id="inscripcionEventosinputNombre" type="text" name="nombre" required>
-                                </div>
-                            </div>
-                            <div id="documentoInscripcion" class="itemDatosInscripcion">
-                                <label class="form-label" for="documento">Documento</label>
-                                <input id="inscripcionEventosinputDocumento" type="number" name="documento" required>
-                            </div>
-                            <div id="generoInscripcion" class="itemDatosInscripcion">
-                                <div>
-                                    <input type="radio" name="genero" value="Masculino">Masculino
-                                    <input type="radio" name="genero" value="Femenino">Femenino
-                                </div>
-                            </div>
-                            <div id="fechaNacimientoInscripcion" class="itemDatosInscripcion">
-                                <label for="fechanacimiento">Fec.Nacimiento</label>
-                                <input id="inscripcionFechaNacimientoInscripcion" type="date" name="fechanacimiento" required>
-                            </div>
-                            <div id="equipoInscripcion" class="itemDatosInscripcion">
-                                <label for="equipo">Equipo</label>
-                                <select id="inscripcionEventossectionEquipo" name="equipo" class="form-select" aria-label="Default select example">
-                                    <option selected>Elija el Equipo</option>
-                                    <option value="4fantasticos">Los 4 Fantasticos</option>
-                                    <option value="unclasico">Un Clásico</option>
-                                    <option value="siemprepresentes">Siempre Presentes</option>
-                                </select>
-            
-                            </div>
-                            <div id="datosContactoInscripcion" class="content">
-                                <div class="row">
-                                    <h3 class="col-12">Datos Contacto en caso de Emergencia</h3>
-                                    <div id="nombreContactoInscripcion" class="col-12">
-                                        <label for="nombrecontacto">Nombre:</label>
-                                        <input id="inputnombreContacto"  type="text" name="nombrecontacto" placeholder="nombre de su contacto"
-                                            required class="col-10">
-                                    </div>
-                                    <div id="telefonoContactoInscripcion" class="col-12">
-                                        <label for="telcontacto">Telefono:</label>
-                                        <input type="tel" name="telcontacto" required class="col-10">
-                                    </div>
-                                </div>
-                            </div>
-                        <!--
-                        <h2 id="h2TerminosYCondInscripcion" class="h2Inscripcion">Términos y Condiciones</h2>
-                        -->
-                            <div id="divTerminosInscripcion" class="content">
-            
-                                <h3>Términos y Condiciones</h3>
-                                <!--iframe src="./terminos_y_condiciones_evento.html" frameborder="2"     style="width: 100%;"></iframe> -->
-                                <div class="row">
-                                    <iframe src="./terminos_y_condiciones_evento.html" frameborder="2" class="frameTerminos col-12"></iframe>
-                                </div>
-                                <!--checkbox-->
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="aceptotc" id="aceptarterminos">
-                                    <label class="form-check-label" for="aceptarterminos">
-                                        Acepto los términos y condiciones
-                                    </label>
-                                </div>                    
-                                <div class="text-center" >
-                                    <input class="btn btn-default" type="submit" value="Enviar Inscripción">
-                                    <input class="btn btn-default" type="reset" value="Limpiar formulario">
-                                    <!--Envia la info al archivo que figura en action-->
-                                </div>
-                            </div>
-                        </form>
-                    <!-- </article> -->
-                </section>
-        </section>
-    </main>
     <footer class="classFooter container">
         <div class="textoFooter row">
             <label class="col-12">Por una vida saludable, subite a la Cauconeta y no dejes pasar el tiempo!!!</label>

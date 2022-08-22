@@ -300,11 +300,11 @@ th{
 
 /* -------------- FIN PROXIMOS EVENTOS  ------------- */
 /* --------------- INSCRIPCION EVENTO ----------------*/
-.gridInscripcionEventosDatosPers > * {
-    border: $verdeBorder;
-    background-color: whitesmoke;
-    background-image: $radialBackground-image;
+#formInscripcionEvento {
+    margin: 10px;
+    padding-bottom: 15px;
 }
+
 /* --------------- FIN INSCRIPCION EVENTO ----------------*/
 
 
@@ -473,6 +473,8 @@ th{
         
         #imgTrabajoEquipo {
             grid-area: imagenTrabajoEquipo;
+            padding: 5%;
+
         }
 
         #botonesContacto{
@@ -571,7 +573,17 @@ th{
     100%{width: 50px;}
 }
 
+#myTabAyuda {
+    .active{
+        background-color: #337ab7;        
+    }
+    .nav-item{
+        .nav-link{
+            color: whitesmoke !important;
 
+        }
+    }
+}
 /*---------------- FIN AYUDA ------------------*/
 
 
@@ -615,25 +627,7 @@ th{
 }
 
 
-/*@media screen and (min-width:451px) and (max-width: 1224px) {*/
-@media screen and (max-width: 1224px) {
-    /* Media query Contacto */
-    #sectionPrincipalContacto{
-        @include setSizeWidthHeight(80%, 0);
-        #contactoDivGral {
-            display: map-get($mapContactoDivGral, modo_display_block);    
-            align-content: map-get($mapContactoDivGral, alineacion_contenido);
-            text-align: map-get($mapContactoDivGral, alineacion_texto);
-            width: map-get($mapContactoDivGral, ancho100p);
-            #textAreaConsulta{
-                width: 20rem;
-            }
-        }
-    }
 
-    /* Fin Media query Contacto */
-
-}
 
 
 
@@ -642,111 +636,10 @@ th{
 @media only screen and (max-width: 1020px) {
 
     /* Media Query min 1019px  INSCRIPCION EVENTOS  */
-    .gridInscripcionEventosDatosPers > * {
-        border: $verdeBorder;
-        background-color: whitesmoke;
-        background-image: $radialBackground-image;
-    }
-
-    .gridInscripcionEventosDatosPers {
-        display: grid;
-        grid-template-columns: 2fr 2fr 2fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 4fr ;
-        margin-left: 10%;
-        margin-right: 10%;
-
-        #tituloInscripcion {
-            grid-column: 1/4 ;
-            grid-row:1/1;
-        }
-        #apellidoInscripcion {
-            grid-column: 1/1 ;
-            grid-row:2/2;
-            border-right: 0;
-            #inscripcionEventosinputApellido {
-                margin-left: 21px;
-            }
-        }
-        #nombreInscripcion {
-            grid-column: 2/2 ;
-            grid-row:2/2;
-            border-left: 0;
-            #inscripcionEventosinputNombre {
-                margin-left: 21px;
-            }
-        }
-
-        #documentoInscripcion {
-            grid-column: 1/1 ;
-            grid-row:3/3;
-            border-right: 0;
-            #inscripcionEventosinputDocumento {
-                margin-left: 1%;
-            }
-        }
-
-        #generoInscripcion {
-            grid-column: 2/2 ;
-            grid-row:3/3;
-            border-left: 0;
-        }
-
-        #fechaNacimientoInscripcion {
-            grid-column: 1/1 ;
-            grid-row:4/4;
-            border-right: 0;
-            #inscripcionFechaNacimientoInscripcion {
-                margin-left: 2%;
-            }        
-
-        }
-
-        #equipoInscripcion {
-            grid-column: 2/2 ;
-            grid-row:4/4;
-            border-left: 0;
-            #inscripcionEventossectionEquipo{
-                width: 53%;
-                margin-left: 7%;
-            }
-
-        }
-
-        #datosContactoInscripcion {
-            grid-column: 3/3 ;
-            grid-row:2/5;
-        }
-
-        #datosContactoInscripcion {
-            div {
-                align-content: space-between;
-                margin-top: 8%;
-                margin-left: 8%;
-                input{
-                    width: 90%;
-                }        
-            }
-        }
-
-        #divTerminosInscripcion {
-            grid-column: 1/4 ;
-            grid-row: 5/5;
-            padding-left: 5%;
-            padding-right: 5%;
-            padding-top: 1%;
-        }
-    }
-
-    .itemDatosInscripcion{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
     .frameTerminos{
         width: 100%;
     }
-    /* FIN Media Query min 1019px  INSCRIPCION EVENTOS  */
+    /* FIN Media Query INSCRIPCION EVENTOS  */
 
     /* Media Query Proximos Eventos */
     main {
@@ -805,104 +698,7 @@ th{
     }
     /* FIN Media Query Proximos Eventos */
 
-    /* Media Query Inscripcion Evento */
-    .gridInscripcionEventosDatosPers > * {
-        border: $verdeBorder;
-        background-color: whitesmoke;
-        background-image: $radialBackground-image;
-        padding-top: 2%;
-        padding-bottom: 2%;
-    }
-
-    form {
-        .gridInscripcionEventosDatosPers{
-            display: grid;
-            grid-template-areas: 
-            "titulo titulo"
-            "apellido nombre"
-            "documento genero"
-            "fechanac equipo"
-            "contacto contacto"
-            "terminos terminos"
-            ;
-            margin-left: 5%;
-            margin-right: 5%;
-
-            #inscripcionEventosinputApellido{
-                margin-left: 7%;
-            }
-        
-            #tituloInscripcion {
-                grid-area: titulo;
-            }
-        
-            #apellidoInscripcion {
-                grid-area: apellido;
-                border-right: 0;
-            }
-        
-            #nombreInscripcion {
-                grid-area: nombre;
-                border-left: 0;
-            }
-        
-            #documentoInscripcion {
-                grid-area: documento;
-                border-right: 0;
-            }
-        
-            #generoInscripcion {
-                grid-area: genero;
-                border-left: 0;
-            }
-        
-            #fechaNacimientoInscripcion {
-                grid-area: fechanac;
-                border-right: 0;
-            }
-        
-            #equipoInscripcion {
-                grid-area: equipo;
-                border-left: 0;
-            }
-        
-            #datosContactoInscripcion {
-                grid-area: contacto;
-            }
-        
-            
-            #divTerminosInscripcion {
-                grid-area: terminos;
-                padding-left: 5%;
-                padding-right: 5%;
-                padding-top: 1%;
-            }    
-        
-            #inscripcionEventosinputApellido{
-                margin-left: 21px;
-            }
-        
-            #inscripcionEventosinputNombre{
-                margin-left: 21px;
-            }
-        
-            #inscripcionEventosinputDocumento {
-                margin-left: 1%;
-            }
-        
-            #inscripcionEventossectionEquipo{
-                width: 55%;
-                margin-left: 8%;
-            }
-        
-            #inscripcionFechaNacimientoInscripcion {
-                margin-left: 2%;
-            }
-        } 
-    }
-
-/* FIN Media Query Inscripcion Evento */
-
+    
 }
 
 
@@ -958,6 +754,23 @@ th{
         }
     }
     /* FIN Media Query Novedades */
+
+    /* Media query Contacto */
+    #sectionPrincipalContacto{
+        @include setSizeWidthHeight(90%, 0);
+        #contactoDivGral {
+            display: map-get($mapContactoDivGral, modo_display_block);    
+            align-content: map-get($mapContactoDivGral, alineacion_contenido);
+            text-align: map-get($mapContactoDivGral, alineacion_texto);
+            width: map-get($mapContactoDivGral, ancho100p);
+            #textAreaConsulta{
+                width: 20rem;
+            }
+        }
+    }
+    /* Fin Media query Contacto */
+
+
 }
 
 @media only screen and (max-width: 455px){
@@ -1077,19 +890,52 @@ th{
 }
 
 @media only screen and  (max-width: 310px){
+    /* Media Query Contacto */
     #sectionPrincipalContacto{
         #contactoDivGral {
             #textAreaConsulta{
                 width: 12rem;
             }    
+            #imgTrabajoEquipo{
+                padding-left: 5%;
+                width: 200px;
+                height: 220px;
+            }
         }
     }
+    /* FIN Media Query Contacto */
+    /* Media Query Proximos Eventos */
+    #divcontainerButton{
+        #button-container{
+            width: 183px;
+            #button{
+                width: 173px;
+                p{
+                    margin-left: 30px;
+                }
+            }
+        }
+    }
+    /* FIN Media Query Proximos Eventos */
 }
 
 @media only screen and  (max-width: 280px){
     .divHeaderGeneralNombreSitio{
         grid-template-rows: 1fr 1fr;
     }
+    /* Media Query Proximos Eventos */
+    #divcontainerButton{
+        #button-container{
+            width: 173px;
+            #button{
+                width: 163px;
+                p{
+                    margin-left: 25px;
+                }
+            }
+        }
+    }
+    /* FIN Media Query Proximos Eventos */
 }
 
 @media only screen and  (max-width: 250px){
@@ -1103,3 +949,6 @@ th{
 
 
 /**** FIN MediaQuerys ***********/
+
+
+
