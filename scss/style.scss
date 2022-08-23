@@ -102,7 +102,7 @@ $novedadLayout767: (
     padding-left: 1%; 
     padding-right: 1%;
     padding-top: 1%;
-    background-color: rgba(0, 0, 0, 0.904) ;
+    background-color: $colorNegroFondo;
 
     .section_articlePrincipal {
         border-style:inset;
@@ -116,7 +116,7 @@ $novedadLayout767: (
         text-align: center;
         font-size: xx-large; 
         border-style: ridge;
-        background-color: rgba(57, 201, 141, 0.363);
+        background-color: $backgroundColorTituloArt;
         margin: 10px;
         background-image: $gradienteBackroundImgTituloArt;
     }
@@ -551,7 +551,6 @@ th{
         align-self: center;
         justify-self: center;
         .iconosAyuda{
-            /*transform: scale(0.8,0.8);*/
             animation-iteration-count: infinite;
             animation-name: movimientoIcono;
             animation-duration: 4s;
@@ -591,6 +590,7 @@ th{
 
 /**** MEDIA QUERYS ***********/
 @media only screen and (max-width: 1595px){
+    /* Media querys Novedades */
     .fotoVideoDer {
         display: flex;
         align-items: center;
@@ -606,7 +606,6 @@ th{
     }
 
 
-    /* Media Query Novedades */
     .sectionNovedades {
         .novedadLayout--Izq{
             display: map-get($novedadLayout767, modo_display_flex);
@@ -623,19 +622,15 @@ th{
             border-bottom: map-get($novedadLayout767, border-bottom_novedad);
         }
     }
-    /* FIN Media Query Novedades */
+    #botonNotaCompletaDer{
+        padding-top: 8%;
+    }
+/* FIN Media Query Novedades */
 }
-
-
-
-
-
-
-
 
 @media only screen and (max-width: 1020px) {
 
-    /* Media Query min 1019px  INSCRIPCION EVENTOS  */
+    /* Media Query INSCRIPCION EVENTOS  */
     .frameTerminos{
         width: 100%;
     }
@@ -697,12 +692,11 @@ th{
         }
     }
     /* FIN Media Query Proximos Eventos */
-
-    
 }
 
 
 @media only screen and (max-width: 767px){
+    /* Media Query Header */    
     .divLogoNombreSitio__nombreSitio{
         font-size: xx-large;
     }
@@ -714,8 +708,7 @@ th{
     }
 
     .divLogoNombreSitio__imagenLogoSitio {
-        width: 100px;
-        height: 100px;
+        @include setSizeWidthHeight(100px, 100px);
     }  
 
     .imagenFondo {
@@ -723,15 +716,11 @@ th{
             font-size: 38px;
         }
     }
-    /* FIN Media Query Header */    
 
     .menuSticky {
         position: static;
         width: 100%;
     }
-
-
-
     /* FIN Media Query Header */
 
 
@@ -778,8 +767,7 @@ th{
         font-size: xx-large;
     }
     .divLogoNombreSitio__imagenLogoSitio {
-        width: 80px;
-        height: 80px;
+        @include setSizeWidthHeight(80px, 80px);
     }
     #sectionIconsFooter{
         display: flex;
@@ -865,8 +853,7 @@ th{
         font-size: x-large;
     }
     .divLogoNombreSitio__imagenLogoSitio {
-        width: 80px;
-        height: 80px;
+        @include setSizeWidthHeight(80px, 80px);        
     }
     #sectionIconsFooter{
         display: block;
@@ -898,8 +885,7 @@ th{
             }    
             #imgTrabajoEquipo{
                 padding-left: 5%;
-                width: 200px;
-                height: 220px;
+                @include setSizeWidthHeight(200px, 220px);
             }
         }
     }
@@ -907,9 +893,9 @@ th{
     /* Media Query Proximos Eventos */
     #divcontainerButton{
         #button-container{
-            width: 183px;
+            @include setSizeWidthHeight(183px, 0);
             #button{
-                width: 173px;
+                @include setSizeWidthHeight(173px, 0);
                 p{
                     margin-left: 30px;
                 }
@@ -926,9 +912,9 @@ th{
     /* Media Query Proximos Eventos */
     #divcontainerButton{
         #button-container{
-            width: 173px;
+            @include setSizeWidthHeight(173px, 0);
             #button{
-                width: 163px;
+                @include setSizeWidthHeight(163px, 0);
                 p{
                     margin-left: 25px;
                 }
