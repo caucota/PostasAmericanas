@@ -1,5 +1,39 @@
 
-$font_family_titulo_articulo: 'Liberation Serif', sans-serif;
+$font_family_titulo_articulo:'Arial Black'; /* 'Liberation Serif', sans-serif;*/
 $font-family_Rubik: 'Rubik Moonrocks', cursive;
 $font-family_Fredericka: 'Fredericka the Great', cursive;
 $font-Verdana: Verdana, Geneva, Tahoma, sans-serif;
+$text-shadow_FondoBlanco: 5px 5px 10px $colorTitulosPrincipales;
+$text-shadow_FondoNegro: 5px 5px 10px $colorNegroFondo;
+$text-shadow_FondoGris: 5px 5px 10px rgb(150, 150, 150);
+
+
+.letraNegraFondoBlanco{
+    color: $colorNegroFondo;
+    text-shadow: $text-shadow_FondoBlanco;
+}
+
+.letraNegraFondoNegro{
+    color: $colorNegroFondo;
+    text-shadow: $text-shadow_FondoNegro;
+}
+
+.letraNegraFondoGris{
+    color: $colorNegroFondo;
+    text-shadow: $text-shadow_FondoGris;
+}
+
+.letraBlancaFondoNegro{
+    color: $colorTitulosPrincipales;
+    text-shadow: $text-shadow_FondoNegro;
+}
+
+.letraBlancaFondoBlanco{
+    color: $colorTitulosPrincipales;
+    text-shadow: $text-shadow_FondoBlanco;
+}
+
+.letraBlancaFondoGris{
+    color: $colorTitulosPrincipales;
+    text-shadow: $text-shadow_FondoGris;
+}

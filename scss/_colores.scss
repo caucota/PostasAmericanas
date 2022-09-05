@@ -4,14 +4,24 @@
 }
 
 .novedadRadial{
-    background-image: radial-gradient(rgba(0, 89, 255, 0.445), rgba(141, 216, 97, 0.644));
+    background-image: radial-gradient(rgb(3, 22, 65), rgb(23, 145, 245));
 }
 
-.novedadGradient{
-    background-image: linear-gradient(to left, rgb(135, 135, 233), rgba(233, 233, 79, 0.719));
+.novedadGradientToLeft{
+    background-image: linear-gradient(to left, rgb(3, 22, 65), rgb(23, 145, 245));
 }
-$gradienteBackroundImgTituloArt : linear-gradient(to right, rgba(0, 0, 255, 0.555), rgba(255, 255, 0, 0.521), rgba(90, 90, 155, 0.541), rgba(255, 166, 0, 0.514));
-$backgroundColorTituloArt : (57, 201, 141, 0.363);
+
+.novedadGradientToRight{
+       background-image: linear-gradient(to right, rgb(3, 22, 65), rgb(23, 145, 245));
+   }
+   
+
+$colorTitulosPrincipales: #DBCFC5;
+/*$gradienteBackroundImgTituloArt : linear-gradient(to right, rgba(0, 0, 255, 0.555), rgba(255, 255, 0, 0.521), rgba(90, 90, 155, 0.541), rgba(255, 166, 0, 0.514));*/
+/*$gradienteBackroundImgTituloArt : linear-gradient(to right, rgba(0, 0, 255, 0.555), rgba(2, 20, 34, 0.671), rgba(90, 90, 155, 0.541), rgba(0, 238, 255, 0.514));*/
+$gradienteBackroundImgTituloArt : linear-gradient(to right, rgba(0, 0, 255, 0.555), rgba(0, 238, 255, 0.514), rgba(131, 131, 216, 0.541), rgba(68, 165, 240, 0.781));
+
+$backgroundColorTituloArt : rgba(57, 201, 141, 0.363);
 
 $azulBordesMenuPrincipal : rgb(0, 102, 255);
 $colorNegroFondo: rgba(0, 0, 0, 0.904);

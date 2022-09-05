@@ -10,64 +10,74 @@
     <link rel="stylesheet" href="../css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Rubik+Moonrocks&family=Reenie+Beanie&display=swap"  rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css"
+        integrity="sha384-X8QTME3FCg1DLb58++lPvsjbQoCT9bp3MsUU3grbIny/3ZwUJkRNO8NPW6zqzuW9" crossorigin="anonymous">
+
+
 </head>
+
 <body class="classBody">
     <header class="menuSticky">
-        <div class="container">
-            <section class="divHeaderGeneralNombreSitio">
-                <div id="divLogo" class="col-2">
-                    <img class="divLogoNombreSitio__imagenLogoSitio" src="../img/IconoPostas.jpg">
-                </div>
-                <div id="divNombreSitio" class="row col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10 align-items-center">
-                    <div class="col-12 text-center" >
-                        <h1 class="divLogoNombreSitio__nombreSitio" >Postas Americanas  </h1>
-                    </div>
-                </div>
-                <div id="divHelp" class="col-1">
-                    <a href="./ayuda.html"><img class="iconHelp " src="../img/help.png"></a>
-                </div>
-            </section>
-        </div>
-        <div class="container">
-            <div class="row">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light w-100">
-                    <a class="navbar-brand aMenuPrincipal" href="#"></a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent" >
-                        <ul class="navbar-nav mr-auto w-100 nav-justified" >
-                            <li class="nav-item active" >
-                                <a class="nav-link aMenuPrincipal"  href="../index.html">Inicio <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item liSeleccionado">
-                                <a class="nav-link aMenuPrincipal" href="./novedades.html">Novedades</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle aMenuPrincipal" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Eventos
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="./proximos_eventos.html">Próximos Eventos</a>
-                                    <a class="dropdown-item" href="./construccion.html">Eventos Recientes</a>
-                                </div>
-                            </li>
-                            <li class="nav-item"><a class="nav-link aMenuPrincipal" href="./mis_datos.html">Mis Datos</a></li>
-                            <li class="nav-item"><a class="nav-link aMenuPrincipal" href="./construccion.html">Ingreso</a></li>
-                        </ul>
-                    </div>
-                </nav>
+        <nav class="navbar navbar-expand-xl navbar-dark ">
+            <div id="divLogo">
+                <img class="divLogoNombreSitio__imagenLogoSitio" style="height: 90px; width: 100px;"
+                    src="../img/IconoPostasBlack.jpeg">
             </div>
-        </div>
-    </header>    
+            <a href="#" class="navbar-brand"><i id="personaNadando" class="fa-solid fa-person-swimming"></i>Postas <b>Americanas</b></a>
+
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse"> <span
+                    class="navbar-toggler-icon"></span> </button>
+            <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
+                <div class="navbar-nav ml-auto">
+                    <a href="../index.html" class="nav-item nav-link">
+                        <i class="fa fa-home"></i><span>Inicio</span>
+                    </a>
+                    <a href="./novedades.html" class="nav-item nav-link active">
+                        <i class="fa fa-tv"></i><span>Novedades</span>
+                    </a>
+                    <a href="#" class="nav-item nav-link" style="padding: 0px; ">
+                        <div class="nav-item dropdown">
+                            <a href="#" id="dropDownEventos" data-toggle="dropdown"
+                                class="nav-item nav-link dropdown-toggle">
+                                <i id="iconoEventos" class="fa fa-users"></i>
+                                <span id="spanEventos">Eventos</span>
+                            </a>
+                            <div class="dropdown-menu">
+                                <a href="./proximos_eventos.html" class="dropdown-item"><i
+                                        class="fa fa-calendar-o"></i>Próximos Eventos</a>
+                                <a href="./construccion.html" class="dropdown-item"><i
+                                        class="fa-solid fa-clock-rotate-left"></i> Eventos Recientes</a>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./mis_datos.html" class="nav-item nav-link">
+                        <i class="fa-solid fa-address-card"></i><span>Mis Datos</span>
+                    </a>
+                    <a href="./ayuda.html" class="nav-item nav-link">
+                        <i class="fa-solid fa-circle-question"></i><span>Ayuda</span>
+                    </a>
+                    <a href="./contacto.html" class="nav-item nav-link">
+                        <i class="fa fa-envelope"></i><span>Contacto</span>
+                    </a>
+                    <a href="./construccion.html" class="nav-item nav-link">
+                        <i class="fa-solid fa-right-to-bracket"></i><span>Ingreso</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
     <main class="justify-content-center align-items-center content" >
         <section class="sectionPrincipal row justify-content-center">
             <article id="sectionPrincipalMisDatos" class="section_articlePrincipal col-md-10 col-lg-10 col-xl-9" >
                 <h1 class="tituloArticulo">NOVEDADES DEL MUNDO ACUATICO</h1>
                 <section id="sectionNovedades" class="sectionPrincipal row">
                     <article class="sectionNovedades">
-                        <div class="novedadLayout--Izq novedadRadial col-12" >
+                        <div class="novedadLayout--Izq novedadGradientToLeft col-12" >
                             <h2 class="tituloNovedad--Izq">Mundial Budapest</h2>
                             <div class="parrafoNovedad--Izq">El XIX Campeonato Mundial de Natación se celebra en Budapest entre el 17 de junio y el 3 de julio de 2022 bajo la
                                 organización de la Federación Internacional de Natación y la Federación Húngara de Natación.​Se realizan competiciones
@@ -79,20 +89,20 @@
                                 allowfullscreen ></iframe>
                             </div>
                             <div class="d-flex justify-content-center align-items-center">
-                                <a class="btn btn-primary" href="https://olympics.com/es/noticias/mundial-de-natacion-budapest-2022-todos-los-resultados" role="button">Nota Completa</a>
+                                <a class="btn btn-primary" id="botonNovedad" href="https://olympics.com/es/noticias/mundial-de-natacion-budapest-2022-todos-los-resultados" role="button">Nota Completa</a>
                             </div>
                         </div>
 
-                        <div class="novedadLayout--Der novedadGradient" >
+                        <div class="novedadLayout--Der novedadGradientToRight">
                             <h2 class="tituloNovedad--Der">Malena Santillán, bronce en la Natación Internacional</h2>
                             <div class="parrafoNovedad--Der">La argentina Malena Santillán con sólo 14 años alcanzó la medalla de bronce en los 200 metros espalda femenino, al obtener el tercer puesto en la categoría cadetes, en el marco del Campeonato Absoluto de Natación, que se lleva a cabo en la ciudad de Sabadell, España.
                             </div>
                             <div class="fotoVideoDer">
-                                <img id="fotoNovedadDer" src="../img/fotoMalenaSantillas.jpg" alt="Página en Construcción" >
-                                <img id="fotoNovedadDer2" src="../img/fotoMalenaSantillan2.jpg" alt="Página en Construcción" >
+                                <img id="fotoNovedadDer" src="../img/fotoMalenaSantillas.jpg" alt="fotoMalenaSantillan">
+                                <img id="fotoNovedadDer2" src="../img/fotoMalenaSantillan2.jpg" alt="fotoMalenaSantillan2" >
                             </div>
                             <div class="d-flex justify-content-center align-items-center" id="botonNotaCompletaDer">
-                                <a class="btn btn-primary" href="https://www.sitioandino.com.ar/andino-sports/malena-santillan-bronce-la-natacion-internacional-n5632024" role="button">Nota Completa</a>
+                                <a class="btn btn-primary"  id="botonNovedad" href="https://www.sitioandino.com.ar/andino-sports/malena-santillan-bronce-la-natacion-internacional-n5632024" role="button">Nota Completa</a>
                             </div>
                         </div>
                     </article>
@@ -109,7 +119,6 @@
                 <a href="./mapadelsitio.html"><img class="btn btn-outline-light btn-floating m-1 imagenIconoRedes" src="../img/organigrama_amarillo.png"></a>
             </div>
             <div class="divIconosRedes row col-11 justify-content-end align-self-center ">
-                <a href="./contacto.html" ><img class="btn btn-outline-light btn-floating m-1 imagenIconoRedes" src="../img/formulario-de-contacto.png"></a> 
                 <a href="https://wa.me/15551234567"><img class="btn btn-outline-light btn-floating m-1 imagenIconoRedes" src="../img/whatsapp (1).png"></a>
                 <a href="https://www.instagram.com/invites/contact/?i=j58yqhtl06su&utm_content=h8u7da4"><img class="btn btn-outline-light btn-floating m-1 imagenIconoRedes" src="../img/instagram.png"></a>
                 <a href="https://www.facebook.com"><img class="btn btn-outline-light btn-floating m-1 imagenIconoRedes" src="../img/facebook (1).png"></a>
@@ -120,9 +129,14 @@
             <p>© Todos los derechos reservados</p>
         </div>
     </footer>    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/7323db770c.js" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -4,11 +4,16 @@
   background-image: radial-gradient(rgba(0, 89, 255, 0.445), rgba(141, 216, 97, 0.644)); }
 
 .novedadRadial {
-  background-image: radial-gradient(rgba(0, 89, 255, 0.445), rgba(141, 216, 97, 0.644)); }
+  background-image: radial-gradient(#031641, #1791f5); }
 
-.novedadGradient {
-  background-image: linear-gradient(to left, #8787e9, rgba(233, 233, 79, 0.719)); }
+.novedadGradientToLeft, .detalleAyuda {
+  background-image: linear-gradient(to left, #031641, #1791f5); }
 
+.novedadGradientToRight {
+  background-image: linear-gradient(to right, #031641, #1791f5); }
+
+/*$gradienteBackroundImgTituloArt : linear-gradient(to right, rgba(0, 0, 255, 0.555), rgba(255, 255, 0, 0.521), rgba(90, 90, 155, 0.541), rgba(255, 166, 0, 0.514));*/
+/*$gradienteBackroundImgTituloArt : linear-gradient(to right, rgba(0, 0, 255, 0.555), rgba(2, 20, 34, 0.671), rgba(90, 90, 155, 0.541), rgba(0, 238, 255, 0.514));*/
 /*index*/
 /*fin index*/
 /*Colors*/
@@ -79,6 +84,31 @@
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedbe9', endColorstr='#26558b',GradientType=1 );
   /* IE6-9 fallback on horizontal gradient */ }
+
+/* 'Liberation Serif', sans-serif;*/
+.letraNegraFondoBlanco, .footerGridProximosEventos, .gridProximosEventos .itemsResumenEvento, .gridProximosEventos .itemCuandoyDonde, .gridProximosEventos .categorias, .gridProximosEventos .consideraciones {
+  color: rgba(0, 0, 0, 0.904);
+  text-shadow: 5px 5px 10px #DBCFC5; }
+
+.letraNegraFondoNegro {
+  color: rgba(0, 0, 0, 0.904);
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.904); }
+
+.letraNegraFondoGris {
+  color: rgba(0, 0, 0, 0.904);
+  text-shadow: 5px 5px 10px #969696; }
+
+.letraBlancaFondoNegro, .imagenFondo .h1Bienvenida, .gridProximosEventos .tituloGridHijo, #felicitacionesFelicitaciones, #misDatosFormulario, #formContacto #contactoDivGral #griddatosContacto, .detalleAyuda {
+  color: #DBCFC5;
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.904); }
+
+.letraBlancaFondoBlanco {
+  color: #DBCFC5;
+  text-shadow: 5px 5px 10px #DBCFC5; }
+
+.letraBlancaFondoGris, #formInscripcionEvento {
+  color: #DBCFC5;
+  text-shadow: 5px 5px 10px #969696; }
 
 /* Header */
 .divLogoNombreSitio__imagenLogoSitio {
@@ -162,11 +192,16 @@ nav ul li {
   background-image: radial-gradient(rgba(0, 89, 255, 0.445), rgba(141, 216, 97, 0.644)); }
 
 .novedadRadial {
-  background-image: radial-gradient(rgba(0, 89, 255, 0.445), rgba(141, 216, 97, 0.644)); }
+  background-image: radial-gradient(#031641, #1791f5); }
 
-.novedadGradient {
-  background-image: linear-gradient(to left, #8787e9, rgba(233, 233, 79, 0.719)); }
+.novedadGradientToLeft, .detalleAyuda {
+  background-image: linear-gradient(to left, #031641, #1791f5); }
 
+.novedadGradientToRight {
+  background-image: linear-gradient(to right, #031641, #1791f5); }
+
+/*$gradienteBackroundImgTituloArt : linear-gradient(to right, rgba(0, 0, 255, 0.555), rgba(255, 255, 0, 0.521), rgba(90, 90, 155, 0.541), rgba(255, 166, 0, 0.514));*/
+/*$gradienteBackroundImgTituloArt : linear-gradient(to right, rgba(0, 0, 255, 0.555), rgba(2, 20, 34, 0.671), rgba(90, 90, 155, 0.541), rgba(0, 238, 255, 0.514));*/
 /*index*/
 /*fin index*/
 /*Colors*/
@@ -410,6 +445,34 @@ nav ul li {
   width: 100px;
   height: 100px; }
 
+#botonNovedad {
+  background-color: rgba(0, 0, 0, 0.719); }
+
+/* 'Liberation Serif', sans-serif;*/
+.letraNegraFondoBlanco, .footerGridProximosEventos, .gridProximosEventos .itemsResumenEvento, .gridProximosEventos .itemCuandoyDonde, .gridProximosEventos .categorias, .gridProximosEventos .consideraciones {
+  color: rgba(0, 0, 0, 0.904);
+  text-shadow: 5px 5px 10px #DBCFC5; }
+
+.letraNegraFondoNegro {
+  color: rgba(0, 0, 0, 0.904);
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.904); }
+
+.letraNegraFondoGris {
+  color: rgba(0, 0, 0, 0.904);
+  text-shadow: 5px 5px 10px #969696; }
+
+.letraBlancaFondoNegro, .imagenFondo .h1Bienvenida, .gridProximosEventos .tituloGridHijo, #felicitacionesFelicitaciones, #misDatosFormulario, #formContacto #contactoDivGral #griddatosContacto, .detalleAyuda {
+  color: #DBCFC5;
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.904); }
+
+.letraBlancaFondoBlanco {
+  color: #DBCFC5;
+  text-shadow: 5px 5px 10px #DBCFC5; }
+
+.letraBlancaFondoGris, #formInscripcionEvento {
+  color: #DBCFC5;
+  text-shadow: 5px 5px 10px #969696; }
+
 /*---------- MIXINS -------------*/
 /*---------- FIN MIXINS -------------*/
 /*---------- MAPS ----------------*/
@@ -488,6 +551,16 @@ body {
       .navbar .dropdown-menu a:hover, .navbar .dropdown-menu a:focus {
         color: #333 !important;
         background: transparent !important; }
+  .navbar #dropDownEventos {
+    display: inline-block;
+    padding-left: 12px; }
+    .navbar #dropDownEventos i {
+      display: flex;
+      padding-right: 15px;
+      justify-content: center; }
+  .navbar #spanEventos {
+    font-size: 14px;
+    padding: 0; }
   .navbar .navbar-nav .active a,
   .navbar .navbar-nav .active a:hover,
   .navbar .navbar-nav .active a:focus {
@@ -535,6 +608,9 @@ body {
       color: #a0a5b1;
       font-size: 19px; }
 
+#personaNadando {
+  display: none; }
+
 /* Footer */
 .classFooter {
   background-color: black;
@@ -574,16 +650,17 @@ body {
   .sectionPrincipal .section_articlePrincipal {
     border-style: inset;
     display: inline-block;
-    background-color: whitesmoke;
+    background-color: rgba(0, 0, 0, 0.904);
     width: 100%; }
   .sectionPrincipal .tituloArticulo {
-    font-family: "Liberation Serif", sans-serif;
+    font-family: "Arial Black";
     text-align: center;
     font-size: xx-large;
     border-style: ridge;
-    background-color: 57, 201, 141, 0.363;
+    background-color: rgba(57, 201, 141, 0.363);
     margin: 10px;
-    background-image: linear-gradient(to right, rgba(0, 0, 255, 0.555), rgba(255, 255, 0, 0.521), rgba(90, 90, 155, 0.541), rgba(255, 166, 0, 0.514)); }
+    background-image: linear-gradient(to right, rgba(0, 0, 255, 0.555), rgba(0, 238, 255, 0.514), rgba(131, 131, 216, 0.541), rgba(68, 165, 240, 0.781));
+    text-shadow: 5px 5px 10px white; }
 
 /* -------------- FIN MASTER  ------------- */
 /* -------------- INDEX  ------------- */
@@ -596,9 +673,9 @@ body {
   background-blend-mode: soft-light; }
   .imagenFondo .h1Bienvenida {
     font-size: 45px;
-    background: linear-gradient(to right, #fd7419, rgba(211, 212, 117, 0.863), rgba(252, 101, 1, 0.979));
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
+    /*background: $colorFontBienvenida;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;*/
     background-clip: text;
     margin-top: 28%;
     text-align: center;
@@ -675,7 +752,7 @@ th {
 .gridProximosEventos > * {
   border: 2px solid rgba(57, 201, 141, 0.363);
   background-color: whitesmoke;
-  background-image: radial-gradient(rgba(135, 233, 187, 0.356), rgba(184, 180, 128, 0.89)); }
+  background-image: linear-gradient(to left, rgba(15, 52, 139, 0.877), #1791f5); }
 
 .gridProximosEventos {
   display: grid;
@@ -730,7 +807,7 @@ th {
 #felicitacionesFelicitaciones {
   text-align: center;
   background: #6f6df3;
-  color: yellow;
+  /*color:yellow; */
   padding-left: 20%;
   padding-right: 20%; }
 
@@ -739,7 +816,9 @@ th {
 #misDatosFormulario {
   margin: 10px; }
   #misDatosFormulario #misDatosDatosPers {
-    text-align: center; }
+    text-align: center;
+    text-decoration: underline;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.904); }
   #misDatosFormulario #misDatosFoto {
     text-align: center;
     padding-left: 10%; }
@@ -769,7 +848,6 @@ th {
 /* -------------- NOVEDADES  ------------- */
 .sectionNovedades {
   border-style: inset;
-  background-color: whitesmoke;
   width: 99%; }
   .sectionNovedades .novedadLayout, .sectionNovedades .novedadLayout--Izq, .sectionNovedades .novedadLayout--Der {
     display: grid;
@@ -784,14 +862,17 @@ th {
   .sectionNovedades .tituloNovedad, .sectionNovedades .tituloNovedad--Izq, .sectionNovedades .tituloNovedad--Der {
     font-size: xx-large;
     text-decoration: underline;
-    text-align: center; }
+    text-align: center;
+    color: #DBCFC5;
+    text-shadow: 5px 5px 10px black; }
   .sectionNovedades .tituloNovedad--Izq {
     grid-area: titleIzq; }
   .sectionNovedades .tituloNovedad--Der {
     grid-area: titleDer; }
   .sectionNovedades .parrafoNovedad, .sectionNovedades .parrafoNovedad--Izq, .sectionNovedades .parrafoNovedad--Der {
     font-size: x-large;
-    margin-left: 2%; }
+    margin-left: 2%;
+    color: #DBCFC5; }
   .sectionNovedades .parrafoNovedad--Izq {
     grid-area: sectionLeftIzq; }
   .sectionNovedades .parrafoNovedad--Der {
@@ -852,8 +933,7 @@ th {
   margin: 1%;
   border-style: double;
   border-color: blue;
-  background-color: whitesmoke;
-  background-image: radial-gradient(rgba(0, 89, 255, 0.445), rgba(141, 216, 97, 0.644)); }
+  /*background-color: whitesmoke;*/ }
   .detalleAyuda p {
     margin-top: 1%;
     margin-left: 2%;
@@ -937,23 +1017,12 @@ th {
       min-width: 30px;
       position: relative;
       top: 4px; }
-    .navbar .navbar-nav a i {
-      display: flex;
-      text-align: left;
-      min-width: 30px;
-      position: relative;
-      top: 4px; }
     .navbar .navbar-nav .nav-item a {
       display: flex;
-      padding-left: 0; } }
-  @media only screen and (max-width: 1199px) and (min-width: 1200px) {
-    .navbar .navbar-nav .nav-item .form-inline .input-group {
-      width: 350px;
-      margin-left: 30px; }
-    .navbar .navbar-nav .nav-item #dropDownEventos {
-      display: flex; } }
-
-@media only screen and (max-width: 1199px) {
+      padding-left: 0; }
+    .navbar .navbar-nav #iconoEventos {
+      display: inline-block;
+      padding: 0%; }
   .navbar .navbar-collapse {
     border: none;
     box-shadow: none;
@@ -1062,6 +1131,12 @@ th {
       #sectionPrincipalContacto #contactoDivGral #textAreaConsulta {
         width: 20rem; }
   /* Fin Media query Contacto */ }
+
+@media only screen and (max-width: 600px) {
+  .divLogoNombreSitio__imagenLogoSitio {
+    display: none; }
+  #personaNadando {
+    display: inline; } }
 
 @media only screen and (max-width: 455px) {
   .divLogoNombreSitio__nombreSitio {

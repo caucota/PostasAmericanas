@@ -74,7 +74,7 @@ body {
         font-size: 24px;
         &:hover,
         &:focus {
-            color: #fff;
+            color:  #fff;
         }
         i{
             font-size: 25px;
@@ -100,7 +100,7 @@ body {
             font-size: 14px;
             &:hover,
             &:focus {
-                color: #fff;
+                color:  #fff;
                 text-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
             }
         }
@@ -159,9 +159,24 @@ body {
                 background: transparent !important;
             }
         }
+
     }
 
-    
+    #dropDownEventos{
+        display: inline-block; 
+        padding-left: 12px;
+
+        i{
+            display:flex; 
+            padding-right: 15px; 
+            justify-content: center;            
+        }
+    }
+    #spanEventos{
+        font-size: 14px; 
+        padding: 0;
+    }
+
     .navbar-nav{
         .active {
             a,
@@ -236,6 +251,9 @@ body {
     }
 }
 
+#personaNadando{
+    display: none;
+}
 
 
 /* Footer */
@@ -300,7 +318,7 @@ body {
     .section_articlePrincipal {
         border-style:inset;
         display: inline-block;
-        background-color: whitesmoke;   
+        background-color: $colorNegroFondo;
         @include setSizeWidthHeight(100%, 0);
     }
 
@@ -312,6 +330,7 @@ body {
         background-color: $backgroundColorTituloArt;
         margin: 10px;
         background-image: $gradienteBackroundImgTituloArt;
+        text-shadow: 5px 5px 10px white;
     }
 }
 /* -------------- FIN MASTER  ------------- */
@@ -330,9 +349,10 @@ body {
 
     .h1Bienvenida{
         font-size: 45px;
-        background: $colorFontBienvenida;
+        @extend .letraBlancaFondoNegro;
+        /*background: $colorFontBienvenida;
         -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
+        -webkit-background-clip: text;*/
         background-clip: text;
         margin-top: 28%;
         text-align: center;
@@ -398,6 +418,7 @@ body {
 /* -------------- PROXIMOS EVENTOS  ------------- */
 
 .footerGridProximosEventos{
+    @extend .letraNegraFondoBlanco;
     display: flex;
     justify-content: space-evenly;
 }
@@ -416,8 +437,11 @@ th{
 .gridProximosEventos > * {
     border: $verdeBorder;
     background-color: whitesmoke;
-    background-image: $radialBackground-image;
+    background-image: linear-gradient(to left, rgba(15, 52, 139, 0.877), rgb(23, 145, 245));
+
 }
+
+
 
 .gridProximosEventos {
     display: grid;
@@ -440,6 +464,7 @@ th{
     }    
 
     .itemsResumenEvento {
+        @extend .letraNegraFondoBlanco;
         grid-area: section1;
         padding-left: 2%;
         padding-right: 2%;
@@ -447,6 +472,7 @@ th{
     }
     
     .itemCuandoyDonde {
+        @extend .letraNegraFondoBlanco;
         grid-area: section2;
         padding-left: 2%;
     }
@@ -461,6 +487,7 @@ th{
     }
     
     .categorias {
+        @extend .letraNegraFondoBlanco;
         grid-area: section3;
         padding: 2%;
     }
@@ -474,6 +501,7 @@ th{
     }
     
     .consideraciones{
+        @extend .letraNegraFondoBlanco;
         grid-area: section4;
         padding: 2%;
         .ConsideracionesFlex{
@@ -484,6 +512,7 @@ th{
     }
 
     .tituloGridHijo{
+        @extend .letraBlancaFondoNegro;
         margin: 20px;
     }
     
@@ -494,6 +523,7 @@ th{
 /* -------------- FIN PROXIMOS EVENTOS  ------------- */
 /* --------------- INSCRIPCION EVENTO ----------------*/
 #formInscripcionEvento {
+    @extend .letraBlancaFondoGris;
     margin: 10px;
     padding-bottom: 15px;
 }
@@ -504,9 +534,10 @@ th{
 
 /* -------------- FELICITACIONES  ------------- */
 #felicitacionesFelicitaciones{
+    @extend .letraBlancaFondoNegro;
     text-align: center; 
     background: rgb(111, 109, 243); 
-    color:yellow; 
+    /*color:yellow; */
     padding-left: 20%; 
     padding-right: 20%;    
 }
@@ -517,9 +548,12 @@ th{
 /* -------------- MIS DATOS  ------------- */
 #misDatosFormulario {
     margin: 10px;
+    @extend .letraBlancaFondoNegro;
 
     #misDatosDatosPers {
         text-align: center;
+        text-decoration: underline;
+        text-shadow: $text-shadow_FondoNegro;
     }
     
     #misDatosFoto {
@@ -564,7 +598,6 @@ th{
 
 .sectionNovedades {
     border-style:inset;
-    background-color: whitesmoke;   
     @include setSizeWidthHeight(99%, 0); 
 
     .novedadLayout{
@@ -596,6 +629,8 @@ th{
         font-size: xx-large;
         text-decoration: underline;
         text-align: center;
+        color:$colorTitulosPrincipales;
+        text-shadow: 5px 5px 10px black;
     }
     .tituloNovedad--Izq {
         @extend .tituloNovedad;
@@ -610,6 +645,7 @@ th{
     .parrafoNovedad{
         font-size: x-large;
         margin-left: 2%;
+        color:$colorTitulosPrincipales;
     }
     .parrafoNovedad--Izq {
         @extend .parrafoNovedad;
@@ -675,6 +711,7 @@ th{
         }
 
         #griddatosContacto {
+            @extend .letraBlancaFondoNegro;
             grid-area: datos;
             #labelNombre{
                 padding-right: 3px;
@@ -719,8 +756,9 @@ th{
     margin: 1%;
     border-style: double;
     border-color: blue;
-    background-color: whitesmoke;
-    background-image: radial-gradient(rgba(0, 89, 255, 0.445), rgba(141, 216, 97, 0.644));
+    /*background-color: whitesmoke;*/
+    @extend .novedadGradientToLeft;
+    @extend .letraBlancaFondoNegro;
 
     p {
         margin-top: 1%;
@@ -824,20 +862,10 @@ th{
 @media only screen and (max-width: 1199px) {
     .navbar{
         .navbar-nav{
-            a{
-                i {
-                    display: inline-block;
-                    text-align: left;
-                    min-width: 30px;
-                    position: relative;
-                    top: 4px;
-                }
-            }
             margin: 8px 0;
-
             a{
                 i{
-                    display: flex;
+                    display: inline-block;
                     text-align: left;
                     min-width: 30px;
                     position: relative;
@@ -849,20 +877,14 @@ th{
                 a{
                     display: flex;
                     padding-left: 0;
-                }        @media (min-width: 1200px) {
-            .form-inline .input-group {
-                width: 350px;
-                margin-left: 30px;
-            }
-
-            #dropDownEventos{
-                display: flex;
-            }
-        }
+                }       
 
 
             }
-            
+            #iconoEventos{
+                display: inline-block;
+                padding: 0%;
+            }
         }
 
         .navbar-collapse {
@@ -1044,6 +1066,15 @@ th{
     /* Fin Media query Contacto */
 
 
+}
+
+@media only screen and (max-width: 600px){
+    .divLogoNombreSitio__imagenLogoSitio{
+        display: none;
+    }
+    #personaNadando{
+        display: inline;
+    }
 }
 
 @media only screen and (max-width: 455px){
