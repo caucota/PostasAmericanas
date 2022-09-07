@@ -98,7 +98,7 @@
   color: rgba(0, 0, 0, 0.904);
   text-shadow: 5px 5px 10px #969696; }
 
-.letraBlancaFondoNegro, .imagenFondo .h1Bienvenida, .gridProximosEventos .tituloGridHijo, #felicitacionesFelicitaciones, #misDatosFormulario, #formContacto #contactoDivGral #griddatosContacto, .detalleAyuda {
+.letraBlancaFondoNegro, .h1Bienvenida, .gridProximosEventos .tituloGridHijo, #felicitacionesFelicitaciones, #misDatosFormulario, #formContacto #contactoDivGral #griddatosContacto, .detalleAyuda {
   color: #DBCFC5;
   text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.904); }
 
@@ -109,6 +109,18 @@
 .letraBlancaFondoGris, #formInscripcionEvento {
   color: #DBCFC5;
   text-shadow: 5px 5px 10px #969696; }
+
+.tituloSlideCarousel {
+  margin: 0;
+  color: #dcf06f;
+  padding-top: 80px;
+  font-size: 30px; }
+
+.parrafoSlideCarousel {
+  margin: 0;
+  color: #dcf06f;
+  padding-top: 80px;
+  font-size: 30px; }
 
 /* Header */
 .divLogoNombreSitio__imagenLogoSitio {
@@ -448,6 +460,11 @@ nav ul li {
 #botonNovedad {
   background-color: rgba(0, 0, 0, 0.719); }
 
+.itemCarousel {
+  background: #333;
+  text-align: center;
+  /*height: 800px;	*/ }
+
 /* 'Liberation Serif', sans-serif;*/
 .letraNegraFondoBlanco, .footerGridProximosEventos, .gridProximosEventos .itemsResumenEvento, .gridProximosEventos .itemCuandoyDonde, .gridProximosEventos .categorias, .gridProximosEventos .consideraciones {
   color: rgba(0, 0, 0, 0.904);
@@ -461,7 +478,7 @@ nav ul li {
   color: rgba(0, 0, 0, 0.904);
   text-shadow: 5px 5px 10px #969696; }
 
-.letraBlancaFondoNegro, .imagenFondo .h1Bienvenida, .gridProximosEventos .tituloGridHijo, #felicitacionesFelicitaciones, #misDatosFormulario, #formContacto #contactoDivGral #griddatosContacto, .detalleAyuda {
+.letraBlancaFondoNegro, .h1Bienvenida, .gridProximosEventos .tituloGridHijo, #felicitacionesFelicitaciones, #misDatosFormulario, #formContacto #contactoDivGral #griddatosContacto, .detalleAyuda {
   color: #DBCFC5;
   text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.904); }
 
@@ -472,6 +489,18 @@ nav ul li {
 .letraBlancaFondoGris, #formInscripcionEvento {
   color: #DBCFC5;
   text-shadow: 5px 5px 10px #969696; }
+
+.tituloSlideCarousel {
+  margin: 0;
+  color: #dcf06f;
+  padding-top: 80px;
+  font-size: 30px; }
+
+.parrafoSlideCarousel {
+  margin: 0;
+  color: #dcf06f;
+  padding-top: 80px;
+  font-size: 30px; }
 
 /*---------- MIXINS -------------*/
 /*---------- FIN MIXINS -------------*/
@@ -664,6 +693,21 @@ body {
 
 /* -------------- FIN MASTER  ------------- */
 /* -------------- INDEX  ------------- */
+.h1Bienvenida {
+  font-size: 45px;
+  /*
+    background: $colorFontBienvenida;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    margin-top: 28%;
+    background-clip: text;
+    */
+  text-align: center;
+  animation-duration: 0.8s;
+  animation-name: animacionBienvenida;
+  animation-iteration-count: 1;
+  /*infinite;*/ }
+
 .imagenFondo {
   height: 800px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.692), rgba(0, 0, 0, 0.705)), url("../img/foto_inicio_grey.jpg");
@@ -671,18 +715,6 @@ body {
   background-position-x: center;
   background-size: cover;
   background-blend-mode: soft-light; }
-  .imagenFondo .h1Bienvenida {
-    font-size: 45px;
-    /*background: $colorFontBienvenida;
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;*/
-    background-clip: text;
-    margin-top: 28%;
-    text-align: center;
-    animation-duration: 0.8s;
-    animation-name: animacionBienvenida;
-    animation-iteration-count: 1;
-    /*infinite;*/ }
 
 @keyframes animacionBienvenida {
   0% {

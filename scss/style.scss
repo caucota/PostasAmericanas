@@ -339,6 +339,22 @@ body {
 
 
 /* -------------- INDEX  ------------- */
+.h1Bienvenida{
+    font-size: 45px;
+    @extend .letraBlancaFondoNegro;
+    /*
+    background: $colorFontBienvenida;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    margin-top: 28%;
+    background-clip: text;
+    */
+    text-align: center;
+    animation-duration: 0.8s;
+    animation-name: animacionBienvenida;
+    animation-iteration-count: 1; /*infinite;*/
+}
+
 .imagenFondo{
     height: 800px; 
     background-image: linear-gradient(rgba(0, 0, 0, 0.692), rgba(0, 0, 0, 0.705)),  url('../img/foto_inicio_grey.jpg');
@@ -347,19 +363,7 @@ body {
     background-size: cover;
     background-blend-mode: soft-light;
 
-    .h1Bienvenida{
-        font-size: 45px;
-        @extend .letraBlancaFondoNegro;
-        /*background: $colorFontBienvenida;
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;*/
-        background-clip: text;
-        margin-top: 28%;
-        text-align: center;
-        animation-duration: 0.8s;
-        animation-name: animacionBienvenida;
-        animation-iteration-count: 1; /*infinite;*/
-    }
+
 }
 
 @keyframes animacionBienvenida {
