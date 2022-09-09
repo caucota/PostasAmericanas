@@ -340,7 +340,7 @@ body {
 
 /* -------------- INDEX  ------------- */
 .h1Bienvenida{
-    font-size: 45px;
+    font-size: 40px;
     @extend .letraBlancaFondoNegro;
     /*
     background: $colorFontBienvenida;
@@ -356,8 +356,8 @@ body {
 }
 
 .imagenFondo{
-    height: 800px; 
-    background-image: linear-gradient(rgba(0, 0, 0, 0.692), rgba(0, 0, 0, 0.705)),  url('../img/foto_inicio_grey.jpg');
+    height: 400px; 
+    /*background-image: linear-gradient(rgba(0, 0, 0, 0.692), rgba(0, 0, 0, 0.705)),  url('../img/foto_inicio_grey.jpg');*/
     background-repeat: no-repeat;
     background-position-x: center;
     background-size: cover;
@@ -864,6 +864,13 @@ th{
 }
 
 @media only screen and (max-width: 1199px) {
+    .imagenFondo {
+        height: 350px;
+        .h1Bienvenida{
+            font-size: 30px;
+        };
+    }
+
     .navbar{
         .navbar-nav{
             margin: 8px 0;
@@ -923,22 +930,30 @@ th{
 }
 
 
-@media (min-width: 1200px) {
+@media only screen and (min-width: 1200px) {
     .form-inline{
         .input-group {
             width: 350px;
-            margin-left: 30px;
+            margin-left: 32px;
         }
     }
 
     #dropDownEventos{
         display: flex;
     }
+
+
 }
 
 
 
 @media only screen and (max-width: 1020px) {
+    .imagenFondo {
+        height: 280px;
+        .h1Bienvenida{
+            font-size: 30px;
+        };
+    }
 
     /* Media Query INSCRIPCION EVENTOS  */
     .frameTerminos{
@@ -1006,6 +1021,13 @@ th{
 
 
 @media only screen and (max-width: 767px){
+    .imagenFondo {
+        height: 230px;
+        .h1Bienvenida{
+            font-size: 26px;
+        };
+    }
+
     /* Media Query Header */    
     .divLogoNombreSitio__nombreSitio{
         font-size: xx-large;
@@ -1020,12 +1042,7 @@ th{
     .divLogoNombreSitio__imagenLogoSitio {
         @include setSizeWidthHeight(100px, 100px);
     }  
-
-    .imagenFondo {
-        .h1Bienvenida{
-            font-size: 38px;
-        }
-    }
+    
 
     .menuSticky {
         position: static;
@@ -1072,7 +1089,23 @@ th{
 
 }
 
+@media only screen and (max-width: 630px){
+    .imagenFondo {
+        height: 190px;
+        .h1Bienvenida{
+            font-size: 23px;
+        };
+    }
+}
+
 @media only screen and (max-width: 600px){
+    .imagenFondo {
+        height: 160px;
+        .h1Bienvenida{
+            font-size: 18px;
+        };
+    }
+
     .divLogoNombreSitio__imagenLogoSitio{
         display: none;
     }
@@ -1082,6 +1115,13 @@ th{
 }
 
 @media only screen and (max-width: 455px){
+    .imagenFondo {
+        height: 140px;
+        .h1Bienvenida{
+            font-size: 16px;
+        };
+    }
+
     .divLogoNombreSitio__nombreSitio{
         font-size: xx-large;
     }
@@ -1090,11 +1130,6 @@ th{
     }
     #sectionIconsFooter{
         display: flex;
-    }
-    .imagenFondo {
-        .h1Bienvenida{
-            font-size: 35px;
-        }
     }
 
     section {
@@ -1157,7 +1192,22 @@ th{
     /*Fin media Query Contacto */
 }
 
+@media only screen and  (max-width: 420px){
+    .imagenFondo {
+        height: 120px;
+        .h1Bienvenida{
+            font-size: 14px;
+        };
+    }    
+}
+
 @media only screen and  (max-width: 410px){
+    .imagenFondo {
+        height: 100px;
+        .h1Bienvenida{
+            font-size: 14px;
+        };
+    }    
     #sectionPrincipalContacto{
         #contactoDivGral {
             #textAreaConsulta{
@@ -1168,6 +1218,12 @@ th{
 }
 
 @media only screen and  (max-width: 355px){
+    .imagenFondo {
+        height: 80px;
+        .h1Bienvenida{
+            font-size: 13px;
+        };
+    }       
     .divLogoNombreSitio__nombreSitio{
         font-size: x-large;
     }
@@ -1179,11 +1235,6 @@ th{
     }
     #divIconosRedes{
         display: flex;
-    }
-    .imagenFondo {
-        .h1Bienvenida{
-            font-size: 30px;
-        }
     }
 
     #sectionPrincipalContacto{
@@ -1225,6 +1276,12 @@ th{
 }
 
 @media only screen and  (max-width: 280px){
+    .imagenFondo {
+        height: 50px;
+        .h1Bienvenida{
+            font-size: 10px;
+        };
+    }        
     .divHeaderGeneralNombreSitio{
         grid-template-rows: 1fr 1fr;
     }
@@ -1241,14 +1298,6 @@ th{
         }
     }
     /* FIN Media Query Proximos Eventos */
-}
-
-@media only screen and  (max-width: 250px){
-    .imagenFondo {
-        .h1Bienvenida{
-            font-size: 25px;
-        }
-    }
 }
 
 
