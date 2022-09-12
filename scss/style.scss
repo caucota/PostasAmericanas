@@ -47,14 +47,12 @@ $novedadLayout767: (
 
 body {
     background: black;
-    /* #eeeeee;*/
     font-family: 'Varela Round', sans-serif;
 }
 
 .navbar {
     color: #fff;
     background: black;
-    /* #926dde !important;*/
     padding: 5px 16px;
     border-radius: 0;
     border: none;
@@ -342,22 +340,14 @@ body {
 .h1Bienvenida{
     font-size: 40px;
     @extend .letraBlancaFondoNegro;
-    /*
-    background: $colorFontBienvenida;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    margin-top: 28%;
-    background-clip: text;
-    */
     text-align: center;
     animation-duration: 0.8s;
     animation-name: animacionBienvenida;
-    animation-iteration-count: 1; /*infinite;*/
+    animation-iteration-count: 1; 
 }
 
 .imagenFondo{
     height: 400px; 
-    /*background-image: linear-gradient(rgba(0, 0, 0, 0.692), rgba(0, 0, 0, 0.705)),  url('../img/foto_inicio_grey.jpg');*/
     background-repeat: no-repeat;
     background-position-x: center;
     background-size: cover;
@@ -404,6 +394,23 @@ body {
     }
 }
 /* FIN index - Burbuja Noticias */
+
+.carousel-control-next-icon{
+    background-image: url("../img/next.png"); 
+    background-color:white;
+    border-radius: 30px;
+    @include setSizeWidthHeight(50px, 50px);    
+}
+.carousel-control-prev-icon{
+    background-image: url("../img/previous.png"); 
+    background-color:white; 
+    border-radius: 30px;
+    @include setSizeWidthHeight(50px, 50px);    
+}
+.carousel-indicators li{
+    @include setSizeWidthHeight(10px, 10px);
+    border-radius: 50%;
+}
 
 /* -------------- FIN INDEX  ------------- */
 
@@ -520,8 +527,20 @@ th{
         margin: 20px;
     }
     
+}
 
+.cardProximosEventos{
+    &:hover{
+        transform: scale(1.03, 1.03);
+        transition-duration: 1s;
+    }
+}
 
+.munecoProximosEventos{
+    &:hover{
+        transform: scale(1.15, 1.15);
+        transition-duration: 1s;
+    }
 }
 
 /* -------------- FIN PROXIMOS EVENTOS  ------------- */
@@ -541,7 +560,6 @@ th{
     @extend .letraBlancaFondoNegro;
     text-align: center; 
     background: rgb(111, 109, 243); 
-    /*color:yellow; */
     padding-left: 20%; 
     padding-right: 20%;    
 }
@@ -760,7 +778,6 @@ th{
     margin: 1%;
     border-style: double;
     border-color: blue;
-    /*background-color: whitesmoke;*/
     @extend .novedadGradientToLeft;
     @extend .letraBlancaFondoNegro;
 
@@ -955,6 +972,9 @@ th{
         };
     }
 
+    .carousel-control-next-icon, .carousel-control-prev-icon{
+        @include setSizeWidthHeight(40px, 40px);    
+    }
     /* Media Query INSCRIPCION EVENTOS  */
     .frameTerminos{
         width: 100%;
@@ -1050,7 +1070,10 @@ th{
     }
     /* FIN Media Query Header */
 
-
+    .carousel-control-next-icon, .carousel-control-prev-icon{
+        @include setSizeWidthHeight(35px, 35px);    
+    }
+    
 
     /* Media Query Novedades */
     .sectionNovedades {
@@ -1111,6 +1134,10 @@ th{
     }
     #personaNadando{
         display: inline;
+    }
+
+    .carousel-control-next-icon, .carousel-control-prev-icon{
+        @include setSizeWidthHeight(30px, 30px);    
     }
 }
 
@@ -1215,6 +1242,11 @@ th{
             }    
         }
     }
+
+    .carousel-control-next-icon, .carousel-control-prev-icon{
+        @include setSizeWidthHeight(10x, 20px);    
+    }
+
 }
 
 @media only screen and  (max-width: 355px){

@@ -514,13 +514,11 @@ nav ul li {
 
 body {
   background: black;
-  /* #eeeeee;*/
   font-family: 'Varela Round', sans-serif; }
 
 .navbar {
   color: #fff;
   background: black;
-  /* #926dde !important;*/
   padding: 5px 16px;
   border-radius: 0;
   border: none;
@@ -695,22 +693,13 @@ body {
 /* -------------- INDEX  ------------- */
 .h1Bienvenida {
   font-size: 40px;
-  /*
-    background: $colorFontBienvenida;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    margin-top: 28%;
-    background-clip: text;
-    */
   text-align: center;
   animation-duration: 0.8s;
   animation-name: animacionBienvenida;
-  animation-iteration-count: 1;
-  /*infinite;*/ }
+  animation-iteration-count: 1; }
 
 .imagenFondo {
   height: 400px;
-  /*background-image: linear-gradient(rgba(0, 0, 0, 0.692), rgba(0, 0, 0, 0.705)),  url('../img/foto_inicio_grey.jpg');*/
   background-repeat: no-repeat;
   background-position-x: center;
   background-size: cover;
@@ -759,6 +748,25 @@ body {
     opacity: 0; } }
 
 /* FIN index - Burbuja Noticias */
+.carousel-control-next-icon {
+  background-image: url("../img/next.png");
+  background-color: white;
+  border-radius: 30px;
+  width: 50px;
+  height: 50px; }
+
+.carousel-control-prev-icon {
+  background-image: url("../img/previous.png");
+  background-color: white;
+  border-radius: 30px;
+  width: 50px;
+  height: 50px; }
+
+.carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%; }
+
 /* -------------- FIN INDEX  ------------- */
 /* -------------- CONSTRUCCION  ------------- */
 .imagenFondoConstruccion {
@@ -828,6 +836,14 @@ th {
   .gridProximosEventos .tituloGridHijo {
     margin: 20px; }
 
+.cardProximosEventos:hover {
+  transform: scale(1.03, 1.03);
+  transition-duration: 1s; }
+
+.munecoProximosEventos:hover {
+  transform: scale(1.15, 1.15);
+  transition-duration: 1s; }
+
 /* -------------- FIN PROXIMOS EVENTOS  ------------- */
 /* --------------- INSCRIPCION EVENTO ----------------*/
 #formInscripcionEvento {
@@ -839,7 +855,6 @@ th {
 #felicitacionesFelicitaciones {
   text-align: center;
   background: #6f6df3;
-  /*color:yellow; */
   padding-left: 20%;
   padding-right: 20%; }
 
@@ -964,8 +979,7 @@ th {
   grid-template-columns: 1fr 2fr 0.5fr;
   margin: 1%;
   border-style: double;
-  border-color: blue;
-  /*background-color: whitesmoke;*/ }
+  border-color: blue; }
   .detalleAyuda p {
     margin-top: 1%;
     margin-left: 2%;
@@ -1088,6 +1102,9 @@ th {
     height: 280px; }
     .imagenFondo .h1Bienvenida {
       font-size: 30px; }
+  .carousel-control-next-icon, .carousel-control-prev-icon {
+    width: 40px;
+    height: 40px; }
   /* Media Query INSCRIPCION EVENTOS  */
   .frameTerminos {
     width: 100%; }
@@ -1148,6 +1165,9 @@ th {
     position: static;
     width: 100%; }
   /* FIN Media Query Header */
+  .carousel-control-next-icon, .carousel-control-prev-icon {
+    width: 35px;
+    height: 35px; }
   /* Media Query Novedades */
   .sectionNovedades .novedadLayout--Izq {
     display: flex;
@@ -1188,7 +1208,10 @@ th {
   .divLogoNombreSitio__imagenLogoSitio {
     display: none; }
   #personaNadando {
-    display: inline; } }
+    display: inline; }
+  .carousel-control-next-icon, .carousel-control-prev-icon {
+    width: 30px;
+    height: 30px; } }
 
 @media only screen and (max-width: 455px) {
   .imagenFondo {
@@ -1247,7 +1270,10 @@ th {
     .imagenFondo .h1Bienvenida {
       font-size: 14px; }
   #sectionPrincipalContacto #contactoDivGral #textAreaConsulta {
-    width: 16rem; } }
+    width: 16rem; }
+  .carousel-control-next-icon, .carousel-control-prev-icon {
+    width: 10x;
+    height: 20px; } }
 
 @media only screen and (max-width: 355px) {
   .imagenFondo {
